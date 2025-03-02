@@ -1,0 +1,83 @@
+.form__title {
+    font-family: "Volkhov Bold";
+    color: #181E4B;
+    font-size: 32px;
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.form__wrap {
+    max-width: 542px;
+    width: 100%;
+
+    border: 0.58px solid #00000057;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
+
+    background-color: #fff;
+    padding: 30px 35px 16px;
+}
+
+.form__input {
+    padding: 25px 0 25px 22px;
+    border: 0.58px solid #00000057;
+    border-radius: 6px;
+    width: 100%;
+
+    font-size: 18px;
+    font-family: "Poppins Regular";
+}
+
+.form__error {
+    color: red;
+    font-family: "Poppins Medium";
+    margin-top: 5px;
+}
+
+.form__input_wrap:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.form__input_wrap:last-child {
+    margin-bottom: 59px;
+}
+
+.form__btn {
+    border-radius: 6px;
+    background-color: #DF6951;
+
+    padding: 13px 59px;
+    width: 100%;
+    cursor: pointer;
+    
+    color: #fff;
+    font-family: "Poppins SemiBold";
+    font-size: 14px;
+
+    margin-bottom: 29px;
+}
+
+.form__btn:hover {
+    background-color: #e77d68;
+}
+
+.form__links_wrap {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.linkToAnotherForm,
+.form__link {
+    font-size: 16px;
+}
+
+.form__link {
+    color: #000;
+}
+
+.form__link:hover {
+    color: #e77d68;
+    text-decoration: underline;
+}

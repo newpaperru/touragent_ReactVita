@@ -1,0 +1,51 @@
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 63px;
+}
+
+.menu__link {
+    font-size: 17px;
+    font-family: "Circular Medium";
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+.menu__link:not(:last-child) {
+    margin-right: 50px;
+}
+
+.buttonLogin {
+    padding: 16px 32px;
+    background-color: #DF6951;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
+    font-family: "Circular Medium";
+
+    color: white;
+    font-size: 17px;
+}
+  
+.menu__link::after {
+    width: 0;
+    border-radius: 34px;
+    background: #DF6951;
+    height: 3px;
+    transition: all .5s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+  
+.menu__link.underline::after {
+    width: 30px;
+    right: 0;
+  }
+  
+.menu__link:hover::after {
+    width: 30px;
+}

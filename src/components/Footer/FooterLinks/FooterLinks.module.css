@@ -1,0 +1,22 @@
+.footer_links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 18px;
+    column-gap: 110px;
+
+    max-width: 366px;
+}
+
+.footer_links__title, .footer_links__text {
+    color: #181433;
+}
+
+.footer_links__title {
+    margin-bottom: 6px;
+    font-size: 21px;
+    font-family: "Manrope Bold";
+}
+
+.footer_links__text {
+    font-family: "Manrope Medium";
+}

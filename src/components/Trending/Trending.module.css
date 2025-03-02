@@ -1,0 +1,24 @@
+.trending {
+    padding: 0 262px 0 279px;
+    margin-bottom: 112px;
+}
+
+.trending__titles_wrap {
+    margin-bottom: 57px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #DF6951;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Poppins Bold";
+}
+
+.title {
+    color: #181E4B;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: "Volkhov Bold";
+}

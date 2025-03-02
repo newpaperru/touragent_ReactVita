@@ -1,0 +1,20 @@
+.footer {
+    padding: 0 100px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #E5E5EA;
+    padding-bottom: 59px;
+    margin-bottom: 59px;
+}
+
+.footer__copyright {
+    font-family: "Manrope Medium";
+    letter-spacing: -0.02em;
+    color: #181433;
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+}

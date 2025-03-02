@@ -1,0 +1,11 @@
+.people__container {
+  display: flex;
+  align-items: center;
+  column-gap: 38px;
+}
+
+.people__text {
+  font-family: "Poppins Medium";
+  color: #fff;
+  font-size: 13px;
+}

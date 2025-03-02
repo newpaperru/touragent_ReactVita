@@ -1,0 +1,11 @@
+@import url('css/base.css');
+@import url('css/font-style.css');
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+#root {
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "2085",
+      "email": "boryanski213@gmail.com",
+      "phone": "+79632567812",
+      "password": "qwerty",
+      "repeatPassword": " "
+    }
+  ]
+}

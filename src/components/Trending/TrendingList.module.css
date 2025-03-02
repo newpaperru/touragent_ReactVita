@@ -1,0 +1,4 @@
+.trending__card_list {
+    display: flex;
+    justify-content: space-between;
+}

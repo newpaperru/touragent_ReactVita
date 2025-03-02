@@ -1,0 +1,17 @@
+.middle__content {
+  max-width: 631px;
+  
+}
+
+.middle__img {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 15px;
+  font-family: "Poppins Bold";
+  color: #fff;
+  font-size: 59px;
+  font-weight: 700;
+}
