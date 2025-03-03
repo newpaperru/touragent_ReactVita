@@ -6,7 +6,7 @@ export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFilte
     return (
         <>
             <header className={styles.header}>
-                <div className={styles.header__wrap}>
+                <div className={styles.wrap}>
                     <img src={imgSrc} alt="bg изображение" className={styles.bgImg}/>
                     <div className={bgFiltered}>
                         <div className={styles.container}>

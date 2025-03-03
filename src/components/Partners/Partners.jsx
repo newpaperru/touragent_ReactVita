@@ -16,7 +16,7 @@ export const Partners = () => {
 
       return (
             <>
-                  <div className={styles.partners__container}>
+                  <div className={styles.container}>
                         {partners.map((partner) => (
                               <img src={partner.imgUrl} alt="партнер иконка" key={partner.id}/>
                         ))}

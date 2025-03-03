@@ -1,4 +1,4 @@
-.footer_follow__title {
+.title {
     font-size: 21px;
     color: #181433;
     font-family: "Manrope Bold";
@@ -6,22 +6,22 @@
     display: inline-block;
 }
 
-.footer_follow__input {
+.input {
     background-color: #EEEEFF;
     padding: 14px 0 12px 15px;
     max-width: 240px;
     width: 100%;
 }
 
-.footer_follow__input::placeholder,
-.footer_follow__note {
+.input::placeholder,
+.note {
     color: #181433;
     opacity: 0.2;
     font-family: "Manrope Medium";
     letter-spacing: -0.02em;
 }
 
-.footer_follow__btn {
+.btn {
     padding: 13px 32px 13px 43px;
     background-color: #DF6951;
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
@@ -31,6 +31,6 @@
     color: white;
 }
 
-.footer_follow__note {
+.note {
     opacity: 0.5;
 }

@@ -2,11 +2,11 @@ import "./App.css";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthContext } from "./services/AuthContext";
-import { PageHome } from "./pages/PageHome";
-import { PageAbout } from "./pages/PageAbout";
-import { PageProfile } from "./pages/PageProfile";
-import { PageRegistration } from "./pages/PageRegistration";
-import { PageLogin } from "./pages/PageLogin";
+import { PageHome } from "./pages/HomePage";
+import { PageAbout } from "./pages/AboutPage";
+import { PageProfile } from "./pages/ProfilePage";
+import { PageRegistration } from "./pages/RegistrationPage";
+import { PageLogin } from "./pages/LoginPage";
 
 function App() {
     const [isAuth, setIsAuth] = useState(false);

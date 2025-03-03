@@ -6,12 +6,12 @@ import styles from "./Footer.module.css";
 export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footer__content}>
+            <div className={styles.content}>
                 <FooterSocial />
                 <FooterLinks />
                 <FooterFollow  />
             </div>
-            <span className={styles.footer__copyright}>Copyright @ Boris, Anna, Alexey 2025. All Rights Reserved.</span>
+            <span className={styles.copyright}>Copyright @ Boris, Anna, Alexey 2025. All Rights Reserved.</span>
         </footer>
     )
 }

@@ -4,14 +4,14 @@
     max-width: 200px;
 }
 
-.footer_social__text {
+.text {
     color: #757095;
     font-size: 16px;
     font-family: 'Manrope Medium';
     margin-bottom: 10px;
 }
 
-.footer_social__icons_wrap {
+.icons_wrap {
     display: flex;
     align-items: center;
     column-gap: 16px;

@@ -1,41 +1,41 @@
 /* часто повторяемые свойства */
-.card__data,
-.card__days_wrap,
-.card__people_wrap,
-.card__info,
-.card__place_wrap {
+.data,
+.days_wrap,
+.people_wrap,
+.info,
+.place_wrap {
     display: flex;
     align-items: center;
 }
 
-.card__days,
-.card__people,
-.card__name_place,
-.card__description {
+.days,
+.people,
+.name_place,
+.description {
     font-family: "Poppins Regular";
 }
 
-.card__discount,
-.card__price_line_through,
-.card__price {
+.discount,
+.price_line_through,
+.price {
     font-family: "Poppins Medium";
 }
 
-.card__days,
-.card__people,
-.card__name_place {
+.days,
+.people,
+.name_place {
     font-size: 17px;
     color: #7D7D7D;
 }
 
-.card__country_name,
-.card__discount,
-.card__price {
+.country_name,
+.discount,
+.price {
     font-size: 30px;
 }
 
-.card__description,
-.card__btn {
+.description,
+.btn {
     font-size: 13px;
 }
 
@@ -55,18 +55,18 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card__img_wrap {
+.img_wrap {
     position: relative;
     margin-bottom: 39px;
 }
 
-.card__img {
+.img {
     max-width: 393px;
     width: 100%;
 }
 
 
-.card__icon {
+.icon {
     position: absolute;
     left: 39px;
     bottom: -38px;
@@ -75,45 +75,45 @@
     border-radius: 50%;
 }
 
-.card__data {
+.data {
     column-gap: 35px;
     margin-bottom: 18px;
 }
 
-.card__days_wrap,
-.card__people_wrap {
+.days_wrap,
+.people_wrap {
     column-gap: 8px;
     text-transform: capitalize;
 }
 
-.card__info {
+.info {
     justify-content: space-between;
 }
 
-.card__place_wrap {
+.place_wrap {
     column-gap: 10px;
     margin-bottom: 10px;
 }
 
-.card__country_name {
+.country_name {
     font-family: "Poppins Bold";
 }
 
-.card__discount {
+.discount {
     color: #DF6951;
 }
 
-.card__price_line_through {
+.price_line_through {
     color: #7D7D7D;
     text-decoration: line-through;
     font-size: 22px;
 }
 
-.card__description {
+.description {
     margin-bottom: 49px;
 }
 
-.card__btn {
+.btn {
     font-family: "Poppins SemiBold";
     box-shadow: 0 15.28px 26.74px 0 rgba(223, 105, 81, 0.15);
     background-color: #DF6951;
@@ -124,6 +124,6 @@
     color: white;
 }
 
-.card__btn:hover {
+.btn:hover {
     background-color: #e47e6a;
 }

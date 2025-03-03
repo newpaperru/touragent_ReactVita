@@ -4,9 +4,9 @@ import peopleImg from '/people.png';
 
 export const People = () => {
     return (
-        <div className={styles.people__container}>
+        <div className={styles.container}>
             <img src={peopleImg} alt="Люди" />
-            <span className={styles.people__text}>2,500 people booked Tommorowland Event in last 24 hours</span>
+            <span className={styles.text}>2,500 people booked Tommorowland Event in last 24 hours</span>
         </div>
     )
 }

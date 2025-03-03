@@ -1,4 +1,4 @@
-.form__title {
+.title {
     font-family: "Volkhov Bold";
     color: #181E4B;
     font-size: 32px;
@@ -7,7 +7,7 @@
     margin-bottom: 28px;
 }
 
-.form__wrap {
+.wrap {
     max-width: 542px;
     width: 100%;
 
@@ -19,7 +19,7 @@
     padding: 30px 35px 16px;
 }
 
-.form__input {
+.input {
     padding: 25px 0 25px 22px;
     border: 0.58px solid #00000057;
     border-radius: 6px;
@@ -29,21 +29,21 @@
     font-family: "Poppins Regular";
 }
 
-.form__error {
+.error {
     color: red;
     font-family: "Poppins Medium";
     margin-top: 5px;
 }
 
-.form__input_wrap:not(:last-child) {
+.input_wrap:not(:last-child) {
     margin-bottom: 16px;
 }
 
-.form__input_wrap:last-child {
+.input_wrap:last-child {
     margin-bottom: 59px;
 }
 
-.form__btn {
+.btn {
     border-radius: 6px;
     background-color: #DF6951;
 
@@ -58,26 +58,26 @@
     margin-bottom: 29px;
 }
 
-.form__btn:hover {
+.btn:hover {
     background-color: #e77d68;
 }
 
-.form__links_wrap {
+.links_wrap {
     display: flex;
     justify-content: center;
     column-gap: 10px;
 }
 
 .linkToAnotherForm,
-.form__link {
+.link {
     font-size: 16px;
 }
 
-.form__link {
+.link {
     color: #000;
 }
 
-.form__link:hover {
+.link:hover {
     color: #e77d68;
     text-decoration: underline;
 }

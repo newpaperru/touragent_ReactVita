@@ -5,12 +5,12 @@ import titleVector from "/titleVector.svg";
 // eslint-disable-next-line react/prop-types
 export const MiddleHeader = ({ title, description, peoples, titleCheck }) => {
     return (
-      <div className={styles.middle__content}>
+      <div className={styles.content}>
         {titleCheck ? 
           (
-            <img className={styles.middle__img} src={titleVector}></img>
+            <img className={styles.img} src={titleVector}></img>
           ) : (
-            <span className={styles.middle__title}>{title}</span>
+            <span>{title}</span>
           )}
         <p className={styles.description}>{description}</p>
         {peoples && (

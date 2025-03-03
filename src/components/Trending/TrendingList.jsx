@@ -57,7 +57,7 @@ const cardList = [
 
 export const TrendingList = () => {
     return (
-        <div className={styles.trending__card_list}>
+        <div className={styles.card_list}>
             {cardList.map((item) => (
                 <TrendingCard key={item.id} {...item} />
             ))}

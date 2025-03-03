@@ -17,14 +17,14 @@ export const TopHeader = () => {
     ];
 
     return (
-        <div className={styles.nav__container}>
+        <div className={styles.container}>
             <img src={logo} alt="логотип" />
             <nav>
                 {links.map((link) => (
                     <Link
                         key={link.id}
                         to={link.to}
-                        className={`${styles.menu__link} ${
+                        className={`${styles.link} ${
                             location.pathname === link.to
                                 ? styles.underline
                                 : ""

@@ -7,16 +7,16 @@
     max-width: 366px;
 }
 
-.footer_links__title, .footer_links__text {
+.title, .text {
     color: #181433;
 }
 
-.footer_links__title {
+.title {
     margin-bottom: 6px;
     font-size: 21px;
     font-family: "Manrope Bold";
 }
 
-.footer_links__text {
+.text {
     font-family: "Manrope Medium";
 }

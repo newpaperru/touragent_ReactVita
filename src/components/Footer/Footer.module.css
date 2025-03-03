@@ -2,7 +2,7 @@
     padding: 0 100px;
 }
 
-.footer__content {
+.content {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #E5E5EA;
@@ -10,7 +10,7 @@
     margin-bottom: 59px;
 }
 
-.footer__copyright {
+.copyright {
     font-family: "Manrope Medium";
     letter-spacing: -0.02em;
     color: #181433;

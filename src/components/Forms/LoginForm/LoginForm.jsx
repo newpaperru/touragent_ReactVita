@@ -25,15 +25,14 @@ export const LoginForm = () => {
     };
 
     return (
-        <div className={styles.form__wrap} style={{position: 'relative'}}>
-            <img style={{maxWidth: 60, position: "absolute", bottom: 100, right: 37}} src="/test.gif" alt="" />
-            <h1 className={styles.form__title}>Login</h1>
+        <div className={styles.wrap}>
+            <h1 className={styles.title}>Login</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                    <div className={styles.form__input_wrap}>
+                    <div className={styles.input_wrap}>
                         <label htmlFor="email">
                             <input
-                                className={styles.form__input}
+                                className={styles.input}
                                 type="email"
                                 placeholder="Email"
                                 {...register("email", {
@@ -41,16 +40,16 @@ export const LoginForm = () => {
                                 })}
                             />
                             {errors.email && (
-                                <p className={styles.form__error}>
+                                <p className={styles.error}>
                                     {errors.email.message}
                                 </p>
                             )}
                         </label>
                     </div>
-                    <div className={styles.form__input_wrap}>
+                    <div className={styles.input_wrap}>
                         <label htmlFor="password">
                             <input
-                                className={styles.form__input}
+                                className={styles.input}
                                 type="password"
                                 placeholder="Password"
                                 {...register("password", {
@@ -58,30 +57,30 @@ export const LoginForm = () => {
                                 })}
                             />
                             {errors.password && (
-                                <p className={styles.form__error}>
+                                <p className={styles.error}>
                                     {errors.password.message}
                                 </p>
                             )}
                         </label>
                     </div>
                 </div>
-                <button type="submit" className={styles.form__btn}>
+                <button type="submit" className={styles.btn}>
                     {isLoading ? "Loging..." : "Login"}
                 </button>
             </form>
-            <div className={styles.form__links_wrap}>
+            <div className={styles.links_wrap}>
                 <span className={styles.linkToAnotherForm}>
                     Dont have an account?
                     <Link
                         key={1}
                         to={"/registration"}
-                        className={styles.form__link}
+                        className={styles.link}
                         style={{ marginLeft: 3 }}
                     >
                         Registration
                     </Link>
                 </span>
-                <Link key={1} to={"/"} className={styles.form__link}>
+                <Link key={1} to={"/"} className={styles.link}>
                     Back To Home
                 </Link>
             </div>
