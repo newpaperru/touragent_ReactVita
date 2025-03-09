@@ -7,7 +7,7 @@ export const Trending = () => {
         <section className={styles.trending}>
             <div className={styles.titles_wrap}>
                 <span className={styles.subtitle}>trendy</span>
-                <h2 className={styles.title}>our trending tour <br />packages</h2>
+                <span className={styles.title}>our trending tour <br />packages</span>
             </div>
             <TrendingList />
         </section>

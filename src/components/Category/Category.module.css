@@ -1,0 +1,33 @@
+.category {
+    margin-bottom: 119px;
+}
+
+.container {
+    padding: 0 319px;
+}
+
+.subtitle {
+    font-family: "Poppins SemiBold";
+    font-size: 18px;
+    color: #DF6951;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+.title {
+    font-family: "Volkhov Bold";
+    font-size: 50px;
+    color: #181E4B;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    margin-bottom: 70px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

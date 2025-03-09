@@ -4,6 +4,7 @@ import styles from '../components/Header/Header.module.css';
 import { Partners } from '../components/Partners/Partners';
 import { Trending } from '../components/Trending/Trending';
 import { Footer } from '../components/Footer/Footer';
+import { Category } from '../components/Category/Category';
 
 export const PageHome = () => {
   return (
@@ -16,6 +17,7 @@ export const PageHome = () => {
         bgFiltered={styles.homePageFilter}
       />
       <Partners />
+      <Category/>
       <Trending />
       <Footer/>
     </>
