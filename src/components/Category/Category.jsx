@@ -1,9 +1,9 @@
 import styles from "./Category.module.css";
 
-import GuidedTours from "/guidedTours.png";
-import BestFlights from "/bestFlights.png";
-import ReligiousTours from "/religTours.png";
-import MedicalInsurance from "/medicInsurance.png";
+import GuidedTours from "/guidedTours.svg";
+import BestFlights from "/bestFlights.svg";
+import ReligiousTours from "/religTours.svg";
+import MedicalInsurance from "/medicInsurance.svg";
 import { CategoryCard } from "./CategoryCard";
 
 const cards = [

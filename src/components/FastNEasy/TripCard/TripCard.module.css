@@ -1,0 +1,61 @@
+.bgImg {
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: -205px;
+}
+
+.card {
+    padding: 20px 24px 31px;
+    box-shadow: -40px -10px 50px 0 #59b0e62d;
+    max-width: 370px;
+    border-radius: 26px;
+    z-index: 2;
+    position: relative;
+}
+
+.card > img {
+    margin-bottom: 27px;
+}
+
+.text {
+    margin-bottom: 21px;
+}
+
+.title {
+    display: block;
+    color: #080809;
+    font-family: "Poppins Medium";
+    letter-spacing: 0.015em;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.info, .count_people {
+    letter-spacing: 0.02em;
+    color: #84829A;
+    font-family: "Poppins Medium";
+}
+
+.count_wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.icons {
+    display: flex;
+    column-gap: 13px;
+    margin-bottom: 30px;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #F5F5F5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

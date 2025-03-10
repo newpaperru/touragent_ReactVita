@@ -1,0 +1,45 @@
+.element {
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+    max-width: 395px;
+    width: 100%;
+}
+
+.element:not(:last-child) {
+    margin-bottom: 42px;
+}
+
+.icon {
+    border-radius: 13px;
+    min-width: 47px;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element:first-child .icon {
+    background-color: #F0BB1F;
+}
+
+.element:nth-child(2) .icon {
+    background-color: #F15A2B;
+}
+
+.element:last-child .icon {
+    background-color: #006380;
+}
+
+.title {
+    color: #5E6282;
+    font-size: 16px;
+    font-family: "Poppins Bold";
+}
+
+.text {
+  color: #5E6282;
+  font-size: 16px;
+  font-family: "Poppins Regular";
+}

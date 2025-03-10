@@ -1,0 +1,10 @@
+.fastNEasy {
+    margin-bottom: 117px;
+}
+
+.container {
+    padding: 0 157px;
+    display: flex;
+    column-gap: 294px;
+    align-items: center;
+}
