@@ -1,10 +1,10 @@
 .fastNEasy {
-    margin-bottom: 117px;
+    margin-bottom: 119px;
 }
 
 .container {
     padding: 0 157px;
     display: flex;
-    column-gap: 294px;
+    justify-content: space-between;
     align-items: center;
 }

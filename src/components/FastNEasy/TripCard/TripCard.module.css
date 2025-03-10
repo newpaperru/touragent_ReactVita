@@ -1,17 +1,8 @@
-.bgImg {
-    position: absolute;
-    z-index: -1;
-    top: -60px;
-    right: -205px;
-}
-
 .card {
     padding: 20px 24px 31px;
-    box-shadow: -40px -10px 50px 0 #59b0e62d;
+    border: 1px solid #ddd;
     max-width: 370px;
     border-radius: 26px;
-    z-index: 2;
-    position: relative;
 }
 
 .card > img {

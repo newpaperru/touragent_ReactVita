@@ -1,6 +1,5 @@
 import styles from "./TripCard.module.css";
 import bigImg from "/hawaiiTripCard.png";
-import airplane from "/airplane.png";
 import building from "/building.svg";
 import leaf from "/leaf.svg";
 import map from "/map.svg";
@@ -31,11 +30,6 @@ export const TripCard = () => {
                     60 people are interested
                 </span>
             </div>
-            <img
-                src={airplane}
-                alt="изображение самолета"
-                className={styles.bgImg}
-            />
         </div>
     );
 };

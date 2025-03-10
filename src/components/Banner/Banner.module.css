@@ -1,0 +1,13 @@
+.banner {
+    margin-bottom: 117px;
+    background: url('/nextHolidayAmazing.png') no-repeat;
+    padding: 135px 0 135px 388px;
+}
+
+.text {
+    font-family: "Volkhov Bold";
+    font-size: 50px;
+    color: #fff;
+    display: block;
+    text-transform: capitalize;
+}

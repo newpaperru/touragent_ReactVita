@@ -1,5 +1,5 @@
 import styles from './FastNEasy.module.css';
-import { ResortBookingInfo } from './ResortBookingInfo';
+import { ResortBookingInfo } from './ResortBookingInfo/ResortBookingInfo';
 import { TripCard } from './TripCard/TripCard';
 
 export const FastNEasy = () => {

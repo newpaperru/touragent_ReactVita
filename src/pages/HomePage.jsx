@@ -6,6 +6,8 @@ import { Trending } from "../components/Trending/Trending";
 import { Footer } from "../components/Footer/Footer";
 import { Category } from "../components/Category/Category";
 import { FastNEasy } from "../components/FastNEasy/FastNEasy";
+import { Explore } from "../components/Explore/Explore";
+import { Banner } from "../components/Banner/Banner";
 
 export const PageHome = () => {
     return (
@@ -20,6 +22,8 @@ export const PageHome = () => {
             <Partners />
             <Category />
             <FastNEasy />
+            <Banner />
+            <Explore />
             <Trending />
             <Footer />
         </>
