@@ -1,0 +1,15 @@
+.card {
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    border-radius: 46px;
+    background: linear-gradient(45deg, #FF7255 0%, #BA4E38 100%);
+    color: #fff;
+    font-family: "Poppins Regular";
+    padding: 6px 22px;
+    
+}

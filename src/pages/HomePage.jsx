@@ -8,6 +8,7 @@ import { Category } from "../components/Category/Category";
 import { FastNEasy } from "../components/FastNEasy/FastNEasy";
 import { Explore } from "../components/Explore/Explore";
 import { Banner } from "../components/Banner/Banner";
+import { BestPackages } from "../components/BestPackages/BestPackages";
 
 export const PageHome = () => {
     return (
@@ -23,6 +24,7 @@ export const PageHome = () => {
             <Category />
             <FastNEasy />
             <Banner />
+            <BestPackages />
             <Explore />
             <Trending />
             <Footer />
