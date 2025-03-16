@@ -1,5 +1,4 @@
 import styles from "./Category.module.css";
-
 import GuidedTours from "/guidedTours.svg";
 import BestFlights from "/bestFlights.svg";
 import ReligiousTours from "/religTours.svg";

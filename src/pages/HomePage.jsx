@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer/Footer";
 import { Category } from "../components/Category/Category";
 import { FastNEasy } from "../components/FastNEasy/FastNEasy";
 import { Explore } from "../components/Explore/Explore";
-import { Banner } from "../components/Banner/Banner";
+import { LetsMake } from "../components/LetsMake/LetsMake";
 import { BestPackages } from "../components/BestPackages/BestPackages";
 
 export const PageHome = () => {
@@ -23,7 +23,7 @@ export const PageHome = () => {
             <Partners />
             <Category />
             <FastNEasy />
-            <Banner />
+            <LetsMake />
             <BestPackages />
             <Explore />
             <Trending />
