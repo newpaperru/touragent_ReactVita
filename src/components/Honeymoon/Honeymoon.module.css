@@ -1,0 +1,70 @@
+.honeymoon {
+    margin-bottom: 117px;
+}
+
+.container {
+    padding: 0 303px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtitle {
+    font-family: "Poppins SemiBold";
+    font-size: 18px;
+    color: #DF6951;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    display: block;
+
+}
+
+.title {
+    font-family: "Volkhov Bold";
+    font-size: 50px;
+    color: #181E4B;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.description {
+    max-width: 583px;
+    width: 100%;
+
+    font-family: "Poppins Regular";
+    margin-bottom: 31px;
+}
+
+.btn {
+    padding: 11px 42px 21px 6px;
+    background-color: #DF6951;
+    color: #fff;
+    font-family: "Poppins SemiBold";
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.img_wrap {
+  position: relative;
+}
+
+.img {
+    border-radius: 300px 300px 0 0;
+}
+
+.trans_text {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 52px;
+    font-family: "Poppins Bold";
+    color: #000;
+    opacity: 10%;
+
+    position: absolute;
+    left: -340px;
+    bottom: 260px;
+}

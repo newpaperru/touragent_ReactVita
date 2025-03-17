@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthContext } from "./services/AuthContext";
 import { PageHome } from "./pages/HomePage";
@@ -9,7 +9,13 @@ import { PageRegistration } from "./pages/RegistrationPage";
 import { PageLogin } from "./pages/LoginPage";
 
 function App() {
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(() => {
+        return localStorage.getItem('isAuth') === 'true';
+    });
+
+    useEffect(() => {
+        localStorage.setItem('isAuth', isAuth);
+    }, [isAuth]);
 
     return (
         <AuthContext.Provider value={{ isAuth, setIsAuth }}>

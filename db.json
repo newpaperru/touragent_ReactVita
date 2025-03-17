@@ -5,7 +5,8 @@
       "email": "boryanski213@gmail.com",
       "phone": "+79632567812",
       "password": "qwerty",
-      "repeatPassword": " "
+      "fullName": "Архангельский Борис Станиславович",
+      "birthDate": "2005-02-01"
     }
   ]
 }

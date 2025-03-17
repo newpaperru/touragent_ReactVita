@@ -9,6 +9,7 @@ import { FastNEasy } from "../components/FastNEasy/FastNEasy";
 import { Explore } from "../components/Explore/Explore";
 import { LetsMake } from "../components/LetsMake/LetsMake";
 import { BestPackages } from "../components/BestPackages/BestPackages";
+import { Honeymoon } from "../components/Honeymoon/Honeymoon";
 
 export const PageHome = () => {
     return (
@@ -22,6 +23,7 @@ export const PageHome = () => {
             />
             <Partners />
             <Category />
+            <Honeymoon />
             <FastNEasy />
             <LetsMake />
             <BestPackages />

@@ -2,9 +2,8 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../services/AuthContext';
 import { useContext } from 'react';
 import styles from "./TopHeader.module.css";
-import logo from "/logo.svg";
 
-export const TopHeader = () => {
+export const TopHeader = ({logoImg, theme}) => {
     // Получаем текущий путь
     const location = useLocation();
     const navigate = useNavigate();
@@ -18,13 +17,13 @@ export const TopHeader = () => {
 
     return (
         <div className={styles.container}>
-            <img src={logo} alt="логотип" />
+            {logoImg && <img src={logoImg} alt="логотип" />}
             <nav>
                 {links.map((link) => (
                     <Link
                         key={link.id}
                         to={link.to}
-                        className={`${styles.link} ${
+                        className={`${theme} ${
                             location.pathname === link.to
                                 ? styles.underline
                                 : ""

@@ -1,0 +1,80 @@
+.profile_card {
+    padding: 50px;
+    border-radius: 26px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 130px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btnLogOut, .buttonStyle {
+    padding: 16px 32px;
+    background-color: #DF6951;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
+    font-family: "Circular Medium";
+
+    color: white;
+    font-size: 17px;
+    align-self: flex-start;
+}
+
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_avatar {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+
+.user_fullname {
+    font-family: "Poppins Bold";
+    font-size: 28px;
+    color: #281D1B;
+}
+
+.user_datas {
+    font-family: "Poppins Medium";
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: "Poppins Medium";
+    font-size: 18px;
+}
+
+
+.input {
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 27px 22px;
+    width: 580px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
