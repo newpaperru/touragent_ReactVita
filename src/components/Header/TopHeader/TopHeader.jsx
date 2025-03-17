@@ -35,7 +35,7 @@ export const TopHeader = ({logoImg, theme}) => {
             </nav>
             <button
                 type="button"
-                className={styles.buttonLogin}
+                className={styles.button_login}
                 onClick={() => navigate(isAuth ? "/profile" : "/login")}
             >
                 {isAuth ? "Go to profile" : "Login"}

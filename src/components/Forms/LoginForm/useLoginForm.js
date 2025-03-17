@@ -35,7 +35,7 @@ export function useLoginForm({ onErrorCustom } = {}) {
             setIsAuth(true);
             localStorage.setItem('isAuth', 'true');
             localStorage.setItem('userId', userData.id);
-            navigate('/');
+            navigate('/profile');
         },
         onError: (error) => {
             if (onErrorCustom) {

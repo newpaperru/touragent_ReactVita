@@ -108,7 +108,7 @@ useRegistrationForm();
                 )}
             </form>
             <div className={styles.links_wrap}>
-                <span className={styles.linkToAnotherForm}>
+                <span className={styles.link_to_another_form}>
                     Have an account?
                     <Link
                         key={1}

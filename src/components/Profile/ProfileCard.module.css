@@ -5,7 +5,7 @@
     box-shadow: 0 0 130px 0 rgba(0, 0, 0, 0.15);
 }
 
-.btnLogOut, .buttonStyle {
+.btn {
     padding: 16px 32px;
     background-color: #DF6951;
     border-radius: 10px;

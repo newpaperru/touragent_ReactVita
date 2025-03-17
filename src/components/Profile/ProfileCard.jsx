@@ -24,6 +24,7 @@ export const ProfileCard = () => {
         formState: { errors },
         reset,
     } = useForm();
+
     const mutation = useUserMutation(
         setUserData,
         setShowRegistrationForm,
@@ -43,109 +44,107 @@ export const ProfileCard = () => {
     return (
         <div>
             {showRegistrationForm ? (
-            <div className={styles.profile_card}>
-                <div className={styles.user_info}>
-                    <div className={styles.user}>
-                        <img
-                            src={avatarDefault}
-                            alt="аватарка"
-                            className={styles.user_avatar}
-                        />
-                        <div className={styles.user_data}>
-                            <span className={styles.user_fullname}>
-                                {userData.fullName}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.email}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.phone}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.birthDate}
-                            </span>
-                        </div>
-                    </div>
-                    <button className={styles.btnLogOut} onClick={logout}>
-                        log out
-                    </button>
-                </div>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className={styles.wrapper}>
-                        <div className={styles.input_wrapper}>
-                            <label className={styles.label}>
-                                Full Name:
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="Enter your full name ..."
-                                {...register("fullName", {
-                                    required: true,
-                                })}
-                                className={styles.input}
+                <div className={styles.profile_card}>
+                    <div className={styles.user_info}>
+                        <div className={styles.user}>
+                            <img
+                                src={avatarDefault}
+                                alt="аватарка"
+                                className={styles.user_avatar}
                             />
-                            {errors.fullName && (
-                                <p className={styles.error}>
-                                    The date of birth is required
-                                </p>
-                            )}
+                            <div className={styles.user_data}>
+                                <span className={styles.user_fullname}>
+                                    {userData.fullName}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.email}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.phone}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.birthDate}
+                                </span>
+                            </div>
                         </div>
+                        <button className={styles.btn_logout} onClick={logout}>
+                            log out
+                        </button>
+                    </div>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className={styles.wrapper}>
+                            <div className={styles.input_wrapper}>
+                                <label className={styles.label}>
+                                    Full Name:
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your full name ..."
+                                    {...register("fullName", {
+                                        required: true,
+                                    })}
+                                    className={styles.input}
+                                />
+                                {errors.fullName && (
+                                    <p className={styles.error}>
+                                        The date of birth is required
+                                    </p>
+                                )}
+                            </div>
 
-                        <div style={styles.inputContainerStyle}>
-                            <label className={styles.label}>
-                                Date of birth:
-                            </label>
-                            <input
-                                type="date"
-                                {...register("birthDate", {
-                                    required: true,
-                                })}
-                                className={styles.input}
-                            />
-                            {errors.birthDate && (
-                                <p className={styles.error}>
-                                    The date of birth is required
-                                </p>
-                            )}
+                            <div style={styles.inputContainerStyle}>
+                                <label className={styles.label}>
+                                    Date of birth:
+                                </label>
+                                <input
+                                    type="date"
+                                    {...register("birthDate", {
+                                        required: true,
+                                    })}
+                                    className={styles.input}
+                                />
+                                {errors.birthDate && (
+                                    <p className={styles.error}>
+                                        The date of birth is required
+                                    </p>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" className={styles.buttonStyle}>
-                        Save
-                    </button>
-                </form>
-            </div>
-        ) : (
-            <div className={styles.profile_card}>
-                 <div className={styles.user_info}>
-                    <div className={styles.user}>
-                        <img
-                            src={avatarDefault}
-                            alt="аватарка"
-                            className={styles.user_avatar}
-                        />
-                        <div className={styles.user_data}>
-                            <span className={styles.user_fullname}>
-                                {userData.fullName}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.email}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.phone}
-                            </span>
-                            <span className={styles.user_datas}>
-                                {userData.birthDate}
-                            </span>
-                        </div>
-                    </div>
-                    <button className={styles.btnLogOut} onClick={logout}>
-                        log out
-                    </button>
+                        <button type="submit" className={styles.btn}>
+                            Save
+                        </button>
+                    </form>
                 </div>
-
-                
-            </div>
-        )}
+            ) : (
+                <div className={styles.profile_card}>
+                    <div className={styles.user_info}>
+                        <div className={styles.user}>
+                            <img
+                                src={avatarDefault}
+                                alt="аватарка"
+                                className={styles.user_avatar}
+                            />
+                            <div className={styles.user_data}>
+                                <span className={styles.user_fullname}>
+                                    {userData.fullName}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.email}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.phone}
+                                </span>
+                                <span className={styles.user_datas}>
+                                    {userData.birthDate}
+                                </span>
+                            </div>
+                        </div>
+                        <button className={styles.btn} onClick={logout}>
+                            log out
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

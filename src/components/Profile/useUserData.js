@@ -10,7 +10,7 @@ export const useUserData = (navigate) => {
             try {
                 const response = await fetch(`http://localhost:3000/users/${userId}`);
                 if (!response.ok) {
-                    throw new Error("Не удалось получить данные пользователя");
+                    throw new Error("Failed to get user data");
                 }
                 const user = await response.json();
                 setUserData(user);
@@ -19,7 +19,7 @@ export const useUserData = (navigate) => {
                     setShowRegistrationForm(false);
                 }
             } catch (error) {
-                console.error("Ошибка при загрузке данных:", error);
+                console.error("Data loading error:", error);
             }
         };
 

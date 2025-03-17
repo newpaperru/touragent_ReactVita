@@ -4,7 +4,7 @@ import { TripCard } from './TripCard/TripCard';
 
 export const FastNEasy = () => {
     return (
-        <section className={styles.fastNEasy}>
+        <section className={styles.fast_n_easy}>
             <div className={styles.container}>
                 <ResortBookingInfo />
                 <TripCard />

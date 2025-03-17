@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.bgFilter {
+.bg_filter {
     background-color: rgba(30, 30, 30, 0.38);
     position: absolute;
     z-index: 2;

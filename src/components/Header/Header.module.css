@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.bgImg {
+.bg_img {
   object-fit: cover;
   min-width: 100%;
   max-height: 976px;
@@ -21,11 +21,11 @@
   height: 100%;
 }
 
-.homePageFilter {
+.home_page_filter {
   background-color: rgba(0, 0, 0, 0.33);
 }
 
-.aboutPageFilter {
+.about_page_filter {
   background-color: rgba(38, 38, 38, 0.13);
 }
 

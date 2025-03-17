@@ -9,7 +9,7 @@ export const PageAbout = () => {
         title="Read"
         description="About Us"
         imgSrc={bgAbout}
-        bgFiltered={styles.aboutPageFilter}
+        bgFiltered={styles.about_page_filter}
       />
     </>
   )

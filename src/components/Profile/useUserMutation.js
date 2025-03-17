@@ -7,7 +7,7 @@ export const useUserMutation = (setUserData, setShowRegistrationForm, reset) => 
 
             const responseGet = await fetch(`http://localhost:3000/users/${userId}`);
             if (!responseGet.ok) {
-                throw new Error("Не удалось получить данные пользователя");
+                throw new Error("Failed to get user data");
             }
             const userData = await responseGet.json();
 
@@ -25,7 +25,7 @@ export const useUserMutation = (setUserData, setShowRegistrationForm, reset) => 
             });
 
             if (!response.ok) {
-                throw new Error("Не удалось обновить данные пользователя");
+                throw new Error("Failed to update user data");
             }
 
             return response.json();
@@ -37,10 +37,9 @@ export const useUserMutation = (setUserData, setShowRegistrationForm, reset) => 
                 if (updatedUserData.fullName && updatedUserData.birthDate) {
                     setShowRegistrationForm(false);
                 }
-                console.log("Данные успешно обновлены");
             },
             onError: (error) => {
-                console.error("Ошибка при обновлении данных:", error);
+                console.error("Data updating error:", error);
             },
         }
     );

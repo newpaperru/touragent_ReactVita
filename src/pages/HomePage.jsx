@@ -19,7 +19,7 @@ export const PageHome = () => {
                 peoples
                 titleCheck
                 imgSrc={bgImg}
-                bgFiltered={styles.homePageFilter}
+                bgFiltered={styles.home_page_filter}
             />
             <Partners />
             <Category />
