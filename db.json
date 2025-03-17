@@ -7,6 +7,15 @@
       "password": "qwerty",
       "fullName": "Архангельский Борис Станиславович",
       "birthDate": "2005-02-01"
+    },
+    {
+      "id": "813b",
+      "email": "boristar010205@icloud.com",
+      "phone": "+79632567999",
+      "password": "qwerty",
+      "repeatPassword": "qwerty",
+      "fullName": "Архангельский Борис Станиславович",
+      "birthDate": "2005-02-01"
     }
   ]
 }

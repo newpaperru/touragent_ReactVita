@@ -16,7 +16,6 @@ export const ProfileCard = () => {
         setUserData,
         showRegistrationForm,
         setShowRegistrationForm,
-        isLoading,
     } = useUserData(navigate);
 
     const {
@@ -43,9 +42,7 @@ export const ProfileCard = () => {
     };
     return (
         <div>
-            {isLoading ? (
-            <p>Загрузка...</p>
-        ) : showRegistrationForm ? (
+            {showRegistrationForm ? (
             <div className={styles.profile_card}>
                 <div className={styles.user_info}>
                     <div className={styles.user}>
@@ -73,50 +70,49 @@ export const ProfileCard = () => {
                         log out
                     </button>
                 </div>
-
                 <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className={styles.wrapper}>
-                            <div className={styles.input_wrapper}>
-                                <label className={styles.label}>
-                                    Full Name:
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your full name ..."
-                                    {...register("fullName", {
-                                        required: true,
-                                    })}
-                                    className={styles.input}
-                                />
-                                {errors.fullName && (
-                                    <p className={styles.error}>
-                                        The date of birth is required
-                                    </p>
-                                )}
-                            </div>
-
-                            <div style={styles.inputContainerStyle}>
-                                <label className={styles.label}>
-                                    Date of birth:
-                                </label>
-                                <input
-                                    type="date"
-                                    {...register("birthDate", {
-                                        required: true,
-                                    })}
-                                    className={styles.input}
-                                />
-                                {errors.birthDate && (
-                                    <p className={styles.error}>
-                                        The date of birth is required
-                                    </p>
-                                )}
-                            </div>
+                    <div className={styles.wrapper}>
+                        <div className={styles.input_wrapper}>
+                            <label className={styles.label}>
+                                Full Name:
+                            </label>
+                            <input
+                                type="text"
+                                placeholder="Enter your full name ..."
+                                {...register("fullName", {
+                                    required: true,
+                                })}
+                                className={styles.input}
+                            />
+                            {errors.fullName && (
+                                <p className={styles.error}>
+                                    The date of birth is required
+                                </p>
+                            )}
                         </div>
-                        <button type="submit" className={styles.buttonStyle}>
-                            Save
-                        </button>
-                    </form>
+
+                        <div style={styles.inputContainerStyle}>
+                            <label className={styles.label}>
+                                Date of birth:
+                            </label>
+                            <input
+                                type="date"
+                                {...register("birthDate", {
+                                    required: true,
+                                })}
+                                className={styles.input}
+                            />
+                            {errors.birthDate && (
+                                <p className={styles.error}>
+                                    The date of birth is required
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                    <button type="submit" className={styles.buttonStyle}>
+                        Save
+                    </button>
+                </form>
             </div>
         ) : (
             <div className={styles.profile_card}>
@@ -146,6 +142,8 @@ export const ProfileCard = () => {
                         log out
                     </button>
                 </div>
+
+                
             </div>
         )}
         </div>
