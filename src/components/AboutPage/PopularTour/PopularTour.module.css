@@ -1,0 +1,40 @@
+.popular_tour {
+    margin-bottom: 177px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding: 0 264px;
+}
+
+.subtitle {
+    font-family: "Poppins Bold";
+    font-size: 18px;
+    color: #DF6951;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.1em;
+}
+
+.title {
+    font-family: "Volkhov Bold";
+    font-size: 50px;
+    color: #181E4B;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.description {
+    max-width: 583px;
+    width: 100%;
+
+    font-family: "Poppins Regular";
+    margin-bottom: 85px;
+}

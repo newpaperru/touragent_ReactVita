@@ -1,0 +1,11 @@
+.gallery_international {
+    display: grid;
+    grid-template-columns: repeat(4, 363px);
+    column-gap: 56px;
+    row-gap: 52px;
+}
+
+
+.two_rows {
+    grid-row: span 2;
+}

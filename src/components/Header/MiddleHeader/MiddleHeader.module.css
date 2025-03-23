@@ -7,6 +7,14 @@
   margin-bottom: 15px;
 }
 
+.title {
+  font-family: "Poppins Bold";
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  font-size: 18px;
+}
+
 .description {
   margin-bottom: 15px;
   font-family: "Poppins Bold";
@@ -15,9 +23,15 @@
   font-weight: 700;
 }
 
+.description_alt {
+  font-family: "Yesteryear Regular";
+  color: white;
+  font-size: 158px;
+}
+
 @media (max-width: 1257px) {
   .description {
-    font-size: 48px; /* Уменьшаем размер шрифта */
+    font-size: 48px; 
   }
 }
 

@@ -1,3 +1,7 @@
+import { InternationalPackages } from '../components/AboutPage/InternationalPackages/InternationalPackages';
+import { PopularTour } from '../components/AboutPage/PopularTour/PopularTour';
+import { Wanderlust } from '../components/AboutPage/Wanderlust/Wanderlust';
+import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header'
 import styles from '../components/Header/Header.module.css';
 import bgAbout from '/bgAbout.png';
@@ -11,6 +15,10 @@ export const PageAbout = () => {
         imgSrc={bgAbout}
         bgFiltered={styles.about_page_filter}
       />
+      <PopularTour />
+      <Wanderlust />
+      <InternationalPackages />
+      <Footer />
     </>
   )
 }

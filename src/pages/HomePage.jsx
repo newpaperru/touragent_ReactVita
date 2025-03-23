@@ -21,6 +21,7 @@ export const PageHome = () => {
                 titleCheck
                 imgSrc={bgImg}
                 bgFiltered={styles.home_page_filter}
+                changeFontFamily
             />
             <Partners />
             <Category />

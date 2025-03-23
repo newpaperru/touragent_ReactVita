@@ -43,6 +43,7 @@ img {
 img, svg {
 	max-width: 100%;
 	height: auto;
+	object-fit: cover;
 	-webkit-user-drag: none;
 	user-drag: none;
 }

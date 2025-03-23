@@ -57,3 +57,12 @@
          url('../fonts/Manrope/Manrope-Bold.woff2') format('woff2');
     font-weight: 700;
 }
+
+/* Yesteryear */
+@font-face {
+    font-family: 'Yesteryear Regular';
+    src: 
+        url('../fonts/yesteryear/Yesteryear-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+}

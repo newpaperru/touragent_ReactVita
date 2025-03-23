@@ -1,0 +1,17 @@
+.circle {
+    transform: rotate(-90deg);
+}
+
+.circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.text {
+    color: #181E4B;
+    font-size: 18px;
+    font-family: "Poppins Bold";
+    letter-spacing: 0.1em;
+}
