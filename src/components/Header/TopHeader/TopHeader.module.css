@@ -53,3 +53,43 @@
 .dark_theme {
     color: #181E4B;
 }
+
+/* Адаптив для планшетов (до 1024px) */
+@media (max-width: 1024px) {
+    .container {
+      padding-top: 40px; /* Уменьшаем отступ сверху */
+    }
+  
+    .link, .dark_theme {
+      font-size: 15px; /* Уменьшаем размер шрифта */
+    }
+  
+    .link:not(:last-child), .dark_theme:not(:last-child) {
+      margin-right: 30px; /* Уменьшаем отступ между ссылками */
+    }
+  
+    .button_login {
+      padding: 12px 24px; /* Уменьшаем размер кнопки */
+      font-size: 15px; /* Уменьшаем размер шрифта кнопки */
+    }
+  }
+  
+  /* Адаптив для планшетов (до 768px) */
+  @media (max-width: 768px) {
+    .container {
+      padding-top: 30px; /* Еще больше уменьшаем отступ сверху */
+    }
+  
+    .link, .dark_theme {
+      font-size: 14px; /* Еще больше уменьшаем размер шрифта */
+    }
+  
+    .link:not(:last-child), .dark_theme:not(:last-child) {
+      margin-right: 20px; /* Еще больше уменьшаем отступ между ссылками */
+    }
+  
+    .button_login {
+      padding: 10px 20px; /* Еще больше уменьшаем размер кнопки */
+      font-size: 14px; /* Еще больше уменьшаем размер шрифта кнопки */
+    }
+  }

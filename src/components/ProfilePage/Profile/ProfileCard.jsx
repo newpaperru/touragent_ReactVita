@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserData } from "./useUserData";
 import { useUserMutation } from "./useUserMutation";
-import { AuthContext } from "../../services/AuthContext";
+import { AuthContext } from "../../../services/AuthContext";
 import { formatDate } from "./FormatDate";
 
 export const ProfileCard = () => {

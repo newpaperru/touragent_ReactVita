@@ -1,6 +1,5 @@
 .content {
   max-width: 631px;
-  
 }
 
 .img {
@@ -14,4 +13,22 @@
   color: #fff;
   font-size: 59px;
   font-weight: 700;
+}
+
+@media (max-width: 1257px) {
+  .description {
+    font-size: 48px; /* Уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 1024px) {
+  .description {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 36px;
+  }
 }

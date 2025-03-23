@@ -22,6 +22,7 @@ export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFilte
                                 peoples={peoples}
                                 titleCheck={titleCheck}
                             />
+                            <div></div>
                         </div>
                     </div>
                 </div>

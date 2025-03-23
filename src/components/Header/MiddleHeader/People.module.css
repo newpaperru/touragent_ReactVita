@@ -9,3 +9,13 @@
   color: #fff;
   font-size: 13px;
 }
+
+@media (max-width: 1257px) {
+  .container {
+    column-gap: 20px; /* Уменьшаем отступ между изображением и текстом */
+  }
+
+  .text {
+    font-size: 12px; /* Уменьшаем размер шрифта */
+  }
+}

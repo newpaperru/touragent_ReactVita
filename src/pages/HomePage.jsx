@@ -1,15 +1,16 @@
-import { Header } from "../components/Header/Header";
 import bgImg from "/bgImg.png";
 import styles from "../components/Header/Header.module.css";
-import { Partners } from "../components/Partners/Partners";
-import { Trending } from "../components/Trending/Trending";
+
+import { Header } from "../components/Header/Header";
+import { Partners } from "../components/HomePage/Partners/Partners";
+import { Trending } from "../components/HomePage/Trending/Trending";
 import { Footer } from "../components/Footer/Footer";
-import { Category } from "../components/Category/Category";
-import { FastNEasy } from "../components/FastNEasy/FastNEasy";
-import { Explore } from "../components/Explore/Explore";
-import { LetsMake } from "../components/LetsMake/LetsMake";
-import { BestPackages } from "../components/BestPackages/BestPackages";
-import { Honeymoon } from "../components/Honeymoon/Honeymoon";
+import { Category } from "../components/HomePage/Category/Category";
+import { FastNEasy } from "../components/HomePage/FastNEasy/FastNEasy";
+import { Explore } from "../components/HomePage/Explore/Explore";
+import { LetsMake } from "../components/HomePage/LetsMake/LetsMake";
+import { BestPackages } from "../components/HomePage/BestPackages/BestPackages";
+import { Honeymoon } from "../components/HomePage/Honeymoon/Honeymoon";
 
 export const PageHome = () => {
     return (
