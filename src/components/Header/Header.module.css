@@ -12,8 +12,8 @@
   max-height: 976px;
 }
 
-.homePageFilter,
-.aboutPageFilter {
+.home_page_filter,
+.about_page_filter {
   position: absolute;
   top: 0;
   z-index: 1;

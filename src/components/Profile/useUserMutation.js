@@ -1,6 +1,6 @@
 import { useMutation } from 'react-query';
 
-export const useUserMutation = (setUserData, setShowRegistrationForm, reset) => {
+export const useUserMutation = (setUserData, setShowRegistrationForm) => {
     return useMutation(
         async (formData) => {
             const userId = localStorage.getItem("userId");
@@ -33,7 +33,6 @@ export const useUserMutation = (setUserData, setShowRegistrationForm, reset) => 
         {
             onSuccess: (updatedUserData) => {
                 setUserData(updatedUserData);
-                reset();
                 if (updatedUserData.fullName && updatedUserData.birthDate) {
                     setShowRegistrationForm(false);
                 }

@@ -2,19 +2,10 @@
   "users": [
     {
       "id": "2085",
-      "email": "boryanski213@gmail.com",
+      "email": "allaaay@gmail.com",
       "phone": "+79632567812",
       "password": "qwerty",
-      "fullName": "Архангельский Борис Станиславович",
-      "birthDate": "2005-02-01"
-    },
-    {
-      "id": "d2ce",
-      "email": "boristar010205@icloud.com",
-      "phone": "+79673643222",
-      "password": "qwerty",
-      "repeatPassword": "qwerty",
-      "fullName": "Архангельский Борис Станиславович",
+      "fullName": "Антон Антонович Антонов",
       "birthDate": "2005-02-01"
     }
   ]
