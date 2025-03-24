@@ -4,7 +4,7 @@ import { useRegistrationForm } from "./useRegistrationForm";
 
 export const RegistrationForm = () => {
     const { register, handleSubmit, watch, onSubmit, mutation, errors } =
-useRegistrationForm();
+        useRegistrationForm();
     const password = watch("password");
 
     return (
@@ -12,6 +12,70 @@ useRegistrationForm();
             <h1 className={styles.title}>Registration</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
+                    {/* Поле для ФИО */}
+                    <div className={styles.input_wrap}>
+                        <label htmlFor="fullName">
+                            <input
+                                className={styles.input}
+                                id="fullName"
+                                type="text"
+                                placeholder="Full Name"
+                                {...register("fullName", {
+                                    required: "Enter your full name",
+                                    pattern: {
+                                        value: /^[A-Za-zА-Яа-я\s]+$/,
+                                        message: "Invalid full name format",
+                                    },
+                                })}
+                            />
+                            {errors.fullName && (
+                                <p className={styles.error}>
+                                    {errors.fullName.message}
+                                </p>
+                            )}
+                        </label>
+                    </div>
+
+                    <div className={styles.input_wrap}>
+                        <label htmlFor="birthDate">
+                            <input
+                                className={`${styles.input} ${styles.birth_date}`}
+                                id="birthDate"
+                                type="date"
+                                {...register("birthDate", {
+                                    required: "Enter your date of birth",
+                                    validate: {
+                                        notFuture: (value) => {
+                                            const selectedDate = new Date(
+                                                value
+                                            );
+                                            const today = new Date();
+                                            today.setHours(23, 59, 59, 999);
+                                            return (
+                                                selectedDate <= today ||
+                                                "Date cannot be in the future"
+                                            );
+                                        },
+                                        minYear: (value) => {
+                                            const minYear = 1900;
+                                            return (
+                                                new Date(value).getFullYear() >=
+                                                    minYear ||
+                                                `Year must be after ${minYear}`
+                                            );
+                                        },
+                                    },
+                                })}
+                            />
+                            {errors.birthDate && (
+                                <p className={styles.error}>
+                                    {errors.birthDate.message}
+                                </p>
+                            )}
+                        </label>
+                    </div>
+
+                    {/* Поле для email */}
                     <div className={styles.input_wrap}>
                         <label htmlFor="email">
                             <input
@@ -34,6 +98,8 @@ useRegistrationForm();
                             )}
                         </label>
                     </div>
+
+                    {/* Поле для телефона */}
                     <div className={styles.input_wrap}>
                         <label htmlFor="phone">
                             <input
@@ -56,6 +122,8 @@ useRegistrationForm();
                             )}
                         </label>
                     </div>
+
+                    {/* Поле для пароля */}
                     <div className={styles.input_wrap}>
                         <label htmlFor="password">
                             <input
@@ -78,6 +146,8 @@ useRegistrationForm();
                             )}
                         </label>
                     </div>
+
+                    {/* Поле для подтверждения пароля */}
                     <div className={styles.input_wrap}>
                         <label htmlFor="repeatPassword">
                             <input

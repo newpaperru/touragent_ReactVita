@@ -1,113 +1,99 @@
 import styles from "./ProfileCard.module.css";
 import avatarDefault from "/userDefaultAvatar.png";
-import { useContext, useState, useEffect } from "react";
+import Calender from "../../../assets/Icons/calenderDateIcon.svg?react";
+import Phone from "../../../assets/Icons/phoneIcon.svg?react";
+import Email from "../../../assets/Icons/emailIcon.svg?react";
+
+import { useContext, useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserData } from "./useUserData";
 import { useUserMutation } from "./useUserMutation";
 import { AuthContext } from "../../../services/AuthContext";
 import { formatDate } from "./FormatDate";
+import { useValidation } from "./useValidation";
+
+const InputField = ({
+    label,
+    name,
+    type = "text",
+    value,
+    error,
+    isEditing,
+    onChange,
+    placeholder,
+    Icon,
+    ...props
+}) => (
+    <div className={styles.input_wrapper}>
+        <label className={styles.label}>{label}</label>
+        <div className={styles.input_container}>
+            {Icon && <Icon className={styles.input_icon} />}
+            <input
+                {...props}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                disabled={!isEditing}
+                className={`${styles.input} ${!isEditing ? styles.input_blocked : ""} ${error ? styles.input_error : ""} ${Icon ? styles.with_icon : ""}`}
+            />
+        </div>
+        {error && <p className={styles.error_message}>{error}</p>}
+    </div>
+);
 
 export const ProfileCard = () => {
     const { setIsAuth } = useContext(AuthContext);
     const navigate = useNavigate();
     const [isEditing, setIsEditing] = useState(false);
-    const [formData, setFormData] = useState({
-        fullName: "",
-        birthDate: "",
-        email: "",
-        phone: "",
-    });
+    const [formData, setFormData] = useState({ fullName: "", birthDate: "", email: "", phone: "" });
+    const [errors, setErrors] = useState({});
+    const { validateField } = useValidation();
 
-    const [errors, setErrors] = useState({
-        email: "",
-        phone: "",
-    });
-
-    // Получение данных пользователя
-    const {
-        userData,
-        setUserData,
-        showRegistrationForm,
-        setShowRegistrationForm,
-    } = useUserData(navigate);
-
+    const { userData, setUserData, showRegistrationForm, setShowRegistrationForm } = useUserData(navigate);
     const mutation = useUserMutation(setUserData, setShowRegistrationForm);
 
-    // Функция выхода из аккаунта
-    const logout = () => {
+    const logout = useCallback(() => {
         setIsAuth(false);
         localStorage.removeItem("isAuth");
         localStorage.removeItem("userId");
         navigate("/login");
-    };
+    }, [setIsAuth, navigate]);
 
-    // Валидация email
-    const validateEmail = (email) => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    };
+    const handleInputChange = useCallback(
+        ({ target: { name, value } }) => {
+            setFormData((prev) => ({ ...prev, [name]: value }));
+            if (errors[name]) validateField(name, value, setErrors);
+        },
+        [errors, validateField]
+    );
 
-    // Валидация телефона
-    const validatePhone = (phone) => {
-        const regex = /^\+?\d{11,15}$/;
-        return regex.test(phone);
-    };
+    const handleSubmit = useCallback(
+        (e) => {
+            e.preventDefault();
+            const isValid = Object.entries(formData).every(([key, value]) =>
+                key === "birthDate" ? true : validateField(key, value, setErrors)
+            );
 
-    // Обработчик изменения полей формы
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+            if (!isValid) return;
+            mutation.mutate(formData);
+            setIsEditing(false);
+        },
+        [formData, mutation, validateField]
+    );
 
-        // Валидация в реальном времени
-        if (name === "email") {
-            setErrors((prev) => ({
-                ...prev,
-                email: validateEmail(value) ? "" : "Invalid email format",
-            }));
-        } else if (name === "phone") {
-            setErrors((prev) => ({
-                ...prev,
-                phone: validatePhone(value) ? "" : "Invalid phone format",
-            }));
-        }
-    };
-
-    // Обработчик отправки формы
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        // Проверка валидации перед отправкой
-        const isEmailValid = validateEmail(formData.email);
-        const isPhoneValid = validatePhone(formData.phone);
-
-        if (!isEmailValid || !isPhoneValid) {
-            setErrors({
-                email: isEmailValid ? "" : "Invalid email format",
-                phone: isPhoneValid ? "" : "Invalid phone format",
-            });
-            return;
-        }
-
-        mutation.mutate(formData);
-        setIsEditing(false);
-    };
-
-    // Обработчик отмены изменений
-    const handleCancel = () => {
+    const handleCancel = useCallback(() => {
         setFormData({
             fullName: userData.fullName || "",
             birthDate: userData.birthDate || "",
             email: userData.email || "",
             phone: userData.phone || "",
         });
-        setErrors({ email: "", phone: "" });
+        setErrors({});
         setIsEditing(false);
-    };
+    }, [userData]);
 
-    // Заполнение формы данными пользователя при загрузке
     useEffect(() => {
         if (userData) {
             setFormData({
@@ -123,137 +109,44 @@ export const ProfileCard = () => {
         <div className={styles.profile_card}>
             <div className={styles.user_info}>
                 <div className={styles.user}>
-                    <img
-                        src={avatarDefault}
-                        alt="аватарка"
-                        className={styles.user_avatar}
-                    />
+                    <img src={avatarDefault} alt="аватарка" className={styles.user_avatar} />
                     <div className={styles.user_data}>
-                        <span className={styles.user_fullname}>
-                            {userData.fullName}
-                        </span>
+                        <span className={styles.user_fullname}>{userData.fullName}</span>
                         <span className={styles.user_datas}>
+                            {userData.birthDate && <Calender fill="rgba(0, 0, 0, 0.26)" />}
                             {formatDate(userData.birthDate)}
                         </span>
                         <span className={styles.user_datas}>
+                            <Phone fill="rgba(0, 0, 0, 0.26)" />
                             {userData.phone}
                         </span>
                         <span className={styles.user_datas}>
+                            <Email fill="rgba(0, 0, 0, 0.26)" />
                             {userData.email}
                         </span>
                     </div>
                 </div>
-                <button className={styles.btn} onClick={logout}>
-                    log out
-                </button>
+                <button className={styles.btn} onClick={logout}>Log out</button>
             </div>
 
             <form onSubmit={handleSubmit}>
                 <div className={styles.wrapper}>
                     <div className={styles.group}>
-                        <div className={styles.input_wrapper}>
-                            <label className={styles.label}>Full Name:</label>
-                            <input
-                                type="text"
-                                name="fullName"
-                                placeholder="Enter your full name ..."
-                                value={formData.fullName}
-                                onChange={handleInputChange}
-                                disabled={!isEditing}
-                                className={
-                                    !isEditing
-                                        ? styles.input_blocked
-                                        : styles.input
-                                }
-                            />
-                        </div>
-
-                        <div className={styles.input_wrapper}>
-                            <label className={styles.label}>Email:</label>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Enter your email ..."
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                disabled={!isEditing}
-                                className={`${
-                                    !isEditing
-                                        ? styles.input_blocked
-                                        : styles.input
-                                } ${errors.email ? styles.input_error : ""}`}
-                            />
-                            {errors.email && (
-                                <p className={styles.error_message}>
-                                    {errors.email}
-                                </p>
-                            )}
-                        </div>
+                        <InputField label="Full Name:" name="fullName" value={formData.fullName} error={errors.fullName} isEditing={isEditing} onChange={handleInputChange} placeholder="Enter your full name ..." />
+                        <InputField label="Email:" name="email" type="email" value={formData.email} error={errors.email} isEditing={isEditing} onChange={handleInputChange} placeholder="Enter your email ..." />
                     </div>
-
                     <div className={styles.group}>
-                        <div className={styles.input_wrapper}>
-                            <label className={styles.label}>
-                                Date of birth:
-                            </label>
-                            <input
-                                type="date"
-                                name="birthDate"
-                                value={formData.birthDate}
-                                onChange={handleInputChange}
-                                disabled={!isEditing}
-                                className={
-                                    !isEditing
-                                        ? styles.input_blocked
-                                        : styles.input
-                                }
-                            />
-                        </div>
-
-                        <div className={styles.input_wrapper}>
-                            <label className={styles.label}>Phone:</label>
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Enter your phone ..."
-                                value={formData.phone}
-                                onChange={handleInputChange}
-                                disabled={!isEditing}
-                                className={`${
-                                    !isEditing
-                                        ? styles.input_blocked
-                                        : styles.input
-                                } ${errors.phone ? styles.input_error : ""}`}
-                            />
-                            {errors.phone && (
-                                <p className={styles.error_message}>
-                                    {errors.phone}
-                                </p>
-                            )}
-                        </div>
+                        <InputField label="Date of birth:" name="birthDate" type="date" value={formData.birthDate} isEditing={isEditing} onChange={handleInputChange} />
+                        <InputField label="Phone:" name="phone" type="tel" value={formData.phone} error={errors.phone} isEditing={isEditing} onChange={handleInputChange} placeholder="Enter your phone ..." />
                     </div>
                 </div>
 
                 {!showRegistrationForm && !isEditing ? (
-                    <button
-                        type="button"
-                        className={styles.btn}
-                        onClick={() => setIsEditing(true)}
-                    >
-                        Edit
-                    </button>
+                    <button type="button" className={styles.btn} onClick={() => setIsEditing(true)}>Edit</button>
                 ) : (
                     <div className={styles.buttons_container}>
-                        <button type="submit" className={styles.btn}>
-                            Save
-                        </button>
-                        <button
-                            type="button"
-                            className={styles.btn}
-                            onClick={handleCancel}
-                        >
-                            Cancel
-                        </button>
+                        <button type="submit" className={styles.btn}>Save</button>
+                        <button type="button" className={styles.btn} onClick={handleCancel}>Cancel</button>
                     </div>
                 )}
             </form>

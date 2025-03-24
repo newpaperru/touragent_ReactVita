@@ -49,6 +49,10 @@
 .user_datas {
     font-family: "Poppins Medium";
     color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
 }
 
 .wrapper {
@@ -65,6 +69,10 @@
     font-size: 18px;
 }
 
+.input_wrapper {
+    margin-bottom: 10px;
+}
+
 
 
 .input,
@@ -73,7 +81,7 @@
     border-radius: 12px;
     padding: 27px 22px;
     width: 580px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .input_blocked {
@@ -87,7 +95,7 @@
 }
 
 .input_error {
-    border: 1px solid red !important; /* Красная рамка для полей с ошибками */
+    border: 1px solid red !important;
 }
 
 .error_message {

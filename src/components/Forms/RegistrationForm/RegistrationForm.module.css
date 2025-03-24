@@ -29,6 +29,10 @@
     font-family: "Poppins Regular";
 }
 
+.birth_date {
+    padding-right: 22px;
+}
+
 .error {
     color: red;
     font-family: "Poppins Medium";

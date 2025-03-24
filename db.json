@@ -1,12 +1,22 @@
 {
   "users": [
     {
-      "id": "2085",
-      "email": "allaaay@gmail.com",
-      "phone": "+79632567812",
+      "id": "93bb",
+      "fullName": " Архангельский Борис Станиславович",
+      "birthDate": "2005-02-01",
+      "email": "boristar010205@icloud.com",
+      "phone": "+79673643999",
       "password": "qwerty",
+      "repeatPassword": "qwerty"
+    },
+    {
+      "id": "26a7",
       "fullName": "Архангельский Борис Станиславович",
-      "birthDate": "2005-02-01"
+      "birthDate": "2005-02-12",
+      "email": "boryanski212@gmail.com",
+      "phone": "+79673643997",
+      "password": "qwerty",
+      "repeatPassword": "qwerty"
     }
   ]
 }

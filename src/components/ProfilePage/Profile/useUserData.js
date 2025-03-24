@@ -9,25 +9,16 @@ export const useUserData = (navigate) => {
         const fetchUserData = async () => {
             try {
                 const response = await fetch(`http://localhost:3000/users/${userId}`);
-                if (!response.ok) {
-                    throw new Error("Failed to get user data");
-                }
+                if (!response.ok) throw new Error("Failed to get user data");
                 const user = await response.json();
                 setUserData(user);
-
-                if (user.fullName && user.birthDate) {
-                    setShowRegistrationForm(false);
-                }
+                setShowRegistrationForm(!(user.fullName && user.birthDate));
             } catch (error) {
                 console.error("Data loading error:", error);
             }
         };
 
-        if (userId) {
-            fetchUserData();
-        } else {
-            navigate("/login");
-        }
+        userId ? fetchUserData() : navigate("/login");
     }, [userId, navigate]);
 
     return { userData, setUserData, showRegistrationForm, setShowRegistrationForm };
