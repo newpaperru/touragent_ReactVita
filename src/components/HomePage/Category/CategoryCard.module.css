@@ -2,7 +2,7 @@
     max-width: 200px;
 }
 
-.img {
+.card > svg {
     display: block;
     margin: 0 auto 20px;
 }

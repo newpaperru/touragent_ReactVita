@@ -2,6 +2,11 @@
   max-width: 631px;
 }
 
+.content_alt {
+  text-align: center;
+  width: 100%;
+}
+
 .img {
   display: inline-block;
   margin-bottom: 15px;

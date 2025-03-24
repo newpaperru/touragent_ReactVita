@@ -1,14 +1,14 @@
 import styles from "./MiddleHeader.module.css";
 import { People } from "./People";
-import titleVector from "/titleVector.svg";
+import TitleVector from "../../../assets/Icons/titleVector.svg?react";
 
 // eslint-disable-next-line react/prop-types
-export const MiddleHeader = ({ title, description, peoples, titleCheck, theme }) => {
+export const MiddleHeader = ({ title, description, peoples, titleCheck, theme, handClass }) => {
     return (
-      <div className={styles.content}>
+      <div className={handClass}>
         {titleCheck ? 
           (
-            <img className={styles.img} src={titleVector}></img>
+            <TitleVector className={styles.img}/>
           ) : (
             <span className={styles.title}>{title}</span>
           )}

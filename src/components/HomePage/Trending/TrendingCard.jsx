@@ -1,8 +1,8 @@
 import styles from "./TrendingCard.module.css";
-import calender from "/calender.svg";
-import userAvatar from "/user-avatar-outline.svg";
-import star from "/star-fill.svg";
-import location from "/location.svg";
+import Calender from "../../../assets/Icons/calender.svg?react";
+import UserAvatar from "../../../assets/Icons/user-avatar-outline.svg?react";
+import Star from "../../../assets/Icons/star-fill.svg?react";
+import Location from "../../../assets/Icons/location.svg?react";
 import "../../../css/font-style.css";
 
 export const TrendingCard = ({
@@ -46,11 +46,11 @@ export const TrendingCard = ({
             <div className={styles.container}>
                 <div className={styles.data}>
                     <div className={styles.days_wrap}>
-                        <img src={calender} alt="иконка календаря" />
+                        <Calender />
                         <span className={styles.days}>{countDays} Days</span>
                     </div>
                     <div className={styles.people_wrap}>
-                        <img src={userAvatar} alt="иконка аватар" />
+                        <UserAvatar />
                         <span className={styles.people}>
                             {handlingCountPeople(countPeople)} people going
                         </span>
@@ -60,12 +60,12 @@ export const TrendingCard = ({
                     <h3 className={styles.country_name}>{title}</h3>
                     <div style={{ display: "flex", alignItems: "center" }}>
                         {stars.map((_, index) => (
-                            <img src={star} key={index} alt="иконка звезды" />
+                            <Star key={index} />
                         ))}
                     </div>
                 </div>
                 <div className={styles.place_wrap}>
-                    <img src={location} alt="иконка места" />
+                    <Location />
                     <span className={styles.name_place}>{place}</span>
                 </div>
                 <div className={styles.price_wrap}>

@@ -2,8 +2,9 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../services/AuthContext';
 import { useContext } from 'react';
 import styles from "./TopHeader.module.css";
+import Logo from "../../../assets/Icons/logo.svg?react";
 
-export const TopHeader = ({logoImg, theme}) => {
+export const TopHeader = ({theme, handColorSvg = "light"}) => {
     // Получаем текущий путь
     const location = useLocation();
     const navigate = useNavigate();
@@ -13,11 +14,12 @@ export const TopHeader = ({logoImg, theme}) => {
     const links = [
         { id: 1, label: "Home", to: "/" },
         { id: 2, label: "About", to: "/about" },
+        { id: 3, label: "Search", to: "/search" },
     ];
 
     return (
         <div className={styles.container}>
-            {logoImg && <img src={logoImg} alt="логотип" />}
+            <Logo fill={handColorSvg === 'dark' ? '#181E4B' : '#fff'} />
             <nav>
                 {links.map((link) => (
                     <Link

@@ -1,16 +1,21 @@
 import styles from './FooterSocial.module.css';
-import logo from '/logoDark.svg';
+
+import Logo from '../../../assets/logo.svg?react';
+import Linkedin from '../../../assets/Icons/linkedin.svg?react'
+import Messenger from '../../../assets/Icons/messenger.svg?react'
+import Twitter from '../../../assets/Icons/twitter.svg?react'
+import Twoo from '../../../assets/Icons/twoo.svg?react'
 
 export const FooterSocial = () => {
     return (
         <div className={styles.footer_social}>
-            <img src={logo} alt="логотип компании" style={{maxWidth: 126}} />
+            <Logo fill={"#181E4B"}/>
             <span className={styles.text}>Travel Helps Companies Manage Payments Easily.</span>
             <div className={styles.icons_wrap}>
-                <img src="/linkedin.svg" alt="иконка соц сети" />
-                <img src="/messenger.svg" alt="иконка соц сети" />
-                <img src="/twitter.svg" alt="иконка соц сети" />
-                <img src="/twoo.svg" alt="иконка соц сети" />
+                <Linkedin />
+                <Messenger />
+                <Twitter />
+                <Twoo />
             </div>
         </div>
     )

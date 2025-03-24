@@ -2,10 +2,9 @@ import { MiddleHeader } from "./MiddleHeader/MiddleHeader"
 import { TopHeader } from "./TopHeader/TopHeader"
 import styles from "./Header.module.css"
 import anotherStyles from "./MiddleHeader/MiddleHeader.module.css";
-import logo from "/logo.svg";
 import stylesTopHeader from './TopHeader/TopHeader.module.css'
 
-export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFiltered, changeFontFamily}) => {
+export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFiltered, changeFontFamily, handClass}) => {
     return (
         <>
             <header className={styles.header}>
@@ -14,15 +13,15 @@ export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFilte
                     <div className={bgFiltered}>
                         <div className={styles.container}>
                             <TopHeader 
-                            logoImg={logo}
                             theme={stylesTopHeader.link}
                             />
                             <MiddleHeader
-                                title={title} 
+                                title={title}
                                 theme={changeFontFamily ? anotherStyles.description : anotherStyles.description_alt} 
                                 description={description} 
                                 peoples={peoples}
                                 titleCheck={titleCheck}
+                                handClass={handClass}
                             />
                             <div></div>
                         </div>

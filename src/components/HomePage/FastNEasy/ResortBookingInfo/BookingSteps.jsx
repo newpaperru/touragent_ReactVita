@@ -1,14 +1,14 @@
 import styles from './BookingSteps.module.css';
-import chooseDestinationIcon from '/chooseDestination.svg';
-import taxiTransportIcon from '/taxiTransport.svg';
-import waterSportIcon from '/waterSport.svg'
+import ChooseDestinationIcon from '../../../../assets/Icons/chooseDestination.svg?react';
+import TaxiTransportIcon from '../../../../assets/Icons/taxiTransport.svg?react';
+import WaterSportIcon from '../../../../assets/Icons/waterSport.svg?react'
 
 export const BookingSteps = () => {
     return (
         <ul className={styles.list}>
             <li className={styles.element}>
                 <div className={styles.icon}>
-                    <img src={chooseDestinationIcon} alt="иконка" />
+                    <ChooseDestinationIcon />
                 </div>
                 <div className={styles.text_wrap}>
                     <span className={styles.title}>Choose Destination</span>
@@ -18,7 +18,7 @@ export const BookingSteps = () => {
             </li>
             <li className={styles.element}>
                 <div className={styles.icon}>
-                    <img src={waterSportIcon} alt="иконка" />
+                    <WaterSportIcon />
                 </div>
                 <div className={styles.text_wrap}>
                     <span className={styles.title}>Check Availability</span>
@@ -28,7 +28,7 @@ export const BookingSteps = () => {
             </li>
             <li className={styles.element}>
                 <div className={styles.icon}>
-                    <img src={taxiTransportIcon} alt="иконка" />
+                    <TaxiTransportIcon />
                 </div>
                 <div className={styles.text_wrap}>
                     <span className={styles.title}>Let’s Go</span>

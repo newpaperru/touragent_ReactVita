@@ -4,6 +4,7 @@ import { Wanderlust } from '../components/AboutPage/Wanderlust/Wanderlust';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header'
 import styles from '../components/Header/Header.module.css';
+import middleHeaderStyles from "../components/Header/MiddleHeader/MiddleHeader.module.css";
 import bgAbout from '/bgAbout.png';
 
 export const PageAbout = () => {
@@ -13,7 +14,9 @@ export const PageAbout = () => {
         title="Read"
         description="About Us"
         imgSrc={bgAbout}
-        bgFiltered={styles.about_page_filter}
+        bgFiltered={styles.others_page_filter}
+        handClass={middleHeaderStyles.content_alt}
+        handColorSvg="light"
       />
       <PopularTour />
       <Wanderlust />

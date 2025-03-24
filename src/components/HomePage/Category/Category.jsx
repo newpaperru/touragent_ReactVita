@@ -1,32 +1,32 @@
 import styles from "./Category.module.css";
-import GuidedTours from "/guidedTours.svg";
-import BestFlights from "/bestFlights.svg";
-import ReligiousTours from "/religTours.svg";
-import MedicalInsurance from "/medicInsurance.svg";
+import GuidedTours from "../../../assets/Icons/guidedTours.svg?react";
+import BestFlights from "../../../assets/Icons/bestFlights.svg?react";
+import ReligiousTours from "../../../assets/Icons/religTours.svg?react";
+import MedicalInsurance from "../../../assets/Icons/medicInsurance.svg?react";
 import { CategoryCard } from "./CategoryCard";
 
 const cards = [
     {
         id: 1,
-        img: GuidedTours,
+        img: <GuidedTours />,
         title: "Guided Tours",
         text: "sunt qui repellat saepe quo velit aperiam id aliquam placeat.",
     },
     {
         id: 2,
-        img: BestFlights,
+        img: <BestFlights />,
         title: "Best Flights Options",
         text: "sunt qui repellat saepe quo velit aperiam id aliquam placeat.",
     },
     {
         id: 3,
-        img: ReligiousTours,
+        img: <ReligiousTours />,
         title: "Religious Tours",
         text: "sunt qui repellat saepe quo velit aperiam id aliquam placeat.",
     },
     {
         id: 4,
-        img: MedicalInsurance,
+        img: <MedicalInsurance />,
         title: "Medical insurance",
         text: "sunt qui repellat saepe quo velit aperiam id aliquam placeat.",
     },

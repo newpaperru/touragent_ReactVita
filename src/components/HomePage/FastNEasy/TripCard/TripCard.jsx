@@ -1,9 +1,9 @@
 import styles from "./TripCard.module.css";
 import bigImg from "/hawaiiTripCard.png";
-import building from "/building.svg";
-import leaf from "/leaf.svg";
-import map from "/map.svg";
-import send from "/send.svg";
+import Building from "../../../../assets/Icons/building.svg?react";
+import Leaf from "../../../../assets/Icons/leaf.svg?react";
+import Map from "../../../../assets/Icons/map.svg?react";
+import Send from "../../../../assets/Icons/send.svg?react";
 
 export const TripCard = () => {
     return (
@@ -15,17 +15,17 @@ export const TripCard = () => {
             </div>
             <div className={styles.icons}>
                 <div className={styles.icon}>
-                    <img src={leaf} alt="иконка листа" />
+                    <Leaf />
                 </div>
                 <div className={styles.icon}>
-                    <img src={map} alt="иконка карты" />
+                    <Map />
                 </div>
                 <div className={styles.icon}>
-                    <img src={send} alt="иконка отправки" />
+                    <Send />
                 </div>
             </div>
             <div className={styles.count_wrap}>
-                <img src={building} alt="иконка здания" />
+                <Building />
                 <span className={styles.count_people}>
                     60 people are interested
                 </span>

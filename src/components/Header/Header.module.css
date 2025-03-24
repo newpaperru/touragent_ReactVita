@@ -14,7 +14,7 @@
 }
 
 .home_page_filter,
-.about_page_filter {
+.others_page_filter {
   position: absolute;
   top: 0;
   z-index: 1;
@@ -26,7 +26,7 @@
   background-color: rgba(0, 0, 0, 0.33);
 }
 
-.about_page_filter {
+.others_page_filter {
   background-color: rgba(38, 38, 38, 0.33);
 }
 

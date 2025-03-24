@@ -1,5 +1,6 @@
 import bgImg from "/bgImg.png";
 import styles from "../components/Header/Header.module.css";
+import middleHeaderStyles from "../components/Header/MiddleHeader/MiddleHeader.module.css";
 
 import { Header } from "../components/Header/Header";
 import { Partners } from "../components/HomePage/Partners/Partners";
@@ -18,6 +19,8 @@ export const PageHome = () => {
             <Header
                 description="No matter where you’re going to, we’ll take you there"
                 peoples
+                handClass={middleHeaderStyles.content}
+                isCenter
                 titleCheck
                 imgSrc={bgImg}
                 bgFiltered={styles.home_page_filter}

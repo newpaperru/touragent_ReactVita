@@ -7,6 +7,7 @@ import { PageAbout } from "./pages/AboutPage";
 import { PageProfile } from "./pages/ProfilePage";
 import { PageRegistration } from "./pages/RegistrationPage";
 import { PageLogin } from "./pages/LoginPage";
+import { SearchPage } from "./pages/SearchPage";
 
 function App() {
     const [isAuth, setIsAuth] = useState(() => {
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/" element={<PageHome />} />
                     <Route path="/about" element={<PageAbout />} />
                     <Route path="/profile" element={<PageProfile />} />
+                    <Route path="/search" element={<SearchPage />} />
                     <Route
                         path="/registration"
                         element={<PageRegistration />}
