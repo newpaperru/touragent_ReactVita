@@ -1,63 +1,75 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+
+const fetchArchiveData = async () => {
+  const response = await fetch("http://localhost:3000/archive");
+  if (!response.ok) throw new Error("Network response was not ok");
+  return response.json();
+};
 
 export const useArchiveData = () => {
-    const [archiveData, setArchiveData] = useState([]);
-    const [activeFilter, setActiveFilter] = useState(null);
-    const [textFilters, setTextFilters] = useState({
-        destination: "",
-        priceFrom: "",
-        priceTo: "",
-        ratingTo: ""
+    const [state, setState] = useState({
+        archiveData: [],
+        activeFilter: null,
+        textFilters: {
+            destination: "",
+            priceFrom: "",
+            priceTo: "",
+            ratingTo: ""
+        },
+        currentPage: 1,
+        isLoading: false,
+        error: null
     });
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(6);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                const response = await fetch("http://localhost:3000/archive");
-                if (!response.ok) throw new Error("Network response was not ok");
-                const data = await response.json();
-                setArchiveData(data);
-            } catch (error) {
-                setError(error.message);
-                console.error("Error loading data:", error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchData();
+    const itemsPerPage = 6;
+
+    const fetchData = useCallback(async () => {
+        setState(prev => ({...prev, isLoading: true}));
+        try {
+            const data = await fetchArchiveData();
+            setState(prev => ({
+                ...prev,
+                archiveData: data,
+                isLoading: false
+            }));
+        } catch (error) {
+            setState(prev => ({
+                ...prev,
+                error: error.message,
+                isLoading: false
+            }));
+        }
     }, []);
 
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
     const getFilteredData = useMemo(() => {
+        const { archiveData, activeFilter, textFilters } = state;
         let result = [...archiveData];
 
         // Текстовая фильтрация
         if (textFilters.destination) {
+            const searchTerm = textFilters.destination.toLowerCase();
             result = result.filter(item => 
-                item.country.toLowerCase().includes(textFilters.destination.toLowerCase())
+                item.country.toLowerCase().includes(searchTerm)
             );
         }
 
         if (textFilters.priceFrom) {
-            result = result.filter(item => 
-                Number(item.price) >= Number(textFilters.priceFrom)
-            );
+            const minPrice = Number(textFilters.priceFrom);
+            result = result.filter(item => Number(item.price) >= minPrice);
         }
 
         if (textFilters.priceTo) {
-            result = result.filter(item => 
-                Number(item.price) <= Number(textFilters.priceTo)
-            );
+            const maxPrice = Number(textFilters.priceTo);
+            result = result.filter(item => Number(item.price) <= maxPrice);
         }
 
         if (textFilters.ratingTo) {
-            result = result.filter(item => 
-                Number(item.rating) <= Number(textFilters.ratingTo)
-            );
+            const maxRating = Number(textFilters.ratingTo);
+            result = result.filter(item => Number(item.rating) <= maxRating);
         }
 
         // Сортировка
@@ -75,44 +87,65 @@ export const useArchiveData = () => {
         }
 
         return result;
-    }, [archiveData, activeFilter, textFilters]);
+    }, [state.archiveData, state.activeFilter, state.textFilters]);
 
-    // Пагинация
     const paginatedData = useMemo(() => {
-        const startIndex = (currentPage - 1) * itemsPerPage;
+        const startIndex = (state.currentPage - 1) * itemsPerPage;
         return getFilteredData.slice(startIndex, startIndex + itemsPerPage);
-    }, [getFilteredData, currentPage, itemsPerPage]);
+    }, [getFilteredData, state.currentPage]);
 
     const totalPages = Math.ceil(getFilteredData.length / itemsPerPage);
 
-    const resetFilter = () => {
-        setActiveFilter(null);
-        setTextFilters({
-            destination: "",
-            priceFrom: "",
-            priceTo: "",
-            ratingTo: ""
-        });
-        setCurrentPage(1);
-    };
+    const setActiveFilter = useCallback((filter) => {
+        setState(prev => ({
+            ...prev,
+            activeFilter: filter,
+            currentPage: 1
+        }));
+    }, []);
 
-    const goToPage = (page) => {
-        setCurrentPage(Math.max(1, Math.min(page, totalPages)));
-    };
+    const setTextFilters = useCallback((filters) => {
+        setState(prev => ({
+            ...prev,
+            textFilters: filters,
+            currentPage: 1
+        }));
+    }, []);
+
+    const resetFilter = useCallback(() => {
+        setState(prev => ({
+            ...prev,
+            activeFilter: null,
+            textFilters: {
+                destination: "",
+                priceFrom: "",
+                priceTo: "",
+                ratingTo: ""
+            },
+            currentPage: 1
+        }));
+    }, []);
+
+    const goToPage = useCallback((page) => {
+        setState(prev => ({
+            ...prev,
+            currentPage: Math.max(1, Math.min(page, totalPages))
+        }));
+    }, [totalPages]);
 
     return {
-        archiveData,
+        archiveData: state.archiveData,
         filteredData: paginatedData,
         fullFilteredData: getFilteredData,
-        activeFilter,
+        activeFilter: state.activeFilter,
         setActiveFilter,
-        textFilters,
+        textFilters: state.textFilters,
         setTextFilters,
         resetFilter,
-        currentPage,
+        currentPage: state.currentPage,
         totalPages,
         goToPage,
-        isLoading,
-        error
+        isLoading: state.isLoading,
+        error: state.error
     };
 };
