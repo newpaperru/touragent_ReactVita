@@ -1,0 +1,73 @@
+.packages_card {
+    padding: 21px;
+    max-width: 373px;
+    cursor: pointer;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.33);
+    border-radius: 21px;
+}
+
+.info_img {
+    background: #DF6951;
+    padding: 10px 22px;
+    margin-bottom: 25px;
+    max-width: 328px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    padding-left: 22px;
+}
+
+.img  {
+    max-width: 328px;
+    width: 100%;
+    border-radius: 21px 21px 0 0;
+}
+
+.details, .star_wrap, 
+.date_wrap, .people_wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.details {
+    column-gap: 18px;
+}
+
+.star_wrap {
+    column-gap: 5px;
+}
+
+
+.info_text {
+    font-family: "Poppins Medium";
+    color: #fff;
+    font-size: 12px;
+}
+
+.country {
+    color: #181E4B;
+    font-size: 34px;
+    font-family: "Volkhov Bold";
+    margin-bottom: 5px;
+    display: block;
+}
+
+.description {
+    color: #181E4B;
+    font-size: 17px;
+    font-family: "Poppins Regular";
+    margin-bottom: 21px;
+}
+
+.price, .star_wrap {
+    color: #262626;
+    font-size: 18px;
+    font-family: "Poppins Medium";
+}

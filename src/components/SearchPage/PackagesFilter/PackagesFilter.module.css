@@ -1,0 +1,103 @@
+.packages_filter {
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.33);
+    align-self: flex-start;
+}
+
+.subtitle {
+    color: #181E4B;
+    font-family: "Volkhov Bold";
+    font-size: 42px;
+    text-align: center;
+    display: block;
+}
+
+.description {
+    font-family: "Poppins Regular";
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.filter_title {
+    font-family: "Poppins Bold";
+    font-size: 20px;
+    color: #343434;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.search_field, .filter_section {
+    margin-bottom: 25px;
+}
+
+.search_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    font-family: "Poppins Regular";
+}
+
+.search_input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #666;
+}
+.price_inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.input_group {
+    flex: 1;
+}
+
+.input_group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+
+    font-family: "Poppins Regular";
+}
+
+.input_group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+
+    font-family: "Poppins Regular";
+}
+
+.rating_input {
+    position: relative;
+}
+
+.rating_input input {
+    padding-right: 30px;
+}
+
+.star_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #FFD700;
+}

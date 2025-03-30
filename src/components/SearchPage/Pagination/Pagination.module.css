@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 117px;
+}
+
+.paginationButton {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background: #f0f0f0;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.paginationButton.active {
+    border-color: #4a4aff;
+}

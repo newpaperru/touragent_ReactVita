@@ -18,5 +18,70 @@
       "password": "qwerty",
       "repeatPassword": "qwerty"
     }
+  ],
+  "archive": [
+    {
+      "date": "2025-09-12",
+      "urlImg": "/packageImg.png",
+      "country": "Switzerland",
+      "price": "1100",
+      "rating": "5.0",
+      "countPeople": "120",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-08-26",
+      "urlImg": "/packagesBerlinImg.png",
+      "country": "Berlin",
+      "price": "1500",
+      "rating": "4.7",
+      "countPeople": "100",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-04-20",
+      "urlImg": "/packagesMaldivesImg.png",
+      "country": "Maldives",
+      "price": "2000",
+      "rating": "5.0",
+      "countPeople": "500",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-02-10",
+      "urlImg": "/packagesTorrontoImg.png",
+      "country": "Torronto",
+      "price": "1000",
+      "rating": "3.0",
+      "countPeople": "56",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-11-6",
+      "urlImg": "/packagesBakuImg.png",
+      "country": "Baku",
+      "price": "1499",
+      "rating": "2.4",
+      "countPeople": "12",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-12-02",
+      "urlImg": "/packagesChineseImg.png",
+      "country": "Chinese",
+      "price": "1399",
+      "rating": "1.5",
+      "countPeople": "200",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "date": "2025-10-02",
+      "urlImg": "/packagesChineseImg.png",
+      "country": "adasddsadasdas",
+      "price": "1299",
+      "rating": "3.5",
+      "countPeople": "250",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    }
   ]
 }

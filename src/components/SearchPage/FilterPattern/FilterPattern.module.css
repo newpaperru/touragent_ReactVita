@@ -1,0 +1,27 @@
+.filter_element {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #343434;
+    font-family: "Poppins Bold";
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    padding: 55px 0;
+    background: #fff;
+}
+
+.filter_pattern {
+    max-width: 1328px;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 2;
+}
