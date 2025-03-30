@@ -1,13 +1,13 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 
 export const useArchiveData = () => {
     const [archiveData, setArchiveData] = useState([]);
     const [activeFilter, setActiveFilter] = useState(null);
     const [textFilters, setTextFilters] = useState({
-        destination: '',
-        priceFrom: '',
-        priceTo: '',
-        ratingTo: ''
+        destination: "",
+        priceFrom: "",
+        priceTo: "",
+        ratingTo: ""
     });
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(6);
@@ -19,7 +19,7 @@ export const useArchiveData = () => {
             setIsLoading(true);
             try {
                 const response = await fetch("http://localhost:3000/archive");
-                if (!response.ok) throw new Error('Network response was not ok');
+                if (!response.ok) throw new Error("Network response was not ok");
                 const data = await response.json();
                 setArchiveData(data);
             } catch (error) {
@@ -63,11 +63,11 @@ export const useArchiveData = () => {
         // Сортировка
         if (activeFilter) {
             switch (activeFilter) {
-                case 'date': 
+                case "date": 
                     return result.sort((a, b) => new Date(a.date) - new Date(b.date));
-                case 'price-asc': 
+                case "price-asc": 
                     return result.sort((a, b) => Number(a.price) - Number(b.price));
-                case 'price-desc': 
+                case "price-desc": 
                     return result.sort((a, b) => Number(b.price) - Number(a.price));
                 default: 
                     return result;
@@ -88,10 +88,10 @@ export const useArchiveData = () => {
     const resetFilter = () => {
         setActiveFilter(null);
         setTextFilters({
-            destination: '',
-            priceFrom: '',
-            priceTo: '',
-            ratingTo: ''
+            destination: "",
+            priceFrom: "",
+            priceTo: "",
+            ratingTo: ""
         });
         setCurrentPage(1);
     };

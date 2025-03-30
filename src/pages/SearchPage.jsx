@@ -9,7 +9,7 @@ import searchImg from "/searchHeaderImg.png";
 import FilterCalendar from "../assets/Icons/filterCalendar.svg?react";
 import PriceHighFilter from "../assets/Icons/priceHighFilter.svg?react";
 import PriceLowFilter from "../assets/Icons/priceLowFilter.svg?react";
-import Redo from "../assets/Icons/packagesRedo.svg?react"
+import Redo from "../assets/Icons/packagesRedo.svg?react";
 
 import middleHeaderStyles from "../components/Header/MiddleHeader/MiddleHeader.module.css";
 import headerStyles from "../components/Header/Header.module.css";
@@ -17,8 +17,18 @@ import searchStyles from "../components/SearchPage/FilterPattern/FilterPattern.m
 
 const filter = [
     { id: 1, text: "Date", icon: <FilterCalendar />, sortKey: "date" },
-    { id: 2, text: "Price Low to High", icon: <PriceHighFilter />, sortKey: "price-asc" },
-    { id: 3, text: "Price High to Low", icon: <PriceLowFilter />, sortKey: "price-desc" },
+    {
+        id: 2,
+        text: "Price Low to High",
+        icon: <PriceHighFilter />,
+        sortKey: "price-asc",
+    },
+    {
+        id: 3,
+        text: "Price High to Low",
+        icon: <PriceLowFilter />,
+        sortKey: "price-desc",
+    },
     { id: 4, text: "Redo", icon: <Redo />, sortKey: null },
 ];
 
@@ -35,7 +45,7 @@ export const SearchPage = () => {
         totalPages,
         goToPage,
         isLoading,
-        error
+        error,
     } = useArchiveData();
 
     const handleFilterClick = (sortKey) => {
@@ -61,10 +71,12 @@ export const SearchPage = () => {
             />
             <FilterPattern>
                 {filter.map((item) => (
-                    <button 
-                        key={item.id} 
+                    <button
+                        key={item.id}
                         className={`${searchStyles.filter_element} ${
-                            activeFilter === item.sortKey ? searchStyles.active : ''
+                            activeFilter === item.sortKey
+                                ? searchStyles.active
+                                : ""
                         }`}
                         onClick={() => handleFilterClick(item.sortKey)}
                     >
@@ -73,8 +85,8 @@ export const SearchPage = () => {
                     </button>
                 ))}
             </FilterPattern>
-            <PackagesData 
-                archiveData={filteredData} 
+            <PackagesData
+                archiveData={filteredData}
                 textFilters={textFilters}
                 onTextFilterChange={setTextFilters}
             />

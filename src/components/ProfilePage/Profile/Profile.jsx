@@ -7,5 +7,5 @@ export const Profile = () => {
             <h1 className={styles.title}>Profile</h1>
             <ProfileCard />
         </section>
-    )
-}
+    );
+};

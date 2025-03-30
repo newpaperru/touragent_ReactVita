@@ -1,19 +1,23 @@
 import styles from "./PackagesData.module.css";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 import { PackagesFilter } from "../PackagesFilter/PackagesFilter";
 import { PackagesList } from "./PackagesList/PackagesList";
 
-export const PackagesData = ({ archiveData = [], textFilters, onTextFilterChange }) => {
+export const PackagesData = ({
+    archiveData = [],
+    textFilters,
+    onTextFilterChange,
+}) => {
     const [priceRange, setPriceRange] = useState({ min: 0, max: 2000 });
-    
+
     useEffect(() => {
         if (archiveData.length > 0) {
-            const prices = archiveData.map(item => Number(item.price));
+            const prices = archiveData.map((item) => Number(item.price));
             setPriceRange({
                 min: Math.min(...prices),
-                max: Math.max(...prices)
+                max: Math.max(...prices),
             });
         }
     }, [archiveData]);

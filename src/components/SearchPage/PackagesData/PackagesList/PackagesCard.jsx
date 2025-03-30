@@ -25,7 +25,9 @@ export const PackagesCard = ({ data }) => {
                 <div className={styles.info_img}>
                     <div className={styles.date_wrap}>
                         <PackagesDate />
-                        <span className={styles.info_text}>{formatDate(data.date)}</span>
+                        <span className={styles.info_text}>
+                            {formatDate(data.date)}
+                        </span>
                     </div>
                     <div className={styles.people_wrap}>
                         <PackagesPeople />
