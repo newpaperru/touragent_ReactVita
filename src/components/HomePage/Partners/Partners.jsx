@@ -1,9 +1,9 @@
-import styles from './Partners.module.css';
-import airbnbImg from '/airbnb.png';
-import imaratesImg from '/imarates.png';
-import swissImg from '/swiss.png';
-import trivagoImg from '/trivago.png';
-import turkishImg from '/turkish.png';
+import styles from "./Partners.module.css";
+import airbnbImg from "/airbnb.png";
+import imaratesImg from "/imarates.png";
+import swissImg from "/swiss.png";
+import trivagoImg from "/trivago.png";
+import turkishImg from "/turkish.png";
 
 export const Partners = () => {
       const partners = [

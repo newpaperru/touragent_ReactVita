@@ -1,6 +1,6 @@
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import { AuthContext } from '../../../services/AuthContext';
-import { useContext } from 'react';
+import { AuthContext } from "../../../services/AuthContext";
+import { useContext } from "react";
 import styles from "./TopHeader.module.css";
 import Logo from "../../../assets/Icons/logo.svg?react";
 
@@ -19,7 +19,7 @@ export const TopHeader = ({theme, handColorSvg = "light"}) => {
 
     return (
         <div className={styles.container}>
-            <Logo fill={handColorSvg === 'dark' ? '#181E4B' : '#fff'} />
+            <Logo fill={handColorSvg === "dark" ? "#181E4B" : "#fff"} />
             <nav>
                 {links.map((link) => (
                     <Link

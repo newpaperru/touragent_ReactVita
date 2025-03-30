@@ -1,7 +1,7 @@
-import styles from './BookingSteps.module.css';
-import ChooseDestinationIcon from '../../../../assets/Icons/chooseDestination.svg?react';
-import TaxiTransportIcon from '../../../../assets/Icons/taxiTransport.svg?react';
-import WaterSportIcon from '../../../../assets/Icons/waterSport.svg?react'
+import styles from "./BookingSteps.module.css";
+import ChooseDestinationIcon from "../../../../assets/Icons/chooseDestination.svg?react";
+import TaxiTransportIcon from "../../../../assets/Icons/taxiTransport.svg?react";
+import WaterSportIcon from "../../../../assets/Icons/waterSport.svg?react"
 
 export const BookingSteps = () => {
     return (

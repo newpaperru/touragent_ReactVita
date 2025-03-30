@@ -1,7 +1,7 @@
 export const validators = {
     email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
     phone: (value) => /^\+?\d{11,15}$/.test(value),
-    fullName: (value) => /^[a-zA-Zа-яА-Я\s'-]{3,}$/.test(value.trim()),
+    fullName: (value) => /^[a-zA-Zа-яА-Я\s"-]{3,}$/.test(value.trim()),
 };
 
 export const errorMessages = {

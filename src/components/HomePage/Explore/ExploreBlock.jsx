@@ -1,4 +1,4 @@
-import styles from './ExploreBlock.module.css';
+import styles from "./ExploreBlock.module.css";
 
 export const ExploreBlock = ({imgUrl, text}) => {
     return (

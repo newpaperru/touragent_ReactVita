@@ -1,5 +1,5 @@
 import styles from "./People.module.css";
-import peopleImg from '/people.png';
+import peopleImg from "/people.png";
 
 
 export const People = () => {

@@ -2,7 +2,7 @@ import { MiddleHeader } from "./MiddleHeader/MiddleHeader"
 import { TopHeader } from "./TopHeader/TopHeader"
 import styles from "./Header.module.css"
 import anotherStyles from "./MiddleHeader/MiddleHeader.module.css";
-import stylesTopHeader from './TopHeader/TopHeader.module.css'
+import stylesTopHeader from "./TopHeader/TopHeader.module.css"
 
 export const Header = ({title, description, peoples, titleCheck, imgSrc, bgFiltered, changeFontFamily, handClass}) => {
     return (

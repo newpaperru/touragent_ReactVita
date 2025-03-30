@@ -1,8 +1,8 @@
-import { useForm } from 'react-hook-form';
-import { useMutation, useQueryClient } from 'react-query';
-import { useNavigate } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "react-query";
+import { useNavigate } from "react-router-dom";
 
-export function useRegistrationForm(apiUrl = 'http://localhost:3000/users') {
+export function useRegistrationForm(apiUrl = "http://localhost:3000/users") {
     const {
         register,
         handleSubmit,
@@ -32,21 +32,21 @@ export function useRegistrationForm(apiUrl = 'http://localhost:3000/users') {
     const mutation = useMutation(
         async (newUser) => {
             const response = await fetch(apiUrl, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(newUser)
             });
             if (!response.ok) {
-                throw new Error('Error when registering');
+                throw new Error("Error when registering");
             }
             return await response.json();
         },
         {
             onSuccess: () => {
-                queryClient.invalidateQueries('users');
-                navigate('/login');
+                queryClient.invalidateQueries("users");
+                navigate("/login");
             }
         }
     );
@@ -58,29 +58,29 @@ export function useRegistrationForm(apiUrl = 'http://localhost:3000/users') {
             let hasError = false;
             switch (true) {
                 case emailExists && phoneExists:
-                    setError('email', {
-                        type: 'manual',
-                        message: 'User with this email is already registered'
+                    setError("email", {
+                        type: "manual",
+                        message: "User with this email is already registered"
                     });
-                    setError('phone', {
-                        type: 'manual',
-                        message: 'User with this phone is already registered'
+                    setError("phone", {
+                        type: "manual",
+                        message: "User with this phone is already registered"
                     });
                     hasError = true;
                     break;
 
                 case emailExists:
-                    setError('email', {
-                        type: 'manual',
-                        message: 'User with this email is already registered'
+                    setError("email", {
+                        type: "manual",
+                        message: "User with this email is already registered"
                     });
                     hasError = true;
                     break;
 
                 case phoneExists:
-                    setError('phone', {
-                        type: 'manual',
-                        message: 'User with this phone is already registered'
+                    setError("phone", {
+                        type: "manual",
+                        message: "User with this phone is already registered"
                     });
                     hasError = true;
                     break;
@@ -97,7 +97,7 @@ export function useRegistrationForm(apiUrl = 'http://localhost:3000/users') {
             // Если проверка пройдена, отправляем данные нового пользователя
             mutation.mutate(data);
         } catch (error) {
-            console.error('User check error', error);
+            console.error("User check error", error);
         }
     };
 

@@ -1,5 +1,5 @@
-import styles from './Trending.module.css';
-import { TrendingList } from './TrendingList';
+import styles from "./Trending.module.css";
+import { TrendingList } from "./TrendingList";
 
 export const Trending = () => {
    return (

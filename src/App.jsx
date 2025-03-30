@@ -11,11 +11,11 @@ import { SearchPage } from "./pages/SearchPage";
 
 function App() {
     const [isAuth, setIsAuth] = useState(() => {
-        return localStorage.getItem('isAuth') === 'true';
+        return localStorage.getItem("isAuth") === "true";
     });
 
     useEffect(() => {
-        localStorage.setItem('isAuth', isAuth);
+        localStorage.setItem("isAuth", isAuth);
     }, [isAuth]);
 
     return (

@@ -1,4 +1,4 @@
-import { useMutation } from 'react-query';
+import { useMutation } from "react-query";
 
 export const useUserMutation = (setUserData, setShowRegistrationForm) => {
     return useMutation(

@@ -1,4 +1,4 @@
-import styles from './FooterFollow.module.css';
+import styles from "./FooterFollow.module.css";
 
 export const FooterFollow = () => {
     return (
@@ -6,7 +6,7 @@ export const FooterFollow = () => {
             <span className={styles.title}>Join Our Newsletter</span>
             <form method="post" style={{marginBottom: 21}}>
                 <label>
-                    <input type="email" name="input"  placeholder='Your email adress' className={styles.input} />
+                    <input type="email" name="input"  placeholder="Your email adress" className={styles.input} />
                     <button type="submit" className={styles.btn}>Subscribe</button>
                 </label>
             </form>

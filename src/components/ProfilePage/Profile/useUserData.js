@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export const useUserData = (navigate) => {
     const [userData, setUserData] = useState(0);

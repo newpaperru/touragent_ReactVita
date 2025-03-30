@@ -1,5 +1,5 @@
-import { BookingSteps } from './BookingSteps';
-import styles from './ResortBookingInfo.module.css';
+import { BookingSteps } from "./BookingSteps";
+import styles from "./ResortBookingInfo.module.css";
 
 export const ResortBookingInfo = () => {
     return (

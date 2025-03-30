@@ -1,6 +1,6 @@
 import exploreNatureImage from "/exploreNature.png";
 import exploreCitiesImage from "/exploreCities.png";
-import styles from './Explore.module.css';
+import styles from "./Explore.module.css";
 import { ExploreBlock } from "./ExploreBlock";
 
 const bords = [
