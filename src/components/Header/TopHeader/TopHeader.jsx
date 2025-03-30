@@ -4,7 +4,7 @@ import { useContext } from "react";
 import styles from "./TopHeader.module.css";
 import Logo from "../../../assets/Icons/logo.svg?react";
 
-export const TopHeader = ({theme, handColorSvg = "light"}) => {
+export const TopHeader = ({ theme, handColorSvg = "light" }) => {
     // Получаем текущий путь
     const location = useLocation();
     const navigate = useNavigate();

@@ -5,6 +5,7 @@ import secondBPImg from "/secondBP.png";
 import thirdBPImg from "/thirdBP.png";
 import fourBPImg from "/fourBP.png";
 import { CardBestPackages } from "./CardBestPackages";
+import { Link } from "react-router-dom";
 
 const cards = [
     { id: 1, imgURl: londonBPImg, price: "700" },
@@ -29,7 +30,9 @@ export const BestPackages = () => {
                         recusandae in maxime quasi aut ducimus illum aut optio
                         quibusdam!
                     </p>
-                    <button className={styles.btn}>View Packages</button>
+                    <Link to={"/search"} className={styles.btn}>
+                        View Packages
+                    </Link>
                     <div className={styles.list}>
                         {cards.map((item) => (
                             <CardBestPackages
