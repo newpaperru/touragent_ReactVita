@@ -9,7 +9,7 @@ export const PackagesCard = ({ data }) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat("en-US", {
             day: "numeric",
-            month: "long",
+            month: "short",
             year: "numeric",
         }).format(date);
     };
