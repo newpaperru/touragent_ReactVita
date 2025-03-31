@@ -39,7 +39,8 @@
 }
 
 .date_wrap,
-.people_wrap {
+.people_wrap,
+.star_wrap {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -66,31 +67,16 @@
     font-size: 17px;
     font-family: "Poppins Regular";
     margin-bottom: 21px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
-    padding-top: 15px;
 }
 
-.price {
-    color: #262626;
-    font-size: 18px;
-    font-family: "Poppins Medium";
-}
-
+.price,
 .star_wrap {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
     color: #262626;
     font-size: 18px;
     font-family: "Poppins Medium";
