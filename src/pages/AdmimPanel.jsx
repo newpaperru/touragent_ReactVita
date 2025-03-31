@@ -5,5 +5,5 @@ export const AdminPanel = () => {
         <>
             <Admin />
         </>
-    )
+    );
 };

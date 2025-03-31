@@ -15,13 +15,13 @@ export const Admin = () => {
             <header className={styles.header}>
                 <h1 className={styles.title}>Admin Dashboard</h1>
                 <div>
-                    <button 
+                    <button
                         onClick={() => setShowForm(!showForm)}
                         className={styles.button}
                     >
                         {showForm ? "Hide Form" : "Add New Tour"}
                     </button>
-                    <button 
+                    <button
                         onClick={logout}
                         className={`${styles.button} ${styles.logout}`}
                     >
@@ -29,9 +29,9 @@ export const Admin = () => {
                     </button>
                 </div>
             </header>
-            
+
             {showForm && <AddTourForm onSubmit={addTour} />}
-            
+
             <div className={styles.list}>
                 <span className={styles.subtitle}>Current Tours</span>
                 <div className={styles.grid}>

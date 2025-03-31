@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 
 const fetchArchiveData = async () => {
-  const response = await fetch("http://localhost:3000/archive");
-  if (!response.ok) throw new Error("Network response was not ok");
-  return response.json();
+    const response = await fetch("http://localhost:3000/archive");
+    if (!response.ok) throw new Error("Network response was not ok");
+    return response.json();
 };
 
 export const useArchiveData = () => {
@@ -24,7 +24,7 @@ export const useArchiveData = () => {
     const itemsPerPage = 6;
 
     const fetchData = useCallback(async () => {
-        setState(prev => ({...prev, isLoading: true}));
+        setState(prev => ({ ...prev, isLoading: true }));
         try {
             const data = await fetchArchiveData();
             setState(prev => ({
@@ -52,7 +52,7 @@ export const useArchiveData = () => {
         // Текстовая фильтрация
         if (textFilters.destination) {
             const searchTerm = textFilters.destination.toLowerCase();
-            result = result.filter(item => 
+            result = result.filter(item =>
                 item.country.toLowerCase().includes(searchTerm)
             );
         }
@@ -75,13 +75,13 @@ export const useArchiveData = () => {
         // Сортировка
         if (activeFilter) {
             switch (activeFilter) {
-                case "date": 
+                case "date":
                     return result.sort((a, b) => new Date(a.date) - new Date(b.date));
-                case "price-asc": 
+                case "price-asc":
                     return result.sort((a, b) => Number(a.price) - Number(b.price));
-                case "price-desc": 
+                case "price-desc":
                     return result.sort((a, b) => Number(b.price) - Number(a.price));
-                default: 
+                default:
                     return result;
             }
         }

@@ -38,7 +38,8 @@
     justify-content: space-between;
 }
 
-.date_wrap, .people_wrap {
+.date_wrap,
+.people_wrap {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -49,7 +50,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex-grow: 1; /* Занимает все доступное пространство */
+    flex-grow: 1;
+    /* Занимает все доступное пространство */
 }
 
 .country {
@@ -66,7 +68,8 @@
     font-family: "Poppins Regular";
     margin-bottom: 21px;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Ограничение текста до 3 строк */
+    -webkit-line-clamp: 3;
+    /* Ограничение текста до 3 строк */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -75,8 +78,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Прижимаем к низу */
-    padding-top: 15px; /* Отступ сверху */
+    margin-top: auto;
+    /* Прижимаем к низу */
+    padding-top: 15px;
+    /* Отступ сверху */
 }
 
 .price {

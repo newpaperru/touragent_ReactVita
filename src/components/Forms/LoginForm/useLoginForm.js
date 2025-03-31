@@ -30,7 +30,7 @@ export function useLoginForm({ onErrorCustom } = {}) {
             localStorage.setItem("isAuth", "true");
             localStorage.setItem("userId", userData.id);
             localStorage.setItem("userRole", userData.role || "user");
-            
+
             // Перенаправление в зависимости от роли
             if (userData.role === "admin") {
                 navigate("/admin");

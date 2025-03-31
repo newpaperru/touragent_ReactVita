@@ -8,7 +8,7 @@ const initialFormState = {
     price: "",
     rating: "",
     countPeople: "",
-    description: ""
+    description: "",
 };
 
 export const AddTourForm = ({ onSubmit }) => {
@@ -16,7 +16,7 @@ export const AddTourForm = ({ onSubmit }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = (e) => {
@@ -28,13 +28,15 @@ export const AddTourForm = ({ onSubmit }) => {
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
             <span className={styles.title}>Add New Tour</span>
-            
+
             {Object.entries(formData).map(([name, value]) => (
                 <div key={name} className={styles.group}>
                     <label>
-                        {name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, ' $1')}:
+                        {name.charAt(0).toUpperCase() +
+                            name.slice(1).replace(/([A-Z])/g, " $1")}
+                        :
                     </label>
-                    {name === 'description' ? (
+                    {name === "description" ? (
                         <textarea
                             name={name}
                             value={value}
@@ -43,21 +45,31 @@ export const AddTourForm = ({ onSubmit }) => {
                         />
                     ) : (
                         <input
-                            type={name === 'date' ? 'date' : name === 'rating' ? 'number' : 'text'}
+                            type={
+                                name === "date"
+                                    ? "date"
+                                    : name === "rating"
+                                    ? "number"
+                                    : "text"
+                            }
                             name={name}
                             value={value}
                             onChange={handleChange}
-                            placeholder={name === 'urlImg' ? '/path/to/image.png' : ''}
-                            min={name === 'rating' ? '0' : undefined}
-                            max={name === 'rating' ? '5' : undefined}
-                            step={name === 'rating' ? '0.1' : undefined}
+                            placeholder={
+                                name === "urlImg" ? "/path/to/image.png" : ""
+                            }
+                            min={name === "rating" ? "0" : undefined}
+                            max={name === "rating" ? "5" : undefined}
+                            step={name === "rating" ? "0.1" : undefined}
                             required
                         />
                     )}
                 </div>
             ))}
-            
-            <button type="submit" className={styles.button}>Add Tour</button>
+
+            <button type="submit" className={styles.button}>
+                Add Tour
+            </button>
         </form>
     );
 };
