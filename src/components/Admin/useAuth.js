@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../services/AuthContext';
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../services/AuthContext";
 
 export function useAuth() {
     const { setIsAuth, setUserRole } = useContext(AuthContext);
