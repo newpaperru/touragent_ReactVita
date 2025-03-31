@@ -1,0 +1,56 @@
+.form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form span {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-family: "Volkhov Bold";
+    font-size: 28px;
+    color: #181E4B;
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+.group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Poppins Bold";
+}
+
+.group input,
+.group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Poppins Regular";
+}
+
+.group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}

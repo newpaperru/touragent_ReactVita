@@ -5,7 +5,7 @@ export const PackagesList = ({ archiveData = [] }) => {
     return (
         <div className={styles.packages_list}>
             {archiveData.map((item) => (
-                <PackagesCard key={item.country} data={item} />
+                <PackagesCard key={item.id} data={item} />
             ))}
         </div>
     );

@@ -1,18 +1,11 @@
-import { useMutation } from "react-query"
-import { useNavigate } from "react-router-dom"
+import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../services/AuthContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 export function useLoginForm({ onErrorCustom } = {}) {
     const navigate = useNavigate();
-    const { setIsAuth } = useContext(AuthContext);
-
-    useEffect(() => {
-        const isAuthenticated = localStorage.getItem("isAuth") === "true";
-        if (isAuthenticated) {
-            setIsAuth(true);
-        }
-    }, [setIsAuth]);
+    const { setIsAuth, setUserRole } = useContext(AuthContext);
 
     const loginUser = async ({ email, password }) => {
         const response = await fetch(
@@ -33,9 +26,17 @@ export function useLoginForm({ onErrorCustom } = {}) {
     return useMutation(loginUser, {
         onSuccess: (userData) => {
             setIsAuth(true);
+            setUserRole(userData.role || "user");
             localStorage.setItem("isAuth", "true");
             localStorage.setItem("userId", userData.id);
-            navigate("/profile");
+            localStorage.setItem("userRole", userData.role || "user");
+            
+            // Перенаправление в зависимости от роли
+            if (userData.role === "admin") {
+                navigate("/admin");
+            } else {
+                navigate("/profile");
+            }
         },
         onError: (error) => {
             if (onErrorCustom) {

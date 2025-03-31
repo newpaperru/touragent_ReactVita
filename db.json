@@ -7,20 +7,23 @@
       "email": "boristar010205@icloud.com",
       "phone": "+79673643999",
       "password": "qwerty",
-      "repeatPassword": "qwerty"
+      "repeatPassword": "qwerty",
+      "role": "user"
     },
     {
       "id": "26a7",
       "fullName": "Архангельский Борис Станиславович",
       "birthDate": "2005-02-12",
-      "email": "boryanski212@gmail.com",
+      "email": "boryanski213@gmail.com",
       "phone": "+79673643997",
       "password": "qwerty",
-      "repeatPassword": "qwerty"
+      "repeatPassword": "qwerty",
+      "role": "admin"
     }
   ],
   "archive": [
     {
+      "id": "82c1",
       "date": "2025-09-12",
       "urlImg": "/packageImg.png",
       "country": "Switzerland",
@@ -30,6 +33,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "bb99",
       "date": "2025-08-26",
       "urlImg": "/packagesBerlinImg.png",
       "country": "Berlin",
@@ -39,6 +43,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "34f5",
       "date": "2025-04-20",
       "urlImg": "/packagesMaldivesImg.png",
       "country": "Maldives",
@@ -48,6 +53,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "91d5",
       "date": "2025-02-10",
       "urlImg": "/packagesTorrontoImg.png",
       "country": "Torronto",
@@ -57,6 +63,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "d5m6",
       "date": "2025-11-6",
       "urlImg": "/packagesBakuImg.png",
       "country": "Baku",
@@ -66,6 +73,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "d9l3",
       "date": "2025-12-02",
       "urlImg": "/packagesChineseImg.png",
       "country": "Chinese",
@@ -75,6 +83,7 @@
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
     },
     {
+      "id": "7dd8",
       "date": "2025-10-02",
       "urlImg": "/packagesChineseImg.png",
       "country": "adasddsadasdas",
@@ -82,6 +91,26 @@
       "rating": "3.5",
       "countPeople": "250",
       "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "id": "706c",
+      "date": "2025-03-12",
+      "urlImg": "/packagesMoscow.jpeg",
+      "country": "Russia",
+      "price": "899",
+      "rating": "5.0",
+      "countPeople": "264",
+      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+    },
+    {
+      "id": "f4e9",
+      "date": "2005-02-01",
+      "urlImg": "/packagesMoscow.jpeg",
+      "country": "Russia",
+      "price": "1200",
+      "rating": "4.0",
+      "countPeople": "10",
+      "description": "asdasgdfgsds"
     }
   ]
 }
