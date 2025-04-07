@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const useTickets = () => {
     const [tickets, setTickets] = useState([]);
@@ -8,7 +8,7 @@ export const useTickets = () => {
 
     // Загрузка билетов при монтировании
     useEffect(() => {
-        const savedTickets = JSON.parse(localStorage.getItem('tickets')) || [];
+        const savedTickets = JSON.parse(localStorage.getItem("tickets")) || [];
         setTickets(savedTickets);
     }, []);
 
@@ -27,12 +27,12 @@ export const useTickets = () => {
             country: packageData.country,
             price: packageData.price,
             status: "Not paid",
-            date: new Date().toISOString().split('T')[0]
+            date: new Date().toISOString().split("T")[0]
         };
 
         const updatedTickets = [...tickets, newTicket];
         setTickets(updatedTickets);
-        localStorage.setItem('tickets', JSON.stringify(updatedTickets));
+        localStorage.setItem("tickets", JSON.stringify(updatedTickets));
         return newTicket;
     };
 
@@ -42,12 +42,12 @@ export const useTickets = () => {
             ticket.id === ticketId ? { ...ticket, status: newStatus } : ticket
         );
         setTickets(updatedTickets);
-        localStorage.setItem('tickets', JSON.stringify(updatedTickets));
+        localStorage.setItem("tickets", JSON.stringify(updatedTickets));
     };
 
     // Перенаправление в профиль
     const goToProfile = () => {
-        navigate('/profile');
+        navigate("/profile");
     };
 
     return { 

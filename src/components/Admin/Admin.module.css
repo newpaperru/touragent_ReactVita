@@ -11,7 +11,8 @@
     margin-bottom: 30px;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
     font-family: "Volkhov Bold";
     font-size: 32px;
     color: #181E4B;

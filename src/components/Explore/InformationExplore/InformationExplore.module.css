@@ -20,7 +20,7 @@
 }
 
 .half_star::before {
-    content: '★';
+    content: "★";
     position: absolute;
     left: 0;
     width: 50%;

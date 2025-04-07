@@ -68,11 +68,10 @@ export const InformationExplore = ({ packageData }) => {
                 />
             </div>
 
-            <button 
-                className={styles.btn} 
-                onClick={handleButtonClick}
-            >
-                {isAdded || isTourInCart(packageData) ? 'Go to the basket' : 'Book Now'}
+            <button className={styles.btn} onClick={handleButtonClick}>
+                {isAdded || isTourInCart(packageData)
+                    ? "Go to the basket"
+                    : "Book Now"}
             </button>
         </div>
     );

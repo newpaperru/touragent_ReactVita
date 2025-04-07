@@ -10,30 +10,38 @@ export const ExploreTabs = ({ activeTab, setActiveTab }) => {
         <div className={styles.container}>
             <div className={styles.explore_tabs}>
                 <div className={styles.inner}>
-                    <button 
-                        className={`${styles.tab} ${activeTab === 'information' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('information')}
+                    <button
+                        className={`${styles.tab} ${
+                            activeTab === "information" ? styles.active : ""
+                        }`}
+                        onClick={() => setActiveTab("information")}
                     >
                         <InfoIcon />
                         <span className={styles.text}>Information</span>
                     </button>
-                    <button 
-                        className={`${styles.tab} ${activeTab === 'tourPlan' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('tourPlan')}
+                    <button
+                        className={`${styles.tab} ${
+                            activeTab === "tourPlan" ? styles.active : ""
+                        }`}
+                        onClick={() => setActiveTab("tourPlan")}
                     >
                         <CalendarIcon />
                         <span className={styles.text}>Tour Plan</span>
                     </button>
-                    <button 
-                        className={`${styles.tab} ${activeTab === 'location' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('location')}
+                    <button
+                        className={`${styles.tab} ${
+                            activeTab === "location" ? styles.active : ""
+                        }`}
+                        onClick={() => setActiveTab("location")}
                     >
                         <LocationIcon />
                         <span className={styles.text}>Location</span>
                     </button>
-                    <button 
-                        className={`${styles.tab} ${activeTab === 'gallery' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('gallery')}
+                    <button
+                        className={`${styles.tab} ${
+                            activeTab === "gallery" ? styles.active : ""
+                        }`}
+                        onClick={() => setActiveTab("gallery")}
                     >
                         <GalleryIcon />
                         <span className={styles.text}>Gallery</span>

@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Circular Medium";
     src: url("../fonts/circular-std-font-family/CircularStd-Medium.woff") format("woff"),
-         url("../fonts/circular-std-font-family/CircularStd-Medium.woff2") format("woff2");
+        url("../fonts/circular-std-font-family/CircularStd-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
@@ -10,28 +10,28 @@
 @font-face {
     font-family: "Poppins Bold";
     src: url("../fonts/poppins/Poppins-Bold.woff") format("woff"),
-         url("../fonts/poppins/Poppins-Bold.woff") format("woff2");
+        url("../fonts/poppins/Poppins-Bold.woff") format("woff2");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Poppins Medium";
     src: url("../fonts/poppins/Poppins-Medium.woff") format("woff"),
-         url("../fonts/poppins/Poppins-Medium.woff2") format("woff2");
+        url("../fonts/poppins/Poppins-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Poppins Regular";
     src: url("../fonts/poppins/Poppins-Regular.woff") format("woff"),
-         url("../fonts/poppins/Poppins-Regular.woff2") format("woff2");
+        url("../fonts/poppins/Poppins-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Poppins SemiBold";
     src: url("../fonts/poppins/Poppins-SemiBold.woff") format("woff"),
-         url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
+        url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
     font-weight: 600;
 }
 
@@ -39,7 +39,7 @@
 @font-face {
     font-family: "Volkhov Bold";
     src: url("../fonts/Volkhov/Volkhov-Bold.woff") format("woff"),
-         url("../fonts/Volkhov/Volkhov-Bold.woff2") format("woff2");
+        url("../fonts/Volkhov/Volkhov-Bold.woff2") format("woff2");
     font-weight: 700;
 }
 
@@ -47,21 +47,21 @@
 @font-face {
     font-family: "Manrope Medium";
     src: url("../fonts/Manrope/Manrope-Medium.woff") format("woff"),
-         url("../fonts/Manrope/Manrope-Medium.woff2") format("woff2");
+        url("../fonts/Manrope/Manrope-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Manrope Bold";
     src: url("../fonts/Manrope/Manrope-Bold.woff") format("woff"),
-         url("../fonts/Manrope/Manrope-Bold.woff2") format("woff2");
+        url("../fonts/Manrope/Manrope-Bold.woff2") format("woff2");
     font-weight: 700;
 }
 
 /* Yesteryear */
 @font-face {
     font-family: "Yesteryear Regular";
-    src: 
+    src:
         url("../fonts/yesteryear/Yesteryear-Regular.woff") format("woff");
     font-style: normal;
     font-weight: 400;
