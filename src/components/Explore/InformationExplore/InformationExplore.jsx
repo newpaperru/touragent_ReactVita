@@ -30,14 +30,10 @@ export const InformationExplore = ({ packageData }) => {
             <p className={styles.description}>{packageData.fullDescription}</p>
             <div className={styles.grid}>
                 {gridItems.map((item, index) => (
-                    <>
-                        <span key={`title-${index}`} className={styles.title}>
-                            {item.title}
-                        </span>
-                        <p key={`value-${index}`} className={styles.value}>
-                            : {item.value}
-                        </p>
-                    </>
+                    <div key={`grid-item-${index}`} className={styles.grid_item}>
+                        <span className={styles.title}>{item.title}</span>
+                        <p className={styles.value}>: {item.value}</p>
+                    </div>
                 ))}
             </div>
 
@@ -56,7 +52,6 @@ export const InformationExplore = ({ packageData }) => {
                 />
             </div>
 
-            {/* Кнопка бронирования */}
             <button className={styles.btn}>Book Now</button>
         </div>
     );

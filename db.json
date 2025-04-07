@@ -44,6 +44,55 @@
                 "Airport Transfer",
                 "Breakfast",
                 "Personal Guide"
+            ],
+            "tourPlan": [
+                {
+                    "day": "Day 1: Departure",
+                    "dayNumber": "01",
+                    "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
+                    "dayNumber": "02",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 3: Rest",
+                    "dayNumber": "03",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 4: Historical Tour",
+                    "dayNumber": "04",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 5: Return",
+                    "dayNumber": "05",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+                }
             ]
         },
         {
