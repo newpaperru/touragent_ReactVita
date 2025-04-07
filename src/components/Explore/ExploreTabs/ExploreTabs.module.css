@@ -1,0 +1,29 @@
+.explore_tabs {
+    margin: 0 auto;
+    border-bottom: 1px solid #34343485;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+
+    background-color: #F8F8F8;
+    padding: 25px 89px;
+}
+
+.tab:not(:last-child) {
+    border-right: 1px solid #34343485;
+}
+
+.text {
+    font-family: "Poppins Bold";
+    font-size: 20px;
+    color: #343434;
+    letter-spacing: 0.1em;
+}

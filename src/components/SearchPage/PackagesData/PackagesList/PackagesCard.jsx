@@ -1,4 +1,5 @@
 import styles from "./PackagesCard.module.css";
+import { Link } from "react-router-dom";
 
 import PackagesDate from "../../../../assets/Icons/packagesDate.svg?react";
 import PackagesPeople from "../../../../assets/Icons/packagesPeople.svg?react";
@@ -16,6 +17,19 @@ export const PackagesCard = ({ data }) => {
 
     return (
         <div className={styles.packages_card}>
+            {/* Добавляем overlay с блюром и кнопкой на всю карточку */}
+            <div className={styles.overlay}>
+                <Link
+                    to={{
+                        pathname: `/explore/${data.id}`,
+                        state: { packageData: data },
+                    }}
+                    className={styles.explore_button}
+                >
+                    Explore
+                </Link>
+            </div>
+
             <div className={styles.wrap_img}>
                 <img
                     src={data.urlImg}

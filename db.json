@@ -1,116 +1,140 @@
 {
-  "users": [
-    {
-      "id": "93bb",
-      "fullName": "Манаждажажаа",
-      "birthDate": "2005-02-01",
-      "email": "boristar010205@icloud.com",
-      "phone": "+79673643999",
-      "password": "qwerty",
-      "repeatPassword": "qwerty",
-      "role": "user"
-    },
-    {
-      "id": "26a7",
-      "fullName": "Архангельский Борис Станиславович",
-      "birthDate": "2005-02-12",
-      "email": "boryanski213@gmail.com",
-      "phone": "+79673643997",
-      "password": "qwerty",
-      "repeatPassword": "qwerty",
-      "role": "admin"
-    }
-  ],
-  "archive": [
-    {
-      "id": "82c1",
-      "date": "2025-09-12",
-      "urlImg": "/packageImg.png",
-      "country": "Switzerland",
-      "price": "1100",
-      "rating": "5.0",
-      "countPeople": "120",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "bb99",
-      "date": "2025-08-26",
-      "urlImg": "/packagesBerlinImg.png",
-      "country": "Berlin",
-      "price": "1500",
-      "rating": "4.7",
-      "countPeople": "100",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "34f5",
-      "date": "2025-04-20",
-      "urlImg": "/packagesMaldivesImg.png",
-      "country": "Maldives",
-      "price": "2000",
-      "rating": "5.0",
-      "countPeople": "500",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "91d5",
-      "date": "2025-02-10",
-      "urlImg": "/packagesTorrontoImg.png",
-      "country": "Torronto",
-      "price": "1000",
-      "rating": "3.0",
-      "countPeople": "56",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "d5m6",
-      "date": "2025-11-6",
-      "urlImg": "/packagesBakuImg.png",
-      "country": "Baku",
-      "price": "1499",
-      "rating": "2.4",
-      "countPeople": "12",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "d9l3",
-      "date": "2025-12-02",
-      "urlImg": "/packagesChineseImg.png",
-      "country": "Chinese",
-      "price": "1399",
-      "rating": "1.5",
-      "countPeople": "200",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "7dd8",
-      "date": "2025-10-02",
-      "urlImg": "/packagesChineseImg.png",
-      "country": "adasddsadasdas",
-      "price": "1299",
-      "rating": "3.5",
-      "countPeople": "250",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "706c",
-      "date": "2025-03-12",
-      "urlImg": "/packagesMoscow.jpeg",
-      "country": "Russia",
-      "price": "899",
-      "rating": "5.0",
-      "countPeople": "264",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
-    },
-    {
-      "id": "f4e9",
-      "date": "2005-02-01",
-      "urlImg": "/packagesMoscow.jpeg",
-      "country": "Russia",
-      "price": "1200",
-      "rating": "4.0",
-      "countPeople": "10",
-      "description": "asdasgdfgsds"
-    }
-  ]
+    "users": [
+        {
+            "id": "93bb",
+            "fullName": "Манаждажажаа",
+            "birthDate": "2005-02-01",
+            "email": "boristar010205@icloud.com",
+            "phone": "+79673643999",
+            "password": "qwerty",
+            "repeatPassword": "qwerty",
+            "role": "user"
+        },
+        {
+            "id": "26a7",
+            "fullName": "Архангельский Борис Станиславович",
+            "birthDate": "2005-02-12",
+            "email": "boryanski213@gmail.com",
+            "phone": "+79673643997",
+            "password": "qwerty",
+            "repeatPassword": "qwerty",
+            "role": "admin"
+        }
+    ],
+    "archive": [
+        {
+            "id": "82c1",
+            "date": "2025-09-12",
+            "urlImg": "/packageImg.png",
+            "country": "Switzerland",
+            "price": "1100",
+            "rating": "5.0",
+            "review": "2300",
+            "countPeople": "120",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
+            "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
+            "destination": "Zurich, Switzerland",
+            "departure": "Main Sqaure, New City",
+            "departureTime": "Approximately 08 : 10 AM",
+            "returnTime": "Approximately 07 : 20 PM",
+            "dressCode": "Casual, comfortable and light",
+            "notIncluded": ["Gallery Ticket", "Lunch"],
+            "included": [
+                "5 star Accomodations",
+                "Airport Transfer",
+                "Breakfast",
+                "Personal Guide"
+            ]
+        },
+        {
+            "id": "bb99",
+            "date": "2025-08-26",
+            "urlImg": "/packagesBerlinImg.png",
+            "country": "Berlin",
+            "price": "1500",
+            "rating": "4.7",
+            "countPeople": "100",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "34f5",
+            "date": "2025-04-20",
+            "urlImg": "/packagesMaldivesImg.png",
+            "country": "Maldives",
+            "price": "2000",
+            "rating": "5.0",
+            "countPeople": "500",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "91d5",
+            "date": "2025-02-10",
+            "urlImg": "/packagesTorrontoImg.png",
+            "country": "Torronto",
+            "price": "1000",
+            "rating": "3.0",
+            "countPeople": "56",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "d5m6",
+            "date": "2025-11-6",
+            "urlImg": "/packagesBakuImg.png",
+            "country": "Baku",
+            "price": "1499",
+            "rating": "2.4",
+            "countPeople": "12",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "d9l3",
+            "date": "2025-12-02",
+            "urlImg": "/packagesChineseImg.png",
+            "country": "Chinese",
+            "price": "1399",
+            "rating": "1.5",
+            "countPeople": "200",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "7dd8",
+            "date": "2025-10-02",
+            "urlImg": "/packagesChineseImg.png",
+            "country": "adasddsadasdas",
+            "price": "1299",
+            "rating": "3.5",
+            "countPeople": "250",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "706c",
+            "date": "2025-03-12",
+            "urlImg": "/packagesMoscow.jpeg",
+            "country": "Russia",
+            "price": "899",
+            "rating": "5.0",
+            "countPeople": "264",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+        },
+        {
+            "id": "f4e9",
+            "date": "2005-02-01",
+            "urlImg": "/packagesMoscow.jpeg",
+            "country": "Russia",
+            "price": "1200",
+            "rating": "4.0",
+            "countPeople": "10",
+            "description": "asdasgdfgsds"
+        },
+        {
+            "id": "5a32",
+            "date": "2005-02-01",
+            "urlImg": "/packagesMoscow.jpeg",
+            "country": "Russia",
+            "price": "1000",
+            "rating": "4.0",
+            "countPeople": "120",
+            "description": "asdasasasdsdfsfd"
+        }
+    ]
 }

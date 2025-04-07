@@ -63,7 +63,7 @@ function App() {
                         }
                     />
                     <Route path="/search" element={<SearchPage />} />
-                    <Route path="/explore" element={<ExplorePage />} />
+                    <Route path="/explore/:id" element={<ExplorePage />} />
                     <Route
                         path="/registration"
                         element={<PageRegistration />}
