@@ -29,7 +29,7 @@ export const TicketCard = () => {
                         <tr key={ticket.id}>
                             <td>{ticket.country}</td>
                             <td>${ticket.price}</td>
-                            <td className={styles.status_progress}>{ticket.status}</td>
+                            <td>{ticket.status}</td>
                             <td>{ticket.date}</td>
                             <td>
                                 {ticket.status === "Not paid" ? (

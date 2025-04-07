@@ -106,7 +106,63 @@
             "price": "1500",
             "rating": "4.7",
             "countPeople": "100",
-            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et."
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
+            "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
+            "destination": "Zurich, Berlin",
+            "review": "5000",
+            "departure": "Main Sqaure, New City",
+            "departureTime": "Approximately 06 : 10 AM",
+            "returnTime": "Approximately 10 : 20 PM",
+            "dressCode": "Casual, comfortable and light",
+            "notIncluded": ["Gallery Ticket", "Lunch"],
+            "included": [
+                "5 star Accomodations",
+                "Airport Transfer",
+                "Breakfast",
+                "Personal Guide",
+                "Dinner"
+            ],
+            "tourPlan": [
+                {
+                    "day": "Day 1: Departure",
+                    "dayNumber": "01",
+                    "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Dinner"
+                    ]
+                },
+                {
+                    "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
+                    "dayNumber": "02",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 3: Rest",
+                    "dayNumber": "03",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": ["5 Star Accommodation", "Breakfast"]
+                },
+                {
+                    "day": "Day 4: Return",
+                    "dayNumber": "04",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet."
+                }
+            ],
+            "map": "/map.png",
+            "locationDescription": [
+                "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
+                "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
+                "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
+            ]
         },
         {
             "id": "34f5",
