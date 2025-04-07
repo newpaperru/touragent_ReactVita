@@ -17,7 +17,6 @@ export const PackagesCard = ({ data }) => {
 
     return (
         <div className={styles.packages_card}>
-            {/* Добавляем overlay с блюром и кнопкой на всю карточку */}
             <div className={styles.overlay}>
                 <Link
                     to={{

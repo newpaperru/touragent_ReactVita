@@ -3,6 +3,8 @@ import NotIncludedIcon from "../../../assets/Icons/notincluded.svg?react";
 import IncludedIcon from "../../../assets/Icons/included.svg?react";
 import { RatingStars } from "./RatingStars";
 import { ServiceList } from "./ServiceList";
+import { useTickets } from "../../ProfilePage/Profile/useTickets";
+import { useState } from "react";
 
 export const InformationExplore = ({ packageData }) => {
     const gridItems = [
@@ -12,6 +14,17 @@ export const InformationExplore = ({ packageData }) => {
         { title: "Return Time", value: packageData.returnTime },
         { title: "Dress Code", value: packageData.dressCode },
     ];
+
+    const { addTicket, isTourInCart, goToProfile } = useTickets();
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleButtonClick = () => {
+        if (!isTourInCart(packageData)) {
+            addTicket(packageData);
+            setIsAdded(true);
+        }
+        goToProfile();
+    };
 
     return (
         <div className={styles.information_explore}>
@@ -30,7 +43,10 @@ export const InformationExplore = ({ packageData }) => {
             <p className={styles.description}>{packageData.fullDescription}</p>
             <div className={styles.grid}>
                 {gridItems.map((item, index) => (
-                    <div key={`grid-item-${index}`} className={styles.grid_item}>
+                    <div
+                        key={`grid-item-${index}`}
+                        className={styles.grid_item}
+                    >
                         <span className={styles.title}>{item.title}</span>
                         <p className={styles.value}>: {item.value}</p>
                     </div>
@@ -52,7 +68,12 @@ export const InformationExplore = ({ packageData }) => {
                 />
             </div>
 
-            <button className={styles.btn}>Book Now</button>
+            <button 
+                className={styles.btn} 
+                onClick={handleButtonClick}
+            >
+                {isAdded || isTourInCart(packageData) ? 'Go to the basket' : 'Book Now'}
+            </button>
         </div>
     );
 };

@@ -1,11 +1,23 @@
+import { useTickets } from "../../ProfilePage/Profile/useTickets";
 import styles from "./TourPlanExplore.module.css";
+import { useState } from "react";
 
 export const TourPlanExplore = ({ packageData }) => {
     const tourPlan = packageData.tourPlan || [];
+    const { addTicket, isTourInCart, goToProfile } = useTickets();
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleButtonClick = () => {
+        if (!isTourInCart(packageData)) {
+            addTicket(packageData);
+            setIsAdded(true);
+        }
+        goToProfile();
+    };
 
     return (
         <div className={styles.tour_plan_explore}>
-            <h2 className={styles.title}>Tour Plan</h2>
+            <span className={styles.title}>Tour Plan</span>
             <div className={styles.timeline}>
                 {tourPlan.map((day, index) => (
                     <div key={index} className={styles.day}>
@@ -30,7 +42,11 @@ export const TourPlanExplore = ({ packageData }) => {
                     </div>
                 ))}
             </div>
-            <button className={styles.btn}>Book Now</button>
+            <button className={styles.btn} onClick={handleButtonClick}>
+                {isAdded || isTourInCart(packageData)
+                    ? "Go to the basket"
+                    : "Book Now"}
+            </button>
         </div>
     );
 };

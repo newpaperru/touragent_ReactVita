@@ -27,3 +27,7 @@
     color: #343434;
     letter-spacing: 0.1em;
 }
+
+.active {
+    background-color: #e0e0e0;
+}
