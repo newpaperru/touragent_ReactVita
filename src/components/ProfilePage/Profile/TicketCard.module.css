@@ -39,6 +39,31 @@
     background-color: #45a049;
 }
 
-.status_progress {
-    color:orange;
+.status_ready,
+.status_rejected,
+.status_paid,
+.status_not_paid,
+.pending_text {
+    font-family: "Poppins Medium";
+}
+
+.status_ready {
+    color: #4CAF50;
+}
+
+.status_rejected {
+    color: #F44336;
+}
+
+.status_paid {
+    color: #2196F3;
+}
+
+.status_not_paid {
+    color: #FFA500;
+}
+
+.pending_text {
+    color: #2196F3;
+    font-style: italic;
 }

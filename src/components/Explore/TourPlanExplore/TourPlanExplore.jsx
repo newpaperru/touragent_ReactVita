@@ -16,7 +16,7 @@ export const TourPlanExplore = ({ packageData }) => {
     };
 
     return (
-        <div className={styles.tour_plan_explore}>
+        <div className={styles.basic_padding}>
             <span className={styles.title}>Tour Plan</span>
             <div className={styles.timeline}>
                 {tourPlan.map((day, index) => (

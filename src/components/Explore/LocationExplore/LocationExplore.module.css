@@ -1,14 +1,4 @@
-.location_explore {
-    padding: 45px 35px 35px 35px;
-}
-
-.title {
-    color: #181E4B;
-    font-size: 32px;
-    font-family: "Volkhov Bold";
-    margin-bottom: 26px;
-    display: inline-block;
-}
+@import url("../common.css");
 
 .image {
     margin-bottom: 33px;
@@ -22,22 +12,4 @@
 
 .description:last-child {
     margin-bottom: 147px;
-}
-
-.btn {
-    width: 100%;
-    background-color: #DF6951;
-    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
-    border-radius: 10px;
-    padding: 15px 0;
-
-    color: #fff;
-    font-size: 17px;
-    font-family: "Poppins SemiBold";
-}
-
-.btn.disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-    opacity: 0.7;
 }

@@ -27,7 +27,7 @@ export const InformationExplore = ({ packageData }) => {
     };
 
     return (
-        <div className={styles.information_explore}>
+        <div className={styles.basic_padding}>
             <div className={styles.header}>
                 <span className={styles.country}>{packageData.country}</span>
                 <div className={styles.price_wrap}>

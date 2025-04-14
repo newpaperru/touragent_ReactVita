@@ -5,7 +5,7 @@ export const TicketCard = () => {
     const { tickets, updateTicketStatus } = useTickets();
 
     const handlePay = (ticketId) => {
-        updateTicketStatus(ticketId, "Paid"); // Обновляем статус на "Paid"
+        updateTicketStatus(ticketId, "Paid");
     };
 
     if (tickets.length === 0) {
@@ -29,7 +29,16 @@ export const TicketCard = () => {
                         <tr key={ticket.id}>
                             <td>{ticket.country}</td>
                             <td>${ticket.price}</td>
-                            <td>{ticket.status}</td>
+                            <td>
+                                <span className={
+                                    ticket.status === "Ready" ? styles.status_ready :
+                                    ticket.status === "Rejected" ? styles.status_rejected :
+                                    ticket.status === "Paid" ? styles.status_paid :
+                                    styles.status_not_paid
+                                }>
+                                    {ticket.status}
+                                </span>
+                            </td>
                             <td>{ticket.date}</td>
                             <td>
                                 {ticket.status === "Not paid" ? (
@@ -39,9 +48,9 @@ export const TicketCard = () => {
                                     >
                                         Pay
                                     </button>
-                                ) : (
-                                    <span className={styles.paid_text}>Paid</span>
-                                )}
+                                ) : ticket.status === "Paid" ? (
+                                    <span className={styles.pending_text}>Waiting for approval</span>
+                                ) : null}
                             </td>
                         </tr>
                     ))}

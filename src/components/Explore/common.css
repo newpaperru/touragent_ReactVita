@@ -1,0 +1,24 @@
+.basic_padding {
+    padding: 45px 35px 35px 35px;
+}
+
+.title {
+    color: #181E4B;
+    font-size: 32px;
+    font-family: "Volkhov Bold";
+    margin-bottom: 26px;
+
+    display: inline-block;
+}
+
+.btn {
+    width: 100%;
+    background-color: #DF6951;
+    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
+    border-radius: 10px;
+    padding: 15px 0;
+
+    color: #fff;
+    font-size: 17px;
+    font-family: "Poppins SemiBold";
+}

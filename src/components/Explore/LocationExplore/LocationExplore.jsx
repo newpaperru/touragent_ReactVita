@@ -15,7 +15,7 @@ export const LocationExplore = ({ packageData }) => {
     };
 
     return (
-        <div className={styles.location_explore}>
+        <div className={styles.basic_padding}>
             <span className={styles.title}>Location</span>
             <div className={styles.map_container}>
                 <img
