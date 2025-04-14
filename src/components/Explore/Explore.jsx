@@ -7,25 +7,22 @@ import { LocationExplore } from "./LocationExplore/LocationExplore";
 import { GalleryExplore } from "./GalleryExplore/GalleryExplore";
 import { useExploreData } from "./useExploreData";
 
+const tabComponents = {
+    information: InformationExplore,
+    tourPlan: TourPlanExplore,
+    location: LocationExplore,
+    gallery: GalleryExplore,
+};
+
 export const Explore = () => {
     const { packageData, error } = useExploreData();
     const [activeTab, setActiveTab] = useState("information");
-
-    const getActiveComponent = () => {
-        const components = {
-            information: InformationExplore,
-            tourPlan: TourPlanExplore,
-            location: LocationExplore,
-            gallery: GalleryExplore,
-        };
-        return components[activeTab] || InformationExplore;
-    };
 
     if (error) return <div className={styles.error}>{error}</div>;
     if (!packageData)
         return <div className={styles.not_found}>Package not found</div>;
 
-    const ActiveComponent = getActiveComponent();
+    const ActiveComponent = tabComponents[activeTab] || InformationExplore;
 
     return (
         <div className={styles.container}>
