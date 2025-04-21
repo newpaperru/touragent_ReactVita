@@ -1,19 +1,8 @@
-import { useTickets } from "../../ProfilePage/Profile/useTickets";
 import styles from "./TourPlanExplore.module.css";
-import { useState } from "react";
+import { BtnAddToBacket } from "../btnAddToBacket";
 
 export const TourPlanExplore = ({ packageData }) => {
     const tourPlan = packageData.tourPlan || [];
-    const { addTicket, isTourInCart, goToProfile } = useTickets();
-    const [isAdded, setIsAdded] = useState(false);
-
-    const handleButtonClick = () => {
-        if (!isTourInCart(packageData)) {
-            addTicket(packageData);
-            setIsAdded(true);
-        }
-        goToProfile();
-    };
 
     return (
         <div className={styles.basic_padding}>
@@ -42,11 +31,7 @@ export const TourPlanExplore = ({ packageData }) => {
                     </div>
                 ))}
             </div>
-            <button className={styles.btn} onClick={handleButtonClick}>
-                {isAdded || isTourInCart(packageData)
-                    ? "Go to the basket"
-                    : "Book Now"}
-            </button>
+            <BtnAddToBacket packageData={packageData} />
         </div>
     );
 };

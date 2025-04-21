@@ -1,19 +1,7 @@
-import { useTickets } from "../../ProfilePage/Profile/useTickets";
 import styles from "./LocationExplore.module.css";
-import { useState } from "react";
+import { BtnAddToBacket } from "../btnAddToBacket";
 
-export const LocationExplore = ({ packageData }) => {
-    const { addTicket, isTourInCart, goToProfile } = useTickets();
-    const [isAdded, setIsAdded] = useState(false);
-
-    const handleButtonClick = () => {
-        if (!isTourInCart(packageData)) {
-            addTicket(packageData);
-            setIsAdded(true);
-        }
-        goToProfile();
-    };
-
+export const LocationExplore = ({ packageData }) => {    
     return (
         <div className={styles.basic_padding}>
             <span className={styles.title}>Location</span>
@@ -31,11 +19,7 @@ export const LocationExplore = ({ packageData }) => {
                     </p>
                 ))}
             </div>
-            <button className={styles.btn} onClick={handleButtonClick}>
-                {isAdded || isTourInCart(packageData)
-                    ? "Go to the basket"
-                    : "Book Now"}
-            </button>
+            <BtnAddToBacket packageData={packageData} />
         </div>
     );
 };

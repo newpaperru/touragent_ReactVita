@@ -8,7 +8,18 @@ export const TopHeader = ({ theme, handColorSvg = "light" }) => {
     // Получаем текущий путь
     const location = useLocation();
     const navigate = useNavigate();
-    const { isAuth } = useContext(AuthContext);
+    const { isAuth, userRole } = useContext(AuthContext);
+
+    // Перенаправления user в зависимости от роли
+    const getAuthButtonInfo = () => {
+        if (!isAuth) return { path: "/login", text: "Login" };
+
+        return userRole === "admin"
+            ? { path: "/admin", text: "Admin Panel" }
+            : { path: "/profile", text: "Profile" };
+    };
+
+    const buttonInfo = getAuthButtonInfo();
 
     // Массив ссылок меню
     const links = [
@@ -38,9 +49,9 @@ export const TopHeader = ({ theme, handColorSvg = "light" }) => {
             <button
                 type="button"
                 className={styles.button_login}
-                onClick={() => navigate(isAuth ? "/profile" : "/login")}
+                onClick={() => navigate(buttonInfo.path)}
             >
-                {isAuth ? "Go to profile" : "Login"}
+                {buttonInfo.text}
             </button>
         </div>
     );

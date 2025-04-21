@@ -86,7 +86,13 @@
     font-family: "Poppins Medium";
 }
 
-/* Остальные существующие стили остаются без изменений */
+.wrap_img {
+    position: relative;
+}
+
+.packages_card:hover .overlay {
+    opacity: 1;
+}
 
 .overlay {
     position: absolute;
@@ -99,20 +105,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    column-gap: 15px;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 2;
 }
 
-.wrap_img {
-    position: relative;
-}
-
-.packages_card:hover .overlay {
-    opacity: 1;
-}
-
-.explore_button {
+.explore_button,
+.delete_button {
     padding: 12px 24px;
     background: #DF6951;
     color: white;
@@ -125,6 +125,14 @@
 
 .explore_button:hover {
     background: #b65743;
+}
+
+.delete_button {
+    background-color: #ff4d4d;
+}
+
+.delete_button:hover {
+    background-color: #ff1a1a;
 }
 
 /* Стили для звезд рейтинга */

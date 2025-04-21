@@ -5,7 +5,7 @@ import PackagesDate from "../../../../assets/Icons/packagesDate.svg?react";
 import PackagesPeople from "../../../../assets/Icons/packagesPeople.svg?react";
 import PackagesStar from "../../../../assets/Icons/packagesStar.svg?react";
 
-export const PackagesCard = ({ data }) => {
+export const PackagesCard = ({ data, isAdmin = false, onDelete }) => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat("en-US", {
@@ -27,6 +27,17 @@ export const PackagesCard = ({ data }) => {
                 >
                     Explore
                 </Link>
+                {isAdmin && (
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onDelete(data.id);
+                        }}
+                        className={styles.delete_button}
+                    >
+                        Delete
+                    </button>
+                )}
             </div>
 
             <div className={styles.wrap_img}>

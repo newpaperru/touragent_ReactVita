@@ -13,7 +13,6 @@ export const Admin = () => {
     const { logout } = useAuth();
     const { orders, updateOrderStatus } = useTickets();
     const [successMessage, setSuccessMessage] = useState(false);
-    const [deleteMode, setDeleteMode] = useState(false);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -42,14 +41,6 @@ export const Admin = () => {
                         className={styles.button}
                     >
                         {showForm ? "Hide Form" : "Add New Tour"}
-                    </button>
-                    <button
-                        onClick={() => setDeleteMode(!deleteMode)}
-                        className={`${styles.button} ${
-                            deleteMode ? styles.delete_mode_active : ""
-                        }`}
-                    >
-                        {deleteMode ? "Cancel Delete" : "Remove Tour"}
                     </button>
                     <button
                         onClick={logout}
@@ -200,18 +191,13 @@ export const Admin = () => {
             <div className={styles.section}>
                 <h2 className={styles.subtitle}>Current Tours</h2>
                 <div className={styles.grid}>
-                    {tours.map((tour, index) => (
-                        <div key={index} className={styles.tour_container}>
-                            <PackagesCard data={tour} />
-                            {deleteMode && (
-                                <button
-                                    onClick={() => removeTour(tour.id)}
-                                    className={styles.delete_button}
-                                >
-                                    Delete
-                                </button>
-                            )}
-                        </div>
+                {tours.map((tour, index) => (
+                        <PackagesCard 
+                            key={index} 
+                            data={tour} 
+                            isAdmin={true}
+                            onDelete={removeTour}
+                        />
                     ))}
                 </div>
             </div>
