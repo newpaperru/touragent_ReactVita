@@ -5,6 +5,7 @@ export function useTours() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    // "Ловим" туры из db.json
     const fetchTours = async () => {
         setLoading(true);
         try {
@@ -19,6 +20,7 @@ export function useTours() {
         }
     };
 
+    // Добавление тура
     const addTour = async (newTour) => {
         try {
             const response = await fetch("http://localhost:3000/archive", {
@@ -36,9 +38,23 @@ export function useTours() {
         }
     };
 
+    // Удаление тура
+    const removeTour = async (tourId) => {
+        try {
+            const response = await fetch(`http://localhost:3000/archive/${tourId}`, {
+                method: "DELETE",
+            });
+            if (!response.ok) throw new Error("Failed to delete tour");
+            setTours(prev => prev.filter(tour => tour.id !== tourId));
+        } catch (err) {
+            setError(err.message);
+            throw err;
+        }
+    };
+
     useEffect(() => {
         fetchTours();
     }, []);
 
-    return { tours, loading, error, addTour, fetchTours };
+    return { tours, loading, error, addTour, fetchTours, removeTour };
 }
