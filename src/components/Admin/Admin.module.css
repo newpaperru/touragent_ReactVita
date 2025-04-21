@@ -124,3 +124,14 @@
 .reject_btn {
     background-color: #F44336;
 }
+
+.success_message {
+    margin-bottom: 30px;
+    font-family: "Poppins Medium";
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -12,6 +12,7 @@ export const Admin = () => {
     const { tours, addTour } = useTours();
     const { logout } = useAuth();
     const { orders, updateOrderStatus } = useTickets();
+    const [successMessage, setSuccessMessage] = useState(false);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -27,7 +28,7 @@ export const Admin = () => {
     }, []);
 
     const getUserInfo = (userId) => {
-        return users.find(user => user.id === userId) || {};
+        return users.find((user) => user.id === userId) || {};
     };
 
     return (
@@ -64,45 +65,95 @@ export const Admin = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {orders.map(order => {
+                            {orders.map((order) => {
                                 const user = getUserInfo(order.userId);
                                 return (
                                     <tr key={order.orderId}>
                                         <td className={styles.user_info}>
-                                            Full Name: <span className={styles.data}>{user.fullName || "N/A"}</span><br />
-                                            ID: <span className={styles.data}>{order.userId}</span>
+                                            Full Name:{" "}
+                                            <span className={styles.data}>
+                                                {user.fullName || "N/A"}
+                                            </span>
+                                            <br />
+                                            ID:{" "}
+                                            <span className={styles.data}>
+                                                {order.userId}
+                                            </span>
                                         </td>
                                         <td className={styles.user_info}>
-                                            Email: <span className={styles.data}>{user.email || "N/A"}</span><br />
-                                            Phone: <span className={styles.data}>{user.phone || "N/A"}</span><br />
-                                            Birth: <span className={styles.data}>{user.birthDate || "N/A"}</span>
+                                            Email:{" "}
+                                            <span className={styles.data}>
+                                                {user.email || "N/A"}
+                                            </span>
+                                            <br />
+                                            Phone:{" "}
+                                            <span className={styles.data}>
+                                                {user.phone || "N/A"}
+                                            </span>
+                                            <br />
+                                            Birth:{" "}
+                                            <span className={styles.data}>
+                                                {user.birthDate || "N/A"}
+                                            </span>
                                         </td>
                                         <td className={styles.user_info}>
-                                            Country: <span className={styles.data}>{order.country}</span><br />
-                                            Price: <span className={styles.data}>${order.price}</span><br />
-                                            Date: <span className={styles.data}>{order.date}</span>
+                                            Country:{" "}
+                                            <span className={styles.data}>
+                                                {order.country}
+                                            </span>
+                                            <br />
+                                            Price:{" "}
+                                            <span className={styles.data}>
+                                                ${order.price}
+                                            </span>
+                                            <br />
+                                            Date:{" "}
+                                            <span className={styles.data}>
+                                                {order.date}
+                                            </span>
                                         </td>
                                         <td>
-                                            <span className={
-                                                order.adminStatus === "Approved" ? styles.status_approved :
-                                                order.adminStatus === "Rejected" ? styles.status_rejected :
-                                                styles.status_pending
-                                            }>
+                                            <span
+                                                className={
+                                                    order.adminStatus ===
+                                                    "Approved"
+                                                        ? styles.status_approved
+                                                        : order.adminStatus ===
+                                                          "Rejected"
+                                                        ? styles.status_rejected
+                                                        : styles.status_pending
+                                                }
+                                            >
                                                 {order.adminStatus}
                                             </span>
                                         </td>
                                         <td>
-                                            {order.adminStatus === "Pending" && (
+                                            {order.adminStatus ===
+                                                "Pending" && (
                                                 <>
-                                                    <button 
-                                                        className={styles.approve_btn}
-                                                        onClick={() => updateOrderStatus(order.orderId, "Approved")}
+                                                    <button
+                                                        className={
+                                                            styles.approve_btn
+                                                        }
+                                                        onClick={() =>
+                                                            updateOrderStatus(
+                                                                order.orderId,
+                                                                "Approved"
+                                                            )
+                                                        }
                                                     >
                                                         Approve
                                                     </button>
-                                                    <button 
-                                                        className={styles.reject_btn}
-                                                        onClick={() => updateOrderStatus(order.orderId, "Rejected")}
+                                                    <button
+                                                        className={
+                                                            styles.reject_btn
+                                                        }
+                                                        onClick={() =>
+                                                            updateOrderStatus(
+                                                                order.orderId,
+                                                                "Rejected"
+                                                            )
+                                                        }
                                                     >
                                                         Reject
                                                     </button>
@@ -117,8 +168,26 @@ export const Admin = () => {
                 </div>
             </div>
 
-            {showForm && <AddTourForm onSubmit={addTour} />}
-            
+            {showForm && (
+                <AddTourForm
+                    onSubmit={async (newTour) => {
+                        await addTour(newTour);
+                        setSuccessMessage(true);
+                        setTimeout(() => {
+                            setSuccessMessage(false);
+                            setShowForm(false);
+                        }, 3000);
+                    }}
+                    onClose={() => setShowForm(false)}
+                />
+            )}
+
+            {successMessage && (
+                <div className={styles.success_message}>
+                    Тур успешно добавлен ✅
+                </div>
+            )}
+
             <div className={styles.section}>
                 <h2 className={styles.subtitle}>Current Tours</h2>
                 <div className={styles.grid}>
