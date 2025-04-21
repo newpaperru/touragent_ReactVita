@@ -45,7 +45,12 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         }
     };
 
-    const renderInputField = (name, type = "text", required = true) => (
+    const renderInputField = (
+        name,
+        type = "text",
+        required = true,
+        placeholder = ""
+    ) => (
         <div key={name} className={styles.group}>
             <label>
                 {name.charAt(0).toUpperCase() +
@@ -58,6 +63,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     value={formData[name]}
                     onChange={handleChange}
                     required={required}
+                    placeholder={placeholder}
                 />
             ) : (
                 <input
@@ -66,6 +72,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     value={formData[name]}
                     onChange={handleChange}
                     required={required}
+                    placeholder={placeholder}
                 />
             )}
         </div>
@@ -162,16 +169,37 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     <>
                         <span className={styles.title}>Basic Information</span>
                         {[
-                            { name: "date", type: "date" },
-                            { name: "urlImg" },
-                            { name: "country" },
-                            { name: "price" },
-                            { name: "rating", type: "number" },
-                            { name: "countPeople" },
+                            {
+                                name: "date",
+                                type: "date",
+                                placeholder: "",
+                            },
+                            { name: "urlImg", placeholder: "/name.*" },
+                            { name: "country", placeholder: "Enter country" },
+                            { name: "price", placeholder: "Enter price" },
+                            {
+                                name: "rating",
+                                type: "number",
+                                placeholder: "Enter rating (1.0-5.0)",
+                            },
+                            {
+                                name: "countPeople",
+                                placeholder: "Enter number of people",
+                            },
                         ].map((field) =>
-                            renderInputField(field.name, field.type)
+                            renderInputField(
+                                field.name,
+                                field.type,
+                                true,
+                                field.placeholder
+                            )
                         )}
-                        {renderInputField("description", "textarea")}
+                        {renderInputField(
+                            "description",
+                            "textarea",
+                            true,
+                            "Enter description"
+                        )}
                     </>
                 );
             case 2:
@@ -179,18 +207,42 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     <>
                         <span className={styles.title}>Tour Information</span>
                         {[
-                            { name: "destination" },
-                            { name: "departure" },
-                            { name: "departureTime" },
-                            { name: "returnTime" },
-                            { name: "dressCode" },
-                            { name: "fullDescription", type: "textarea" },
-                            { name: "review", required: false },
+                            {
+                                name: "destination",
+                                placeholder: "Enter destination",
+                            },
+                            {
+                                name: "departure",
+                                placeholder: "Enter departure location",
+                            },
+                            {
+                                name: "departureTime",
+                                placeholder: "Enter departure time",
+                            },
+                            {
+                                name: "returnTime",
+                                placeholder: "Enter return time",
+                            },
+                            {
+                                name: "dressCode",
+                                placeholder: "Enter dress code",
+                            },
+                            {
+                                name: "fullDescription",
+                                type: "textarea",
+                                placeholder: "Enter full description",
+                            },
+                            {
+                                name: "review",
+                                required: false,
+                                placeholder: "Enter review (optional)",
+                            },
                         ].map((field) =>
                             renderInputField(
                                 field.name,
                                 field.type,
-                                field.required
+                                field.required,
+                                field.placeholder
                             )
                         )}
                         {renderArrayInput(
@@ -215,7 +267,12 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                 return (
                     <>
                         <span className={styles.title}>Location Details</span>
-                        {renderInputField("map")}
+                        {renderInputField(
+                            "map",
+                            "text",
+                            true,
+                            "/name.*"
+                        )}
                         {renderArrayInput(
                             "Location Descriptions",
                             newLocationDesc,
