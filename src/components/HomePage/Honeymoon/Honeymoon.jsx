@@ -9,9 +9,6 @@ export const Honeymoon = () => {
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <div className={styles.img_wrap}>
-                        <span className={styles.trans_text}>
-                            Honeymoon Packages
-                        </span>
                         <img
                             src={honeymoonImg}
                             alt="honeymoon img"

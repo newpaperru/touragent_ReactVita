@@ -19,14 +19,14 @@
 
 .subtitle {
     color: #FFEFEC;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     font-size: 18px;
     letter-spacing: 0.1em;
     margin-bottom: 5px;
 }
 
 .title {
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
     font-size: 50px;
     color: #fff;
     margin-bottom: 23px;
@@ -34,9 +34,25 @@
 
 .btn {
     color: #fff;
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     font-size: 17px;
     padding: 11px 42px 20px 6px;
     border: 1px solid #fff;
     border-radius: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 39px 17px 3px
+    }
 }

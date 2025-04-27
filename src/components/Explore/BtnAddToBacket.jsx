@@ -19,6 +19,7 @@ export const BtnAddToBacket = ({ packageData }) => {
     };
 
     const buttonText =
+        // TODO: вынести в константы
         userRole === "admin"
             ? "User access only"
             : !packageData
@@ -29,6 +30,7 @@ export const BtnAddToBacket = ({ packageData }) => {
 
     return (
         <button
+            // TODO: вынести в константы
             disabled={userRole === "admin" || !packageData}
             className={"btn"}
             onClick={handleButtonClick}

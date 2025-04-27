@@ -12,13 +12,13 @@
 .people,
 .name_place,
 .description {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 .discount,
 .price_line_through,
 .price {
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .days,
@@ -96,11 +96,11 @@
 }
 
 .country_name {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
 }
 
 .discount {
-    color: #DF6951;
+    color: var(--btn-color);
 }
 
 .price_line_through {
@@ -114,9 +114,9 @@
 }
 
 .btn {
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     box-shadow: 0 15.28px 26.74px 0 rgba(223, 105, 81, 0.15);
-    background-color: #DF6951;
+    background-color: var(--btn-color);
     border-radius: 8px;
 
     padding: 7px 42px 14px 14px;

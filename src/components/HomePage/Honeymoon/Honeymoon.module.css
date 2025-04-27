@@ -1,5 +1,5 @@
 .honeymoon {
-    margin-bottom: 117px;
+    margin-bottom: var(--sections--margin-bottom);
 }
 
 .container {
@@ -13,9 +13,9 @@
 }
 
 .subtitle {
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     font-size: 18px;
-    color: #DF6951;
+    color: var(--btn-color);
     margin-bottom: 18px;
     text-transform: uppercase;
     display: block;
@@ -23,9 +23,9 @@
 }
 
 .title {
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
     font-size: 50px;
-    color: #181E4B;
+    color: var(--title-color);
     text-transform: capitalize;
     display: block;
     margin-bottom: 5px;
@@ -35,67 +35,54 @@
     max-width: 583px;
     width: 100%;
 
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
     margin-bottom: 31px;
 }
 
 .btn {
     padding: 11px 42px 21px 6px;
-    background-color: #DF6951;
+    background-color: var(--btn-color);
     color: #fff;
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     border-radius: 10px;
     margin-bottom: 80px;
 }
 
 .img_wrap {
-    position: relative;
     margin-right: 50px;
 }
 
 .img {
     border-radius: 300px 300px 0 0;
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 
 .trans_text {
     display: inline-block;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translate(-72%, -450%);
     font-size: 52px;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     color: #000;
     opacity: 10%;
-
-    position: absolute;
-    left: -340px;
-    bottom: 260px;
 }
 
-@media (max-width: 1705px) {
-    .trans_text {
-        font-size: 40px;
-        bottom: 199px;
-        left: -270px;
+@media (max-width: 1567px) {
+    .container {
+        padding: 0 100px;
     }
+}
 
-    .img {
-        max-width: 360px;
+@media (max-width: 992px) {
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 16px;
     }
 
     .title {
-        font-size: 40px;
+        font-size: 32px;
     }
 
-    .subtitle {
+    .description {
         font-size: 14px;
-        margin-bottom: 14px;
-    }
-
-    .container {
-        padding: 0 202px;
     }
 }
+

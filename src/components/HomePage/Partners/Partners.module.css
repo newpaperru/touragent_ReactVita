@@ -2,4 +2,10 @@
       display: flex;
       justify-content: space-around;
       margin-bottom: 112px;
+      width: 100%;
+}
+
+.img {
+      max-width: 140px;
+      object-fit: contain;
 }

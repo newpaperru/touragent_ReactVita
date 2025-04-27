@@ -22,7 +22,7 @@
 }
 
 .text {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     font-size: 20px;
     color: #343434;
     letter-spacing: 0.1em;

@@ -45,6 +45,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         }
     };
 
+    // TODO: Вынести в отдельный компонент
     const renderInputField = (
         name,
         type = "text",
@@ -78,6 +79,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         </div>
     );
 
+    // TODO: Вынести в отдельный компонент
     const renderArrayInput = (
         label,
         value,
@@ -110,7 +112,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
             </ul>
         </div>
     );
-
+    // TODO: Вынести в отдельный компонент
     const renderDayPlanInput = () => (
         <>
             <div className={styles.group}>
@@ -267,12 +269,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                 return (
                     <>
                         <span className={styles.title}>Location Details</span>
-                        {renderInputField(
-                            "map",
-                            "text",
-                            true,
-                            "/name.*"
-                        )}
+                        {renderInputField("map", "text", true, "/name.*")}
                         {renderArrayInput(
                             "Location Descriptions",
                             newLocationDesc,

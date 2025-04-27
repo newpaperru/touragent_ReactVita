@@ -1,6 +1,6 @@
 .title {
-    font-family: "Volkhov Bold";
-    color: #181E4B;
+    font-family: var(--title-font-family);
+    color: var(--title-color);
     font-size: 32px;
     text-align: center;
 
@@ -26,7 +26,7 @@
     width: 100%;
 
     font-size: 18px;
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 .birth_date {
@@ -35,7 +35,7 @@
 
 .error {
     color: red;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
     margin-top: 5px;
 }
 
@@ -49,14 +49,14 @@
 
 .btn {
     border-radius: 6px;
-    background-color: #DF6951;
+    background-color: var(--btn-color);
 
     padding: 13px 59px;
     width: 100%;
     cursor: pointer;
     
     color: #fff;
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     font-size: 14px;
 
     margin-bottom: 29px;
@@ -70,11 +70,6 @@
     display: flex;
     justify-content: center;
     column-gap: 10px;
-}
-
-.link_to_another_form,
-.link {
-    font-size: 16px;
 }
 
 .link {

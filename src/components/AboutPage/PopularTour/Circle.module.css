@@ -10,8 +10,8 @@
 }
 
 .text {
-    color: #181E4B;
+    color: var(--title-color);;
     font-size: 18px;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
 }

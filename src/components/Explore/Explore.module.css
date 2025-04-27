@@ -1,6 +1,5 @@
 .container {
     box-shadow: 0 4px 48px 12px rgba(0, 0, 0, 0.09);
     max-width: 1328px;
-    margin: 0 auto;
-    margin-bottom: 117px;
+    margin: 0 auto var(--sections--margin-bottom);
 }

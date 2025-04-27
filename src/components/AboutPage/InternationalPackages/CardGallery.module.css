@@ -34,7 +34,7 @@
 
 .country,
 .price {
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     font-size: 22px;
     color: #fff;
 }

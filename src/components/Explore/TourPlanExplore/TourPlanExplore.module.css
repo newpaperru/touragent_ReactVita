@@ -15,20 +15,20 @@
 }
 
 .day:not(:last-child) {
-    border-left: 1px dashed #DF6951;
+    border-left: 1px dashed var(--btn-color);
     height: 368px;
 }
 
 .day_number {
     border-radius: 9px;
-    background-color: #DF6951;
+    background-color: var(--btn-color);
     width: 47px;
     height: 47px;
     display: inline-block;
 
     color: #fff;
     font-size: 20px;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
     text-align: center;
     padding-top: 9px;
@@ -39,16 +39,16 @@
 }
 
 .day_title {
-    color: #181E4B;
-    font-family: "Poppins SemiBold";
+    color: var(--title-color);
+    font-family: var(--text-font-family-semibold);
     font-size: 20px;
     margin-bottom: 8px;
 }
 
 .description,
 .item {
-    font-family: "Poppins Regular";
-    color: #181E4B;
+    font-family: var(--text-font-family-regular);
+    color: var(--title-color);
 }
 
 .description {

@@ -11,6 +11,7 @@ import { SearchPage } from "./pages/SearchPage";
 import { ExplorePage } from "./pages/ExplorePage";
 import { AdminPanel } from "./pages/AdmimPanel";
 
+
 function App() {
     const [isAuth, setIsAuth] = useState(() => {
         return localStorage.getItem("isAuth") === "true";

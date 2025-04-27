@@ -1,95 +1,60 @@
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 63px;
 }
 
-.link, .dark_theme {
-    font-size: 17px;
-    font-family: "Circular Medium";
-    color: white;
-    display: inline-block;
-    position: relative;
+.link,
+.dark_theme {
+  font-size: 17px;
+  font-family: "Circular Medium";
+  color: white;
+  display: inline-block;
+  position: relative;
 }
 
-.link:not(:last-child), .dark_theme:not(:last-child) {
-    margin-right: 50px;
+.link:not(:last-child),
+.dark_theme:not(:last-child) {
+  margin-right: 50px;
 }
-  
-.link::after, .dark_theme::after {
-    width: 0;
-    border-radius: 34px;
-    background: #DF6951;
-    height: 3px;
-    transition: all .5s ease-in-out;
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translate(-50%);
+
+.link::after,
+.dark_theme::after {
+  width: 0;
+  border-radius: 34px;
+  background: var(--btn-color);
+  height: 3px;
+  transition: all .5s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
 }
-  
-.link.underline::after, .dark_theme.underline::after {
-    width: 30px;
-    right: 0;
-  }
-  
-.link:hover::after, .dark_theme:hover::after {
-    width: 30px;
+
+.link.underline::after,
+.dark_theme.underline::after {
+  width: 30px;
+  right: 0;
+}
+
+.link:hover::after,
+.dark_theme:hover::after {
+  width: 30px;
 }
 
 .button_login {
-    padding: 16px 32px;
-    background-color: #DF6951;
-    border-radius: 10px;
-    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
-    font-family: "Circular Medium";
+  padding: 16px 32px;
+  background-color: var(--btn-color);
+  border-radius: 10px;
+  box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
+  font-family: "Circular Medium";
 
-    color: white;
-    font-size: 17px;
+  color: white;
+  font-size: 17px;
 }
 
 .dark_theme {
-    color: #181E4B;
+  color: var(--title-color);
 }
-
-/* Адаптив для планшетов (до 1024px) */
-@media (max-width: 1024px) {
-    .container {
-      padding-top: 40px; /* Уменьшаем отступ сверху */
-    }
-  
-    .link, .dark_theme {
-      font-size: 15px; /* Уменьшаем размер шрифта */
-    }
-  
-    .link:not(:last-child), .dark_theme:not(:last-child) {
-      margin-right: 30px; /* Уменьшаем отступ между ссылками */
-    }
-  
-    .button_login {
-      padding: 12px 24px; /* Уменьшаем размер кнопки */
-      font-size: 15px; /* Уменьшаем размер шрифта кнопки */
-    }
-  }
-  
-  /* Адаптив для планшетов (до 768px) */
-  @media (max-width: 768px) {
-    .container {
-      padding-top: 30px; /* Еще больше уменьшаем отступ сверху */
-    }
-  
-    .link, .dark_theme {
-      font-size: 14px; /* Еще больше уменьшаем размер шрифта */
-    }
-  
-    .link:not(:last-child), .dark_theme:not(:last-child) {
-      margin-right: 20px; /* Еще больше уменьшаем отступ между ссылками */
-    }
-  
-    .button_login {
-      padding: 10px 20px; /* Еще больше уменьшаем размер кнопки */
-      font-size: 14px; /* Еще больше уменьшаем размер шрифта кнопки */
-    }
-  }

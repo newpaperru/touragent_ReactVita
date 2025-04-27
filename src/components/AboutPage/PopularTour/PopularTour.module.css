@@ -1,5 +1,5 @@
 .popular_tour {
-    margin-bottom: 177px;
+    margin-bottom: var(--sections--margin-bottom);
 }
 
 .wrapper {
@@ -13,9 +13,9 @@
 }
 
 .subtitle {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     font-size: 18px;
-    color: #DF6951;
+    color: var(--btn-color);
     margin-bottom: 2px;
     text-transform: uppercase;
     display: block;
@@ -23,9 +23,9 @@
 }
 
 .title {
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
     font-size: 50px;
-    color: #181E4B;
+    color: var(--title-color);
     text-transform: capitalize;
     margin-bottom: 25px;
     display: block;
@@ -35,6 +35,6 @@
     max-width: 583px;
     width: 100%;
 
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
     margin-bottom: 85px;
 }

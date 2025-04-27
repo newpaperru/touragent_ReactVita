@@ -3,9 +3,9 @@
 }
 
 .title {
-    color: #181E4B;
+    color: var(--title-color);
     font-size: 50px;
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
     display: inline-block;
     margin-bottom: 30px;
 }

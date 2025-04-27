@@ -5,7 +5,7 @@
 }
 
 .description {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
     margin-bottom: 15px;
     max-width: 708px;
 }

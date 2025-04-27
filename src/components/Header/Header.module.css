@@ -4,13 +4,11 @@
 
 .wrap {
   position: relative;
+  min-width: 886px;
 }
 
 .bg_img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 .home_page_filter,
@@ -38,23 +36,15 @@
   height: 100%;
 }
 
-@media (max-width: 1257px) {
+
+@media (max-width: 1399px) {
   .container {
     padding: 0 100px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 886px) {
   .container {
-    padding: 0 50px;
-    row-gap: 80px;
-  }
-
-  .bg_img {
-    max-height: 600px;
-  }
-
-  .header {
-    margin-bottom: 30px;
+    padding: 0 70px;
   }
 }

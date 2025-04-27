@@ -37,7 +37,7 @@
 
 .rating_text {
     color: #5E6282;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .header {
@@ -47,9 +47,9 @@
 }
 
 .country {
-    color: #181E4B;
+    color: var(--title-color);
     font-size: 32px;
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
 }
 
 .price_wrap {
@@ -59,15 +59,15 @@
 }
 
 .price {
-    font-family: "Poppins Medium";
-    color: #DF6951;
+    font-family: var(--text-font-family-medium);
+    color: var(--btn-color);
     font-size: 30px;
 }
 
 .price_text, 
 .description,
 .value {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 
@@ -81,9 +81,9 @@
 }
 
 .title {
-    color: #DF6951;
+    color: var(--btn-color);
     font-size: 20px;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
 }
 

@@ -13,9 +13,9 @@
 
 .title,
 .subtitle {
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
     font-size: 32px;
-    color: #181E4B;
+    color: var(--title-color);
 }
 
 .subtitle {
@@ -31,7 +31,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .button:nth-child(2) {
@@ -79,24 +79,24 @@
 }
 
 .user_info {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
 }
 
 .data {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 
 
 .orders_table th {
     background-color: #f8f8f8;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .status_pending,
 .status_approved,
 .status_rejected {
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 
@@ -131,7 +131,7 @@
 
 .success_message {
     margin-bottom: 30px;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
     animation: fadeIn 0.5s ease-in-out;
 }
 

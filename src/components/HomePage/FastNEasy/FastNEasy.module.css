@@ -1,5 +1,5 @@
 .fast_n_easy {
-    margin-bottom: 119px;
+    margin-bottom: var(--sections--margin-bottom);
 }
 
 .container {
@@ -7,4 +7,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 1399px) {
+    .container {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 50px;
+    }
 }

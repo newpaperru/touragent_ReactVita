@@ -3,7 +3,7 @@
     align-items: center;
     column-gap: 10px;
     color: #343434;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
     font-size: 20px;
     cursor: pointer;

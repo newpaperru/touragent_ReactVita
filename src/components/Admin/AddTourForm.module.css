@@ -27,7 +27,7 @@
 /* Typography */
 .title {
     font-size: 24px;
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     color: #333;
     margin-bottom: 16px;
 }
@@ -41,7 +41,7 @@
 }
 
 .group label {
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
     color: #555;
     cursor: default;
 }
@@ -51,7 +51,7 @@
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 .group textarea {
@@ -81,7 +81,7 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .add_button:hover {
@@ -95,7 +95,7 @@ button {
     border: none;
     border-radius: 4px;
     margin: 16px 0;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .add_section_button:hover {
@@ -165,7 +165,7 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .nav_button:hover {
@@ -178,7 +178,7 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .submit_button:hover {

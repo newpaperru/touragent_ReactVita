@@ -19,11 +19,11 @@
 
 .table th {
     background-color: #f5f5f5;
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .table td {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
 }
 
 .pay_btn {
@@ -44,7 +44,7 @@
 .status_paid,
 .status_not_paid,
 .pending_text {
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
 }
 
 .status_ready {

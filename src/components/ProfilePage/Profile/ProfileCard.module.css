@@ -8,7 +8,7 @@
 
 .btn {
     padding: 16px 32px;
-    background-color: #DF6951;
+    background-color: var(--btn-color);
     border-radius: 10px;
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
     font-family: "Circular Medium";
@@ -42,13 +42,13 @@
 }
 
 .user_fullname {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     font-size: 28px;
     color: #281D1B;
 }
 
 .user_datas {
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
     color: rgba(0, 0, 0, 0.5);
 
     display: flex;
@@ -66,7 +66,7 @@
     display: block;
     margin-bottom: 10px;
 
-    font-family: "Poppins Medium";
+    font-family: var(--text-font-family-medium);
     font-size: 18px;
 }
 

@@ -1,5 +1,4 @@
 import styles from "./BestPackages.module.css";
-import parisBPImg from "/parisBP.png";
 import londonBPImg from "/londonBP.png";
 import secondBPImg from "/secondBP.png";
 import thirdBPImg from "/thirdBP.png";
@@ -41,12 +40,6 @@ export const BestPackages = () => {
                                 price={item.price}
                             />
                         ))}
-                    </div>
-                    <div className={styles.bg_wrap}>
-                        <img src={parisBPImg} alt="paris" />
-                        <span className={styles.trans_text}>
-                            Breath Taking Viewes
-                        </span>
                     </div>
                 </div>
             </div>

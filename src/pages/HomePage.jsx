@@ -10,7 +10,6 @@ import { Category } from "../components/HomePage/Category/Category";
 import { FastNEasy } from "../components/HomePage/FastNEasy/FastNEasy";
 import { Explore } from "../components/HomePage/Explore/Explore";
 import { LetsMake } from "../components/HomePage/LetsMake/LetsMake";
-import { BestPackages } from "../components/HomePage/BestPackages/BestPackages";
 import { Honeymoon } from "../components/HomePage/Honeymoon/Honeymoon";
 
 export const PageHome = () => {
@@ -31,7 +30,6 @@ export const PageHome = () => {
             <Honeymoon />
             <FastNEasy />
             <LetsMake />
-            <BestPackages />
             <Explore />
             <Trending />
             <Footer />

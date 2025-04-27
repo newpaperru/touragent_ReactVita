@@ -10,16 +10,16 @@
 
 .subtitle {
     font-size: 18px;
-    color: #DF6951;
+    color: var(--btn-color);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     display: block;
 }
 
 .title {
-    color: #181E4B;
+    color: var(--title-color);
     font-size: 50px;
     text-transform: capitalize;
-    font-family: "Volkhov Bold";
+    font-family: var(--title-font-family);
 }

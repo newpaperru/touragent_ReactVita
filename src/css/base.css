@@ -1,3 +1,18 @@
+:root {
+	--btn-color: #DF6951;
+	--title-color: #181E4B;
+
+	--title-font-family: "Volkhov Bold";
+	--text-font-family-regular: "Poppins Regular";
+	--text-font-family-medium: "Poppins Medium";
+	--text-font-family-semibold: "Poppins SemiBold";
+	--text-font-family-bold: "Poppins Bold";
+
+	--sections--margin-bottom: 117px;
+}
+
+
+
 /* Reset and base styles  */
 * {
 	padding: 0px;

@@ -1,12 +1,12 @@
 .subtitle {
-    font-family: "Poppins Bold";
+    font-family: var(--text-font-family-bold);
     font-size: 18px;
-    color: #DF6951;
+    color: var(--btn-color);
 }
 
 .title {
-    font-family: "Volkhov Bold";
-    color: #181E4B;
+    font-family: var(--title-font-family);
+    color: var(--title-color);
     font-size: 50px;
     margin-bottom: 31px;
 }
@@ -14,4 +14,18 @@
 .subtitle, .title {
     display: block;
     text-transform: capitalize;
+}
+
+@media (max-width: 1070px) {
+    .container {
+        padding: 0 100px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
 }

@@ -72,6 +72,7 @@ export const Admin = () => {
                                         <td className={styles.user_info}>
                                             Full Name:{" "}
                                             <span className={styles.data}>
+                                                {/* TODO: Вынести в константы */}
                                                 {user.fullName || "N/A"}
                                             </span>
                                             <br />
@@ -83,16 +84,19 @@ export const Admin = () => {
                                         <td className={styles.user_info}>
                                             Email:{" "}
                                             <span className={styles.data}>
+                                                {/* TODO: Вынести в константы */}
                                                 {user.email || "N/A"}
                                             </span>
                                             <br />
                                             Phone:{" "}
                                             <span className={styles.data}>
+                                                {/* TODO: Вынести в константы */}
                                                 {user.phone || "N/A"}
                                             </span>
                                             <br />
                                             Birth:{" "}
                                             <span className={styles.data}>
+                                                {/* TODO: Вынести в константы */}
                                                 {user.birthDate || "N/A"}
                                             </span>
                                         </td>
@@ -116,9 +120,11 @@ export const Admin = () => {
                                             <span
                                                 className={
                                                     order.adminStatus ===
+                                                    // TODO: Вынести в константы
                                                     "Approved"
                                                         ? styles.status_approved
                                                         : order.adminStatus ===
+                                                        // TODO: Вынести в константы
                                                           "Rejected"
                                                         ? styles.status_rejected
                                                         : styles.status_pending
@@ -129,6 +135,7 @@ export const Admin = () => {
                                         </td>
                                         <td>
                                             {order.adminStatus ===
+                                            // TODO: Вынести в константы
                                                 "Pending" && (
                                                 <>
                                                     <button
@@ -138,6 +145,7 @@ export const Admin = () => {
                                                         onClick={() =>
                                                             updateOrderStatus(
                                                                 order.orderId,
+                                                                // TODO: Вынести в константы
                                                                 "Approved"
                                                             )
                                                         }
@@ -151,6 +159,7 @@ export const Admin = () => {
                                                         onClick={() =>
                                                             updateOrderStatus(
                                                                 order.orderId,
+                                                                // TODO: Вынести в константы
                                                                 "Rejected"
                                                             )
                                                         }

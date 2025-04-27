@@ -1,10 +1,10 @@
 .best_packages {
-    margin-bottom: 117px;
+    margin-bottom: var(--sections--margin-bottom);
 }
 
 .subtitle {
-    color: #DF6951;
-    font-family: "Poppins Bold";
+    color: var(--btn-color);
+    font-family: var(--text-font-family-bold);
     font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -12,24 +12,24 @@
 }
 
 .title {
-    font-family: "Volkhov Bold";
-    color: #181E4B;
+    font-family: var(--title-font-family);
+    color: var(--title-color);
     font-size: 50px;
     margin-bottom: 19px;
     display: block;
 }
 
 .text {
-    font-family: "Poppins Regular";
+    font-family: var(--text-font-family-regular);
     margin-bottom: 31px;
     max-width: 574px;
 }
 
 .btn {
     padding: 11px 42px 21px 6px;
-    background-color: #DF6951;
+    background-color: var(--btn-color);
     color: #fff;
-    font-family: "Poppins SemiBold";
+    font-family: var(--text-font-family-semibold);
     border-radius: 10px;
     margin-bottom: 80px;
     display: inline-block;
@@ -45,32 +45,6 @@
 
 .list {
     display: flex;
-    column-gap: 56px;
-    margin-bottom: 56px;
+    justify-content: space-between;
 }
 
-.bg_wrap {
-    position: absolute;
-    display: inline-block;
-    z-index: -1;
-    right: 65px;
-    bottom: -53px;
-}
-
-.bg_wrap>img {
-    border-radius: 300px 300px 0 0;
-    position: relative;
-}
-
-.trans_text {
-    display: inline-block;
-    transform: rotate(-90deg);
-    font-size: 52px;
-    font-family: "Poppins Bold";
-    color: #000;
-    opacity: 10%;
-
-    position: absolute;
-    right: -325px;
-    bottom: 250px;
-}
