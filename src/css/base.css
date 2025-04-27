@@ -7,7 +7,10 @@
 	/* Красные/Оранжевые */
 	--color-burnt_coral: #DF6951;
 	--color-tangerine_orange: #e9630f;
+	--color-coral_orange: #FF7255;
+	--color-dark_brick: #BA4E38;
 	--color-vermilion_flame: #F15A2B;
+	--color-rust_red: #b65743;
 	--color-red-400: #ff4d4d;
 	--color-red-500: #f44336;
 	--color-red-600: #ff1a1a;
@@ -19,12 +22,14 @@
 	--color-dusk_lavender: #5E6282;
 	--color-misty_violet: #757095;
 	--color-material_blue: #2196F3;
+	--color-bright_blue: #0b7dda;
 	--color-neon_blue: #4a4aff;
 
 	/* Серые/Нейтральные */
 	--color-void_black: #080809;
 	--color-dark_charcoal: #262626;
 	--color-onyx_gray: #343434;
+	--color-onyx_gray--opacity: #34343485;
 	--color-dark_gray: #333;
 	--color-medium_dark_gray: #666;
 	--color-medium_gray: #555;
@@ -34,10 +39,14 @@
 	--color-silver_mist: #F0F0F0;
 	--color-anti_flash_white: #f5f5f5;
 	--color-ghost_white: #f8f8f8;
+	--color-antique_white :#f9f9f9;
 	--color-lavender_mist: #EEEEFF;
 	--color-whisper_pink: #FFEFEC;
 	--color-white: #fff;
 	--color-black: #000;
+	--color-black--opacity: #00000057;
+	--color-silver: #ddd;
+	--color-system_elevation_base: #E5E5EA;
 
 	/* Желтые/Золотые */
 	--color-gold: #FFD700;

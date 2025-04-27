@@ -108,7 +108,7 @@ export const Circle = ({
                     cx={size / 2}
                     cy={size / 2}
                     r={radius}
-                    stroke="#e0e0e0"
+                    stroke="var(--color-platinum_gray)"
                     strokeWidth={strokeWidth}
                     fill="none"
                 />

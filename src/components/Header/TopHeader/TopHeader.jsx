@@ -30,7 +30,7 @@ export const TopHeader = ({ theme, handColorSvg = "light" }) => {
 
     return (
         <div className={styles.container}>
-            <Logo fill={handColorSvg === "dark" ? "var(--color-midnight_blue)" : "#fff"} />
+            <Logo fill={handColorSvg === "dark" ? "var(--color-midnight_blue)" : "var(--color-white)"} />
             <nav>
                 {links.map((link) => (
                     <Link

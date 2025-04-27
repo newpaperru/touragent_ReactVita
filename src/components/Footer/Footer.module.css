@@ -5,7 +5,7 @@
 .content {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #E5E5EA;
+    border-bottom: 2px solid var(--color-system_elevation_base);
     padding-bottom: 59px;
     margin-bottom: 59px;
 }

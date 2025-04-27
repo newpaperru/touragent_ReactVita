@@ -7,7 +7,7 @@
     right: 15px;
     top: 15px;
     border-radius: 46px;
-    background: linear-gradient(45deg, #FF7255 0%, #BA4E38 100%);
+    background: linear-gradient(45deg, var(--color-coral_orange) 0%, var(--color-dark_brick) 100%);
     color: var(--color-white);
     font-family: var(--font-family-poppins--regular);
     padding: 6px 22px;

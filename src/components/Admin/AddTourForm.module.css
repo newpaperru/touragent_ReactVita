@@ -49,7 +49,7 @@
 .group input,
 .group textarea {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-silver);
     border-radius: 4px;
     font-family: var(--font-family-poppins--regular);
 }
@@ -77,7 +77,7 @@ button {
 
 .add_button {
     padding: 8px 16px;
-    background: #4CAF50;
+    background: var(--color-apple_green);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -85,12 +85,12 @@ button {
 }
 
 .add_button:hover {
-    background: #45a049;
+    background: var(--color-forest_green);
 }
 
 .add_section_button {
     padding: 12px;
-    background: #2196F3;
+    background: var(--color-material_blue);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -98,16 +98,12 @@ button {
     font-family: var(--font-family-poppins--medium);
 }
 
-.add_section_button:hover {
-    background: #0b7dda;
-}
-
 /* Lists */
 .list {
     list-style: none;
     padding: 0;
     margin: 0;
-    border: 1px solid #eee;
+    border: 1px solid var(--color-anti_flash_white);
     border-radius: 4px;
     max-height: 150px;
     overflow-y: auto;
@@ -115,7 +111,7 @@ button {
 
 .list li {
     padding: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-anti_flash_white);
     display: flex;
 }
 
@@ -137,7 +133,7 @@ button {
 .added_sections {
     margin-top: 16px;
     padding: 16px;
-    background: #f9f9f9;
+    background: var(--color-antique_white);
     border-radius: 4px;
     max-height: 300px;
     overflow-y: auto;
@@ -157,12 +153,12 @@ button {
     justify-content: space-between;
     margin-top: 32px;
     padding-top: 16px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--color-anti_flash_white);
 }
 
 .nav_button {
     padding: 12px 24px;
-    background: #2196F3;
+    background: var(--color-material_blue);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -170,12 +166,12 @@ button {
 }
 
 .nav_button:hover {
-    background: #0b7dda;
+    background: var(--color-bright_blue);
 }
 
 .submit_button {
     padding: 12px 24px;
-    background: #4CAF50;
+    background: var(--color-apple_green);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -183,7 +179,7 @@ button {
 }
 
 .submit_button:hover {
-    background: #45a049;
+    background: var(--color-forest_green);
 }
 
 .remove_button {

@@ -78,7 +78,7 @@
 
 .input,
 .input_blocked {
-    border: 1px solid #000;
+    border: 1px solid var(--color-black);
     border-radius: 12px;
     padding: 27px 22px;
     width: 580px;
