@@ -5,7 +5,7 @@
 .title {
     color: var(--color-midnight_blue);
     font-size: 32px;
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     margin-bottom: 26px;
 
     display: inline-block;
@@ -20,7 +20,7 @@
 
     color: var(--color-white);
     font-size: 17px;
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
 }
 
 .btn:disabled {

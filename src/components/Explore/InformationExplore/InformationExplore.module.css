@@ -37,7 +37,7 @@
 
 .rating_text {
     color: var(--color-dusk_lavendar);
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .header {
@@ -49,7 +49,7 @@
 .country {
     color: var(--color-midnight_blue);
     font-size: 32px;
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
 }
 
 .price_wrap {
@@ -59,7 +59,7 @@
 }
 
 .price {
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
     color: var(--color-burnt_coral);
     font-size: 30px;
 }
@@ -67,7 +67,7 @@
 .price_text, 
 .description,
 .value {
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 
@@ -83,7 +83,7 @@
 .title {
     color: var(--color-burnt_coral);
     font-size: 20px;
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     letter-spacing: 0.1em;
 }
 

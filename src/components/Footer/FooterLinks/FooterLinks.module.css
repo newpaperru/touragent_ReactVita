@@ -14,11 +14,11 @@
 .title {
     margin-bottom: 6px;
     font-size: 21px;
-    font-family: "Manrope Bold";
+    font-family: var(--font-family-manrope--bold);
 }
 
 .text {
-    font-family: "Manrope Medium";
+    font-family: var(--font-family-manrope--medium);
 }
 
 @media (max-width: 1380px) {

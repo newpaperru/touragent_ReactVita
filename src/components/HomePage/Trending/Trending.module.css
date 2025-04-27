@@ -13,7 +13,7 @@
     color: var(--color-burnt_coral);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     display: block;
 }
 
@@ -21,5 +21,5 @@
     color: var(--color-midnight_blue);
     font-size: 50px;
     text-transform: capitalize;
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
 }

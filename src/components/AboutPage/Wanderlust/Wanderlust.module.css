@@ -5,7 +5,7 @@
 }
 
 .text {
-    font-family: "Yesteryear Regular";
+    font-family: var(--font-family-yesteryear--regular);
     font-size: 50px;
     color: var(--color-white);
     display: block;

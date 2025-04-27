@@ -7,7 +7,7 @@
 }
 
 .subtitle {
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
     font-size: 18px;
     color: var(--color-burnt_coral);
     margin-bottom: 18px;
@@ -17,7 +17,7 @@
 }
 
 .title {
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     font-size: 50px;
     color: var(--color-midnight_blue);
     text-transform: capitalize;

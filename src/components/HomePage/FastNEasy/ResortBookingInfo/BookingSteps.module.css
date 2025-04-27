@@ -35,12 +35,12 @@
 
 .title {
     color: var(--color-dusk_lavendar);
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
 }
 
 .text {
   color: var(--color-dusk_lavendar);
-  font-family: var(--text-font-family-regular);
+  font-family: var(--font-family-poppins--regular);
 }
 
 

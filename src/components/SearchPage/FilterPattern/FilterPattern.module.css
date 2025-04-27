@@ -3,7 +3,7 @@
     align-items: center;
     column-gap: 10px;
     color: var(--color-onyx_gray);
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     letter-spacing: 0.1em;
     font-size: 20px;
     cursor: pointer;

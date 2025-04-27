@@ -11,7 +11,7 @@
     background-color: var(--color-burnt_coral);
     border-radius: 10px;
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
-    font-family: "Circular Medium";
+    font-family: var(--font-family-circular--medium);
 
     color: white;
     font-size: 17px;
@@ -42,13 +42,13 @@
 }
 
 .user_fullname {
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     font-size: 28px;
     color: var(--color-dark_cocoa);
 }
 
 .user_datas {
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
     color: rgba(0, 0, 0, 0.5);
 
     display: flex;
@@ -66,7 +66,7 @@
     display: block;
     margin-bottom: 10px;
 
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
     font-size: 18px;
 }
 

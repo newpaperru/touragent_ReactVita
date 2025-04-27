@@ -1,7 +1,7 @@
 .title {
     font-size: 21px;
     color: var(--color-midnight_violet);
-    font-family: "Manrope Bold";
+    font-family: var(--font-family-manrope--bold);
     margin-bottom: 24px;
     display: inline-block;
 }
@@ -17,7 +17,7 @@
 .note {
     color: var(--color-midnight_violet);
     opacity: 0.2;
-    font-family: "Manrope Medium";
+    font-family: var(--font-family-manrope--medium);
     letter-spacing: -0.02em;
 }
 
@@ -26,7 +26,7 @@
     background-color: var(--color-burnt_coral);
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
     border-radius: 10px;
-    font-family: "Manrope Medium";
+    font-family: var(--font-family-manrope--medium);
     letter-spacing: -0.02em;
     color: white;
 }

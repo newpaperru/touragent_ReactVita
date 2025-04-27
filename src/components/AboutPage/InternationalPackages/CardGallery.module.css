@@ -34,7 +34,7 @@
 
 .country,
 .price {
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
     font-size: 22px;
     color: var(--color-white);
 }

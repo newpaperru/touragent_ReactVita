@@ -19,11 +19,11 @@
 
 .table th {
     background-color: var(--color-anti_flash_white);
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .table td {
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 .pay_btn {
@@ -44,7 +44,7 @@
 .status_paid,
 .status_not_paid,
 .pending_text {
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .status_ready {

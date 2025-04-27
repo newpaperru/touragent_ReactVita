@@ -13,7 +13,7 @@
 }
 
 .title {
-  font-family: var(--text-font-family-bold);
+  font-family: var(--font-family-poppins--bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: white;
@@ -22,14 +22,14 @@
 
 .description {
   margin-bottom: 15px;
-  font-family: var(--text-font-family-bold);
+  font-family: var(--font-family-poppins--bold);
   color: var(--color-white);
   font-size: 59px;
   font-weight: 700;
 }
 
 .description_alt {
-  font-family: "Yesteryear Regular";
+  font-family: var(--font-family-yesteryear--regular);
   color: white;
   font-size: 158px;
 }

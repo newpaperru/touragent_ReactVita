@@ -9,20 +9,20 @@
 
 .subtitle {
     color: var(--color-midnight_blue);
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     font-size: 42px;
     text-align: center;
     display: block;
 }
 
 .description {
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
     text-align: center;
     margin-bottom: 45px;
 }
 
 .filter_title {
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     font-size: 20px;
     color: var(--color-onyx_gray);
     display: block;
@@ -42,7 +42,7 @@
     border-radius: 5px;
     padding: 10px;
     background-color: var(--color-white);
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 .search_input input {
@@ -72,7 +72,7 @@
     margin-bottom: 5px;
     font-size: 14px;
     color: var(--color-medium_gray);
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 .input_group input {
@@ -82,7 +82,7 @@
     border-radius: 4px;
     background-color: var(--color-white);
 
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 .rating_input {
@@ -101,5 +101,5 @@
     width: 16px;
     height: 16px;
     color: var(--color-gold);
-    
+
 }

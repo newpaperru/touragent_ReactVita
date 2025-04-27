@@ -13,7 +13,7 @@
 
 .title,
 .subtitle {
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     font-size: 32px;
     color: var(--color-midnight_blue);
 }
@@ -31,7 +31,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .button:nth-child(2) {
@@ -79,24 +79,24 @@
 }
 
 .user_info {
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
 }
 
 .data {
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
 }
 
 
 
 .orders_table th {
     background-color: var(--color-ghost_white);
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .status_pending,
 .status_approved,
 .status_rejected {
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 
@@ -131,7 +131,7 @@
 
 .success_message {
     margin-bottom: 30px;
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
     animation: fadeIn 0.5s ease-in-out;
 }
 

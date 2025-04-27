@@ -13,7 +13,7 @@
 }
 
 .subtitle {
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
     font-size: 18px;
     color: var(--color-burnt_coral);
     margin-bottom: 18px;
@@ -23,7 +23,7 @@
 }
 
 .title {
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     font-size: 50px;
     color: var(--color-midnight_blue);
     text-transform: capitalize;
@@ -35,7 +35,7 @@
     max-width: 583px;
     width: 100%;
 
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
     margin-bottom: 31px;
 }
 
@@ -43,7 +43,7 @@
     padding: 11px 42px 21px 6px;
     background-color: var(--color-burnt_coral);
     color: var(--color-white);
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
     border-radius: 10px;
     margin-bottom: 80px;
 }
@@ -60,7 +60,7 @@
     display: inline-block;
     transform: rotate(-90deg) translate(-72%, -450%);
     font-size: 52px;
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     color: var(--color-black);
     opacity: 10%;
 }

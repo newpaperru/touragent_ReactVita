@@ -16,7 +16,7 @@
 .title {
     display: block;
     color: var(--color-void_black);
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
     letter-spacing: 0.015em;
     font-size: 18px;
     margin-bottom: 12px;
@@ -25,7 +25,7 @@
 .info, .count_people {
     letter-spacing: 0.02em;
     color: var(--color-dusty_twilight);
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .count_wrap {

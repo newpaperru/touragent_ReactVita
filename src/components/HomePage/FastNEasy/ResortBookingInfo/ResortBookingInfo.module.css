@@ -1,11 +1,11 @@
 .subtitle {
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     font-size: 18px;
     color: var(--color-burnt_coral);
 }
 
 .title {
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     color: var(--color-midnight_blue);
     font-size: 50px;
     margin-bottom: 31px;

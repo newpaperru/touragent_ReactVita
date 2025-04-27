@@ -5,7 +5,7 @@
 }
 
 .text {
-  font-family: var(--text-font-family-medium);
+  font-family: var(--font-family-poppins--medium);
   color: var(--color-white);
   font-size: 13px;
 }

@@ -12,6 +12,6 @@
 .text {
     color: var(--color-midnight_blue);
     font-size: 18px;
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     letter-spacing: 0.1em;
 }

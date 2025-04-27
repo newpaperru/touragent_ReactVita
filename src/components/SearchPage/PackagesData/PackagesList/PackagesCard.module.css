@@ -36,7 +36,7 @@
     padding: 15px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     color: white;
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
     display: flex;
     justify-content: space-between;
 }
@@ -60,7 +60,7 @@
 .country {
     color: var(--color-midnight_blue);
     font-size: 34px;
-    font-family: var(--title-font-family);
+    font-family: var(--font-family-volkhov--bold);
     margin-bottom: 5px;
     display: block;
 }
@@ -68,7 +68,7 @@
 .description {
     color: var(--color-midnight_blue);
     font-size: 17px;
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
     margin-bottom: 21px;
 }
 
@@ -83,7 +83,7 @@
 .star_wrap {
     color: var(--color-dark_charcoal);
     font-size: 18px;
-    font-family: var(--text-font-family-medium);
+    font-family: var(--font-family-poppins--medium);
 }
 
 .wrap_img {

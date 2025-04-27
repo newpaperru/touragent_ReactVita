@@ -28,7 +28,7 @@
 
     color: var(--color-white);
     font-size: 20px;
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     letter-spacing: 0.1em;
     text-align: center;
     padding-top: 9px;
@@ -40,14 +40,14 @@
 
 .day_title {
     color: var(--color-midnight_blue);
-    font-family: var(--text-font-family-semibold);
+    font-family: var(--font-family-poppins--semibold);
     font-size: 20px;
     margin-bottom: 8px;
 }
 
 .description,
 .item {
-    font-family: var(--text-font-family-regular);
+    font-family: var(--font-family-poppins--regular);
     color: var(--color-midnight_blue);
 }
 

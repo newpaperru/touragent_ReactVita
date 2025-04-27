@@ -22,7 +22,7 @@
 }
 
 .text {
-    font-family: var(--text-font-family-bold);
+    font-family: var(--font-family-poppins--bold);
     font-size: 20px;
     color: var(--color-onyx_gray);
     letter-spacing: 0.1em;
