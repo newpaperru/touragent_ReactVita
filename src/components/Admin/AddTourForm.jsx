@@ -5,6 +5,8 @@ import { InputField } from "./Inputs/InputField";
 import { ArrayInput } from "./Inputs/ArrayInput";
 import { DayPlanInput } from "./Inputs/DayPlanInput";
 
+import { AutocompleteInput } from "./Inputs/AutocompleteInput";
+
 export const AddTourForm = ({ onSubmit, onClose }) => {
     const {
         formData,
@@ -24,10 +26,18 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         handleAddNotIncludedItem,
         handleAddLocationDesc,
         handleAddListItem,
+        handleRemoveItem,
+        newDressCodeItem,
+        setNewDressCodeItem,
+        handleAddDressCodeItem,
         handleAddDayPlan,
         handleSubmit,
         nextStep,
         prevStep,
+        DRESS_CODE_OPTIONS,
+        INCLUDED_SERVICES,
+        NOT_INCLUDED_SERVICES,
+        ACTIVITY_ITEMS,
     } = useAddTourForm(onSubmit, onClose);
 
     const [showSuccess, setShowSuccess] = useState(false);
@@ -67,9 +77,20 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                             { name: "urlImg", placeholder: "/name.*" },
                             { name: "country", placeholder: "Enter country" },
                             { name: "price", placeholder: "Enter price" },
-                            { name: "rating", type: "number", placeholder: "Enter rating (1.0-5.0)" },
-                            { name: "countPeople", placeholder: "Enter number of people" },
-                            { name: "description", type: "textarea", placeholder: "Enter description" },
+                            {
+                                name: "rating",
+                                type: "number",
+                                placeholder: "Enter rating (1.0-5.0)",
+                            },
+                            {
+                                name: "countPeople",
+                                placeholder: "Enter number of people",
+                            },
+                            {
+                                name: "description",
+                                type: "textarea",
+                                placeholder: "Enter description",
+                            },
                         ].map((field) => (
                             <InputField
                                 key={field.name}
@@ -88,13 +109,32 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     <>
                         <span className={styles.title}>Tour Information</span>
                         {[
-                            { name: "destination", placeholder: "Enter destination" },
-                            { name: "departure", placeholder: "Enter departure location" },
-                            { name: "departureTime", placeholder: "Enter departure time" },
-                            { name: "returnTime", placeholder: "Enter return time" },
-                            { name: "dressCode", placeholder: "Enter dress code" },
-                            { name: "fullDescription", type: "textarea", placeholder: "Enter full description" },
-                            { name: "review", required: false, placeholder: "Enter review (optional)" },
+                            {
+                                name: "destination",
+                                placeholder: "Enter destination",
+                            },
+                            {
+                                name: "departure",
+                                placeholder: "Enter departure location",
+                            },
+                            {
+                                name: "departureTime",
+                                placeholder: "Enter departure time",
+                            },
+                            {
+                                name: "returnTime",
+                                placeholder: "Enter return time",
+                            },
+                            {
+                                name: "fullDescription",
+                                type: "textarea",
+                                placeholder: "Enter full description",
+                            },
+                            {
+                                name: "review",
+                                required: false,
+                                placeholder: "Enter review (optional)",
+                            },
                         ].map((field) => (
                             <InputField
                                 key={field.name}
@@ -106,22 +146,117 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                 onChange={handleChange}
                             />
                         ))}
-                        <ArrayInput
-                            label="Included Services"
-                            value={newIncludedItem}
-                            setValue={setNewIncludedItem}
-                            onAdd={handleAddIncludedItem}
-                            items={formData.included}
-                            placeholder="Add included service"
-                        />
-                        <ArrayInput
-                            label="Not Included Services"
-                            value={newNotIncludedItem}
-                            setValue={setNewNotIncludedItem}
-                            onAdd={handleAddNotIncludedItem}
-                            items={formData.notIncluded}
-                            placeholder="Add not included service"
-                        />
+
+                        {/* Dress Code с автодополнением */}
+                        <div className={styles.group}>
+                            <label>Dress Code:</label>
+                            <AutocompleteInput
+                                value={newDressCodeItem}
+                                onChange={(e) =>
+                                    setNewDressCodeItem(e.target.value)
+                                }
+                                onAdd={handleAddDressCodeItem}
+                                placeholder="Add dress code item"
+                                options={DRESS_CODE_OPTIONS}
+                            />
+                            <ul className={styles.list}>
+                                {formData.dressCode?.map((item, index) => (
+                                    <li
+                                        key={`dresscode-${index}`}
+                                        className={styles.list_item}
+                                    >
+                                        {item}
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                handleRemoveItem(
+                                                    "dressCode",
+                                                    index
+                                                )
+                                            }
+                                            className={styles.remove_button}
+                                            aria-label={`Remove ${item}`}
+                                        >
+                                            ×
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Included Services с автодополнением */}
+                        <div className={styles.group}>
+                            <label>Included Services:</label>
+                            <AutocompleteInput
+                                value={newIncludedItem}
+                                onChange={(e) =>
+                                    setNewIncludedItem(e.target.value)
+                                }
+                                onAdd={handleAddIncludedItem}
+                                placeholder="Add included service"
+                                options={INCLUDED_SERVICES}
+                            />
+                            <ul className={styles.list}>
+                                {formData.included.map((item, index) => (
+                                    <li
+                                        key={`included-${index}`}
+                                        className={styles.list_item}
+                                    >
+                                        {item}
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                handleRemoveItem(
+                                                    "included",
+                                                    index
+                                                )
+                                            }
+                                            className={styles.remove_button}
+                                            aria-label={`Remove ${item}`}
+                                        >
+                                            ×
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Not Included Services с автодополнением */}
+                        <div className={styles.group}>
+                            <label>Not Included Services:</label>
+                            <AutocompleteInput
+                                value={newNotIncludedItem}
+                                onChange={(e) =>
+                                    setNewNotIncludedItem(e.target.value)
+                                }
+                                onAdd={handleAddNotIncludedItem}
+                                placeholder="Add not included service"
+                                options={NOT_INCLUDED_SERVICES}
+                            />
+                            <ul className={styles.list}>
+                                {formData.notIncluded.map((item, index) => (
+                                    <li
+                                        key={`notIncluded-${index}`}
+                                        className={styles.list_item}
+                                    >
+                                        {item}
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                handleRemoveItem(
+                                                    "notIncluded",
+                                                    index
+                                                )
+                                            }
+                                            className={styles.remove_button}
+                                            aria-label={`Remove ${item}`}
+                                        >
+                                            ×
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </>
                 );
             case 3:
@@ -144,40 +279,66 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                         />
                     </>
                 );
-            case 4:
-                return (
-                    <>
-                        <span className={styles.title}>Tour Plan</span>
-                        <DayPlanInput
-                            dayPlan={newDayPlan}
-                            setDayPlan={setNewDayPlan}
-                            onAddListItem={handleAddListItem}
-                            listItem={newListItem}
-                            setListItem={setNewListItem}
-                        />
-                        <button
-                            type="button"
-                            onClick={handleAddDayPlan}
-                            className={styles.add_section_button}
-                        >
-                            Add Day Plan
-                        </button>
-                        <div className={styles.added_sections}>
-                            <h4>Added Days:</h4>
-                            {formData.tourPlan.map((day, index) => (
-                                <div key={`day-${index}`} className={styles.day_preview}>
-                                    <strong>{day.dayNumber}: {day.day}</strong>
-                                    <p>{day.descriptionTour}</p>
-                                    <ul>
-                                        {day.listItems.map((item, i) => (
-                                            <li key={`day-${index}-item-${i}`}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </>
-                );
+                case 4:
+                    return (
+                        <>
+                            <span className={styles.title}>Tour Plan</span>
+                            <DayPlanInput
+                                dayPlan={newDayPlan}
+                                setDayPlan={setNewDayPlan}
+                                onAddListItem={handleAddListItem}
+                                listItem={newListItem}
+                                setListItem={setNewListItem}
+                                activityOptions={ACTIVITY_ITEMS}
+                                onRemove={(index) => {
+                                    setNewDayPlan((prev) => ({
+                                        ...prev,
+                                        listItems: prev.listItems.filter(
+                                            (_, i) => i !== index
+                                        ),
+                                    }));
+                                }}
+                            />
+                            <button
+                                type="button"
+                                onClick={handleAddDayPlan}
+                                className={styles.add_section_button}
+                            >
+                                Add Day Plan
+                            </button>
+                            <div className={styles.added_sections}>
+                                <h4>Added Days:</h4>
+                                {formData.tourPlan.map((day, index) => (
+                                    <div
+                                        key={`day-${index}`}
+                                        className={styles.day_preview}
+                                    >
+                                        <strong>
+                                            {day.dayNumber}: {day.day}
+                                        </strong>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                // Используем handleRemoveItem из хука
+                                                handleRemoveItem("tourPlan", index);
+                                            }}
+                                            className={styles.remove_button}
+                                        >
+                                            ×
+                                        </button>
+                                        <p>{day.descriptionTour}</p>
+                                        <ul className={styles.list}>
+                                            {day.listItems.map((item, i) => (
+                                                <li key={`day-${index}-item-${i}`}>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    );
             default:
                 return null;
         }

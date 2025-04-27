@@ -15,7 +15,7 @@ const initialFormState = {
     departure: "",
     departureTime: "",
     returnTime: "",
-    dressCode: "",
+    dressCode: [],
     fullDescription: "",
     included: [],
     notIncluded: [],
@@ -29,9 +29,53 @@ const initialFormState = {
     tourPlan: [],
 };
 
+const DRESS_CODE_OPTIONS = [
+    "Casual",
+    "Business casual",
+    "Formal",
+    "Sportswear",
+    "Swimwear",
+    "Hiking gear",
+    "Evening wear"
+];
+
+const INCLUDED_SERVICES = [
+    "Free Wi-Fi",
+    "Breakfast",
+    "Airport transfer",
+    "Guided tour",
+    "Entrance fees",
+    "Hotel accommodation",
+    "Lunch",
+    "Dinner",
+    "Travel insurance"
+];
+
+const NOT_INCLUDED_SERVICES = [
+    "Visa fees",
+    "Personal expenses",
+    "Alcoholic beverages",
+    "Optional tours",
+    "Tips",
+    "Laundry service",
+    "Spa treatments"
+];
+
+const ACTIVITY_ITEMS = [
+    "City tour",
+    "Museum visit",
+    "Shopping time",
+    "Hiking",
+    "Boat trip",
+    "Photo session",
+    "Free time",
+    "Dinner at local restaurant"
+];
+
 export const useAddTourForm = (onSubmit, onClose) => {
     const [formData, setFormData] = useState(initialFormState);
     const [currentStep, setCurrentStep] = useState(1);
+    const [newDressCodeItem, setNewDressCodeItem] = useState("");
     const [newIncludedItem, setNewIncludedItem] = useState("");
     const [newNotIncludedItem, setNewNotIncludedItem] = useState("");
     const [newLocationDesc, setNewLocationDesc] = useState("");
@@ -55,6 +99,27 @@ export const useAddTourForm = (onSubmit, onClose) => {
                 included: [...prev.included, newIncludedItem],
             }));
             setNewIncludedItem("");
+        }
+    };
+
+    const handleRemoveItem = (type, index) => {
+        const fieldMap = {
+            dressCode: 'dressCode',
+            included: 'included',
+            notIncluded: 'notIncluded',
+            tourPlan: 'tourPlan'
+        };
+        
+        if (type === 'tourPlan') {
+            setFormData(prev => ({
+                ...prev,
+                tourPlan: prev.tourPlan.filter((_, i) => i !== index)
+            }));
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                [fieldMap[type]]: prev[fieldMap[type]].filter((_, i) => i !== index)
+            }));
         }
     };
 
@@ -85,6 +150,16 @@ export const useAddTourForm = (onSubmit, onClose) => {
                 listItems: [...prev.listItems, newListItem],
             }));
             setNewListItem("");
+        }
+    };
+
+    const handleAddDressCodeItem = () => {
+        if (newDressCodeItem) {
+            setFormData(prev => ({
+                ...prev,
+                dressCode: [...(prev.dressCode || []), newDressCodeItem]
+            }));
+            setNewDressCodeItem("");
         }
     };
 
@@ -133,6 +208,10 @@ export const useAddTourForm = (onSubmit, onClose) => {
         setNewListItem,
         handleChange,
         handleAddIncludedItem,
+        newDressCodeItem,
+        handleRemoveItem,
+        setNewDressCodeItem,
+        handleAddDressCodeItem,
         handleAddNotIncludedItem,
         handleAddLocationDesc,
         handleAddListItem,
@@ -140,5 +219,9 @@ export const useAddTourForm = (onSubmit, onClose) => {
         handleSubmit,
         nextStep,
         prevStep,
+        DRESS_CODE_OPTIONS,
+        INCLUDED_SERVICES,
+        NOT_INCLUDED_SERVICES,
+        ACTIVITY_ITEMS
     };
 };

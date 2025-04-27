@@ -1,0 +1,74 @@
+.autocomplete_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input_container {
+  display: flex;
+  gap: 8px;
+}
+
+.input_container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add_button {
+  padding: 8px 16px;
+  background-color: var(--color-apple_green);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.options_list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--color-platinum_gray);
+  border-radius: 4px;
+  background: var(--color-white);
+  z-index: 1000;
+  margin-top: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+}
+
+.option_item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.option_item:hover {
+  background-color: var(--color-anti_flash_white)
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.remove_button {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 6px;
+}
+
+.remove_button:hover {
+  color: #cc0000;
+}

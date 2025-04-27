@@ -116,6 +116,7 @@ button {
 .list li {
     padding: 8px;
     border-bottom: 1px solid #eee;
+    display: flex;
 }
 
 .list li:last-child {
@@ -183,4 +184,16 @@ button {
 
 .submit_button:hover {
     background: #45a049;
+}
+
+.remove_button {
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-red-600);
+    color: var(--color-white)
 }

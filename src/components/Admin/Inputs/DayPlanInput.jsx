@@ -1,5 +1,5 @@
 import styles from "../AddTourForm.module.css";
-import { ArrayInput } from "./ArrayInput";
+import { AutocompleteInput } from "./AutocompleteInput";
 
 export const DayPlanInput = ({
     dayPlan,
@@ -7,6 +7,8 @@ export const DayPlanInput = ({
     onAddListItem,
     listItem,
     setListItem,
+    activityOptions,
+    onRemove,
 }) => {
     return (
         <>
@@ -48,14 +50,33 @@ export const DayPlanInput = ({
                     placeholder="Detailed description of the day's activities"
                 />
             </div>
-            <ArrayInput
-                label="Activity Items"
-                value={listItem}
-                setValue={setListItem}
-                onAdd={onAddListItem}
-                items={dayPlan.listItems}
-                placeholder="Add activity item"
-            />
+            <div className={styles.group}>
+                <label>Activity Items:</label>
+                <AutocompleteInput
+                    value={listItem}
+                    onChange={(e) => setListItem(e.target.value)}
+                    onAdd={onAddListItem}
+                    placeholder="Add activity item"
+                    options={activityOptions}
+                />
+                <ul className={styles.list}>
+                    {dayPlan.listItems.map((item, index) => (
+                        <li
+                            key={`activity-${index}`}
+                            className={styles.list_item}
+                        >
+                            {item}
+                            <button
+                                type="button"
+                                onClick={() => onRemove(index)}
+                                className={styles.remove_button}
+                            >
+                                ×
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </>
     );
 };
