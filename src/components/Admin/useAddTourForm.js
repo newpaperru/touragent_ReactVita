@@ -72,7 +72,7 @@ const ACTIVITY_ITEMS = [
     "Dinner at local restaurant"
 ];
 
-export const useAddTourForm = (onSubmit, onClose) => {
+export const useAddTourForm = (onSubmit) => {
     const [formData, setFormData] = useState(initialFormState);
     const [currentStep, setCurrentStep] = useState(1);
     const [newDressCodeItem, setNewDressCodeItem] = useState("");
@@ -109,7 +109,7 @@ export const useAddTourForm = (onSubmit, onClose) => {
             notIncluded: 'notIncluded',
             tourPlan: 'tourPlan'
         };
-        
+
         if (type === 'tourPlan') {
             setFormData(prev => ({
                 ...prev,
@@ -164,29 +164,78 @@ export const useAddTourForm = (onSubmit, onClose) => {
     };
 
     const handleAddDayPlan = () => {
-        if (newDayPlan.dayNumber && newDayPlan.day && newDayPlan.descriptionTour) {
-            setFormData((prev) => ({
-                ...prev,
-                tourPlan: [...prev.tourPlan, newDayPlan],
-            }));
-            setNewDayPlan({
-                dayNumber: "",
-                day: "",
-                descriptionTour: "",
-                listItems: [],
-            });
+        if (!newDayPlan.dayNumber || !newDayPlan.day || !newDayPlan.descriptionTour) {
+            alert("Please fill all day plan fields (Day Number, Day Title and Description)");
+            return;
         }
+
+        setFormData((prev) => ({
+            ...prev,
+            tourPlan: [...prev.tourPlan, newDayPlan],
+        }));
+        setNewDayPlan({
+            dayNumber: "",
+            day: "",
+            descriptionTour: "",
+            listItems: [],
+        });
     };
+
+    const validateForm = () => {
+        // Проверка шага 1 (Basic Information)
+        if (
+            !formData.date ||
+            !formData.urlImg ||
+            !formData.country ||
+            !formData.price ||
+            !formData.rating ||
+            !formData.countPeople ||
+            !formData.description
+        ) {
+            alert("Please fill all required fields in Basic Information");
+            return false;
+        }
+
+        // Проверка шага 2 (Tour Information)
+        if (
+            !formData.destination ||
+            !formData.departure ||
+            !formData.departureTime ||
+            !formData.returnTime ||
+            !formData.fullDescription ||
+            formData.included.length === 0 ||
+            formData.notIncluded.length === 0
+        ) {
+            alert("Please fill all required fields in Tour Information");
+            return false;
+        }
+
+        // Проверка шага 3 (Location Details)
+        if (!formData.map || formData.locationDescription.length === 0) {
+            alert("Please fill all required fields in Location Details");
+            return false;
+        }
+
+        // Проверка шага 4 (Tour Plan)
+        if (formData.tourPlan.length === 0) {
+            alert("Please add at least one day plan");
+            return false;
+        }
+
+        return true;
+    };
+
 
     const handleSubmit = async (e) => {
         if (e) e.preventDefault();
+
         try {
             await onSubmit(formData);
             setFormData(initialFormState);
             setCurrentStep(1);
-            onClose();
         } catch (error) {
-            console.error("Ошибка при отправке формы:", error);
+            console.error("Form submission error:", error);
+            throw error;
         }
     };
 
@@ -209,6 +258,7 @@ export const useAddTourForm = (onSubmit, onClose) => {
         handleChange,
         handleAddIncludedItem,
         newDressCodeItem,
+        validateForm,
         handleRemoveItem,
         setNewDressCodeItem,
         handleAddDressCodeItem,

@@ -6,7 +6,8 @@ export const ArrayInput = ({
     setValue,
     onAdd,
     items,
-    placeholder
+    placeholder,
+    required = true,
   }) => {
     return (
       <div className={styles.group}>
@@ -17,6 +18,7 @@ export const ArrayInput = ({
             value={value}
             onChange={(e) => setValue(e.target.value)}
             placeholder={placeholder}
+            required={required}
           />
           <button type="button" onClick={onAdd} className={styles.add_button}>
             Add

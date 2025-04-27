@@ -110,7 +110,7 @@ button {
 }
 
 .list li {
-    padding: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--color-anti_flash_white);
     display: flex;
 }
@@ -145,6 +145,10 @@ button {
     background: var(--color-white);
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
 /* Navigation */
@@ -192,4 +196,37 @@ button {
     height: 20px;
     background-color: var(--color-red-600);
     color: var(--color-white)
+}
+
+.day_info {
+    margin-bottom: 5px;
+}
+
+.day_wrap {}
+
+.day_number {
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: var(--color-burnt_coral);
+    color: var(--color-white);
+    margin-right: 5px;
+    font-family: var(--font-family-poppins--regular);
+}
+
+.day_title {
+    font-family: var(--font-family-poppins--medium);
+}
+
+.day_description,
+.day_item {
+    font-family: var(--font-family-poppins--regular);
+}
+
+.success_message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-poppins--medium);
+    font-size: 20px;
 }

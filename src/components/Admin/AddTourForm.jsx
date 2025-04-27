@@ -27,6 +27,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         handleAddLocationDesc,
         handleAddListItem,
         handleRemoveItem,
+        validateForm,
         newDressCodeItem,
         setNewDressCodeItem,
         handleAddDressCodeItem,
@@ -44,15 +45,25 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
 
     useEffect(() => {
         if (showSuccess) {
-            const timer = setTimeout(onClose, 3000);
+            const timer = setTimeout(() => {
+                onClose();
+            }, 3000);
             return () => clearTimeout(timer);
         }
     }, [showSuccess, onClose]);
 
     const handleFinalNext = async (e) => {
         if (currentStep === 4) {
-            await handleSubmit(e);
-            setShowSuccess(true);
+            try {
+                if (!validateForm()) {
+                    return;
+                }
+                await handleSubmit(e);
+                setShowSuccess(true);
+            } catch (error) {
+                console.error("Submission failed:", error);
+                alert("Failed to submit tour. Please try again.");
+            }
         } else {
             nextStep();
         }
@@ -279,66 +290,75 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                         />
                     </>
                 );
-                case 4:
-                    return (
-                        <>
-                            <span className={styles.title}>Tour Plan</span>
-                            <DayPlanInput
-                                dayPlan={newDayPlan}
-                                setDayPlan={setNewDayPlan}
-                                onAddListItem={handleAddListItem}
-                                listItem={newListItem}
-                                setListItem={setNewListItem}
-                                activityOptions={ACTIVITY_ITEMS}
-                                onRemove={(index) => {
-                                    setNewDayPlan((prev) => ({
-                                        ...prev,
-                                        listItems: prev.listItems.filter(
-                                            (_, i) => i !== index
-                                        ),
-                                    }));
-                                }}
-                            />
-                            <button
-                                type="button"
-                                onClick={handleAddDayPlan}
-                                className={styles.add_section_button}
-                            >
-                                Add Day Plan
-                            </button>
-                            <div className={styles.added_sections}>
-                                <h4>Added Days:</h4>
-                                {formData.tourPlan.map((day, index) => (
-                                    <div
-                                        key={`day-${index}`}
-                                        className={styles.day_preview}
-                                    >
-                                        <strong>
-                                            {day.dayNumber}: {day.day}
-                                        </strong>
-                                        <button
-                                            type="button"
-                                            onClick={() => {
-                                                // Используем handleRemoveItem из хука
-                                                handleRemoveItem("tourPlan", index);
-                                            }}
-                                            className={styles.remove_button}
-                                        >
-                                            ×
-                                        </button>
-                                        <p>{day.descriptionTour}</p>
+            case 4:
+                return (
+                    <>
+                        <span className={styles.title}>Tour Plan</span>
+                        <DayPlanInput
+                            dayPlan={newDayPlan}
+                            setDayPlan={setNewDayPlan}
+                            onAddListItem={handleAddListItem}
+                            listItem={newListItem}
+                            setListItem={setNewListItem}
+                            activityOptions={ACTIVITY_ITEMS}
+                            onRemove={(index) => {
+                                setNewDayPlan((prev) => ({
+                                    ...prev,
+                                    listItems: prev.listItems.filter(
+                                        (_, i) => i !== index
+                                    ),
+                                }));
+                            }}
+                        />
+                        <button
+                            type="button"
+                            onClick={handleAddDayPlan}
+                            className={styles.add_section_button}
+                        >
+                            Add Day Plan
+                        </button>
+                        <div className={styles.added_sections}>
+                            <h4>Added Days:</h4>
+                            {formData.tourPlan.map((day, index) => (
+                                <div
+                                    key={`day-${index}`}
+                                    className={styles.day_preview}
+                                >
+                                    <div className={styles.day_wrap}>
+                                        <div className={styles.day_info}>
+                                            <span className={styles.day_number}>
+                                                {day.dayNumber}
+                                            </span>
+                                            <span className={styles.day_title}>
+                                                {day.day}
+                                            </span>
+                                        </div>
+                                        <p className={styles.day_description}>{day.descriptionTour}</p>
                                         <ul className={styles.list}>
                                             {day.listItems.map((item, i) => (
-                                                <li key={`day-${index}-item-${i}`}>
+                                                <li
+                                                    key={`day-${index}-item-${i}`}
+                                                    className={styles.day_item}
+                                                >
                                                     {item}
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
-                                ))}
-                            </div>
-                        </>
-                    );
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            handleRemoveItem("tourPlan", index);
+                                        }}
+                                        className={styles.remove_button}
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                );
             default:
                 return null;
         }

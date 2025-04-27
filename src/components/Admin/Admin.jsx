@@ -135,7 +135,8 @@ export const Admin = () => {
                                             </span>
                                         </td>
                                         <td>
-                                            {order.adminStatus === STATUS.PENDING && (
+                                            {order.adminStatus ===
+                                                STATUS.PENDING && (
                                                 <>
                                                     <button
                                                         className={
@@ -185,13 +186,8 @@ export const Admin = () => {
                         }, 3000);
                     }}
                     onClose={() => setShowForm(false)}
+                    showSuccess={successMessage}
                 />
-            )}
-
-            {successMessage && (
-                <div className={styles.success_message}>
-                    Тур успешно добавлен ✅
-                </div>
             )}
 
             <div className={styles.section}>

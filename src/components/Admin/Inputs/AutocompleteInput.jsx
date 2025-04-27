@@ -7,6 +7,7 @@ export const AutocompleteInput = ({
     onAdd,
     placeholder,
     options,
+    required = true,
     showAddButton = true
 }) => {
     const [filteredOptions, setFilteredOptions] = useState(options);
@@ -66,6 +67,7 @@ export const AutocompleteInput = ({
                     onChange={handleInputChange}
                     placeholder={placeholder}
                     onFocus={() => setShowOptions(true)}
+                    required={required}
                     onBlur={handleBlur}
                 />
                 {showAddButton && onAdd && (
