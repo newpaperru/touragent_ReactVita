@@ -1,6 +1,9 @@
 import styles from "./AddTourForm.module.css";
 import { useAddTourForm } from "./useAddTourForm";
 import { useState, useEffect } from "react";
+import { InputField } from "./Inputs/InputField";
+import { ArrayInput } from "./Inputs/ArrayInput";
+import { DayPlanInput } from "./Inputs/DayPlanInput";
 
 export const AddTourForm = ({ onSubmit, onClose }) => {
     const {
@@ -45,117 +48,6 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         }
     };
 
-    // TODO: Вынести в отдельный компонент
-    const renderInputField = (
-        name,
-        type = "text",
-        required = true,
-        placeholder = ""
-    ) => (
-        <div key={name} className={styles.group}>
-            <label>
-                {name.charAt(0).toUpperCase() +
-                    name.slice(1).replace(/([A-Z])/g, " $1")}
-                :
-            </label>
-            {type === "textarea" ? (
-                <textarea
-                    name={name}
-                    value={formData[name]}
-                    onChange={handleChange}
-                    required={required}
-                    placeholder={placeholder}
-                />
-            ) : (
-                <input
-                    type={type}
-                    name={name}
-                    value={formData[name]}
-                    onChange={handleChange}
-                    required={required}
-                    placeholder={placeholder}
-                />
-            )}
-        </div>
-    );
-
-    // TODO: Вынести в отдельный компонент
-    const renderArrayInput = (
-        label,
-        value,
-        setValue,
-        onAdd,
-        items,
-        placeholder
-    ) => (
-        <div className={styles.group}>
-            <label>{label}:</label>
-            <div className={styles.array_input}>
-                <input
-                    type="text"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                    placeholder={placeholder}
-                />
-                <button
-                    type="button"
-                    onClick={onAdd}
-                    className={styles.add_button}
-                >
-                    Add
-                </button>
-            </div>
-            <ul className={styles.list}>
-                {items.map((item, index) => (
-                    <li key={`${label.toLowerCase()}-${index}`}>{item}</li>
-                ))}
-            </ul>
-        </div>
-    );
-    // TODO: Вынести в отдельный компонент
-    const renderDayPlanInput = () => (
-        <>
-            <div className={styles.group}>
-                <label>Day Number:</label>
-                <input
-                    type="text"
-                    value={newDayPlan.dayNumber}
-                    onChange={(e) =>
-                        setNewDayPlan({
-                            ...newDayPlan,
-                            dayNumber: e.target.value,
-                        })
-                    }
-                    placeholder="01"
-                />
-            </div>
-            <div className={styles.group}>
-                <label>Day Title:</label>
-                <input
-                    type="text"
-                    value={newDayPlan.day}
-                    onChange={(e) =>
-                        setNewDayPlan({ ...newDayPlan, day: e.target.value })
-                    }
-                    placeholder="Arrival and City Tour"
-                />
-            </div>
-            <div className={styles.group}>
-                <label>Day Description:</label>
-                <textarea
-                    value={newDayPlan.descriptionTour}
-                    onChange={(e) =>
-                        setNewDayPlan({
-                            ...newDayPlan,
-                            descriptionTour: e.target.value,
-                        })
-                    }
-                    placeholder="Detailed description of the day's activities"
-                />
-            </div>
-        </>
-    );
-
     const renderStep = () => {
         if (showSuccess) {
             return (
@@ -171,37 +63,24 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     <>
                         <span className={styles.title}>Basic Information</span>
                         {[
-                            {
-                                name: "date",
-                                type: "date",
-                                placeholder: "",
-                            },
+                            { name: "date", type: "date" },
                             { name: "urlImg", placeholder: "/name.*" },
                             { name: "country", placeholder: "Enter country" },
                             { name: "price", placeholder: "Enter price" },
-                            {
-                                name: "rating",
-                                type: "number",
-                                placeholder: "Enter rating (1.0-5.0)",
-                            },
-                            {
-                                name: "countPeople",
-                                placeholder: "Enter number of people",
-                            },
-                        ].map((field) =>
-                            renderInputField(
-                                field.name,
-                                field.type,
-                                true,
-                                field.placeholder
-                            )
-                        )}
-                        {renderInputField(
-                            "description",
-                            "textarea",
-                            true,
-                            "Enter description"
-                        )}
+                            { name: "rating", type: "number", placeholder: "Enter rating (1.0-5.0)" },
+                            { name: "countPeople", placeholder: "Enter number of people" },
+                            { name: "description", type: "textarea", placeholder: "Enter description" },
+                        ].map((field) => (
+                            <InputField
+                                key={field.name}
+                                name={field.name}
+                                type={field.type}
+                                required={field.required !== false}
+                                placeholder={field.placeholder}
+                                value={formData[field.name]}
+                                onChange={handleChange}
+                            />
+                        ))}
                     </>
                 );
             case 2:
@@ -209,90 +88,73 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                     <>
                         <span className={styles.title}>Tour Information</span>
                         {[
-                            {
-                                name: "destination",
-                                placeholder: "Enter destination",
-                            },
-                            {
-                                name: "departure",
-                                placeholder: "Enter departure location",
-                            },
-                            {
-                                name: "departureTime",
-                                placeholder: "Enter departure time",
-                            },
-                            {
-                                name: "returnTime",
-                                placeholder: "Enter return time",
-                            },
-                            {
-                                name: "dressCode",
-                                placeholder: "Enter dress code",
-                            },
-                            {
-                                name: "fullDescription",
-                                type: "textarea",
-                                placeholder: "Enter full description",
-                            },
-                            {
-                                name: "review",
-                                required: false,
-                                placeholder: "Enter review (optional)",
-                            },
-                        ].map((field) =>
-                            renderInputField(
-                                field.name,
-                                field.type,
-                                field.required,
-                                field.placeholder
-                            )
-                        )}
-                        {renderArrayInput(
-                            "Included Services",
-                            newIncludedItem,
-                            setNewIncludedItem,
-                            handleAddIncludedItem,
-                            formData.included,
-                            "Add included service"
-                        )}
-                        {renderArrayInput(
-                            "Not Included Services",
-                            newNotIncludedItem,
-                            setNewNotIncludedItem,
-                            handleAddNotIncludedItem,
-                            formData.notIncluded,
-                            "Add not included service"
-                        )}
+                            { name: "destination", placeholder: "Enter destination" },
+                            { name: "departure", placeholder: "Enter departure location" },
+                            { name: "departureTime", placeholder: "Enter departure time" },
+                            { name: "returnTime", placeholder: "Enter return time" },
+                            { name: "dressCode", placeholder: "Enter dress code" },
+                            { name: "fullDescription", type: "textarea", placeholder: "Enter full description" },
+                            { name: "review", required: false, placeholder: "Enter review (optional)" },
+                        ].map((field) => (
+                            <InputField
+                                key={field.name}
+                                name={field.name}
+                                type={field.type}
+                                required={field.required !== false}
+                                placeholder={field.placeholder}
+                                value={formData[field.name]}
+                                onChange={handleChange}
+                            />
+                        ))}
+                        <ArrayInput
+                            label="Included Services"
+                            value={newIncludedItem}
+                            setValue={setNewIncludedItem}
+                            onAdd={handleAddIncludedItem}
+                            items={formData.included}
+                            placeholder="Add included service"
+                        />
+                        <ArrayInput
+                            label="Not Included Services"
+                            value={newNotIncludedItem}
+                            setValue={setNewNotIncludedItem}
+                            onAdd={handleAddNotIncludedItem}
+                            items={formData.notIncluded}
+                            placeholder="Add not included service"
+                        />
                     </>
                 );
             case 3:
                 return (
                     <>
                         <span className={styles.title}>Location Details</span>
-                        {renderInputField("map", "text", true, "/name.*")}
-                        {renderArrayInput(
-                            "Location Descriptions",
-                            newLocationDesc,
-                            setNewLocationDesc,
-                            handleAddLocationDesc,
-                            formData.locationDescription,
-                            "Add location description paragraph"
-                        )}
+                        <InputField
+                            name="map"
+                            value={formData.map}
+                            onChange={handleChange}
+                            placeholder="/name.*"
+                        />
+                        <ArrayInput
+                            label="Location Descriptions"
+                            value={newLocationDesc}
+                            setValue={setNewLocationDesc}
+                            onAdd={handleAddLocationDesc}
+                            items={formData.locationDescription}
+                            placeholder="Add location description paragraph"
+                        />
                     </>
                 );
             case 4:
                 return (
                     <>
                         <span className={styles.title}>Tour Plan</span>
-                        {renderDayPlanInput()}
-                        {renderArrayInput(
-                            "Activity Items",
-                            newListItem,
-                            setNewListItem,
-                            handleAddListItem,
-                            newDayPlan.listItems,
-                            "Add activity item"
-                        )}
+                        <DayPlanInput
+                            dayPlan={newDayPlan}
+                            setDayPlan={setNewDayPlan}
+                            onAddListItem={handleAddListItem}
+                            listItem={newListItem}
+                            setListItem={setNewListItem}
+                        />
                         <button
                             type="button"
                             onClick={handleAddDayPlan}
@@ -303,19 +165,12 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                         <div className={styles.added_sections}>
                             <h4>Added Days:</h4>
                             {formData.tourPlan.map((day, index) => (
-                                <div
-                                    key={`day-${index}`}
-                                    className={styles.day_preview}
-                                >
-                                    <strong>
-                                        {day.dayNumber}: {day.day}
-                                    </strong>
+                                <div key={`day-${index}`} className={styles.day_preview}>
+                                    <strong>{day.dayNumber}: {day.day}</strong>
                                     <p>{day.descriptionTour}</p>
                                     <ul>
                                         {day.listItems.map((item, i) => (
-                                            <li key={`day-${index}-item-${i}`}>
-                                                {item}
-                                            </li>
+                                            <li key={`day-${index}-item-${i}`}>{item}</li>
                                         ))}
                                     </ul>
                                 </div>

@@ -121,7 +121,7 @@
 
     padding: 7px 42px 14px 14px;
     text-transform: capitalize;
-    color: white;
+    color: var(--color-white);
 }
 
 .btn:hover {

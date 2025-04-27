@@ -28,7 +28,7 @@
     border-radius: 10px;
     font-family: var(--font-family-manrope--medium);
     letter-spacing: -0.02em;
-    color: white;
+    color: var(--color-white);
 }
 
 .note {

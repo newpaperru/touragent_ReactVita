@@ -9,7 +9,7 @@
 .dark_theme {
   font-size: 17px;
   font-family: var(--font-family-circular--medium);
-  color: white;
+  color: var(--color-white);
   display: inline-block;
   position: relative;
 }
@@ -51,7 +51,7 @@
   box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
   font-family: var(--font-family-circular--medium);
 
-  color: white;
+  color: var(--color-white);
   font-size: 17px;
 }
 

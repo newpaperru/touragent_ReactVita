@@ -16,7 +16,7 @@
   font-family: var(--font-family-poppins--bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: white;
+  color: var(--color-white);
   font-size: 18px;
 }
 
@@ -30,7 +30,7 @@
 
 .description_alt {
   font-family: var(--font-family-yesteryear--regular);
-  color: white;
+  color: var(--color-white);
   font-size: 158px;
 }
 
