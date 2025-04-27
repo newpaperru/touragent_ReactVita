@@ -3,6 +3,8 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../services/AuthContext";
 import "./common.css"
 
+const admin = "admin"
+
 export const BtnAddToBacket = ({ packageData }) => {
     const { addTicket, isTourInCart, goToProfile } = useTickets();
     const [isAdded, setIsAdded] = useState(false);
@@ -19,8 +21,7 @@ export const BtnAddToBacket = ({ packageData }) => {
     };
 
     const buttonText =
-        // TODO: вынести в константы
-        userRole === "admin"
+        userRole === admin
             ? "User access only"
             : !packageData
             ? "Loading..."
@@ -30,8 +31,7 @@ export const BtnAddToBacket = ({ packageData }) => {
 
     return (
         <button
-            // TODO: вынести в константы
-            disabled={userRole === "admin" || !packageData}
+            disabled={userRole === admin || !packageData}
             className={"btn"}
             onClick={handleButtonClick}
         >

@@ -6,6 +6,12 @@ const fetchArchiveData = async () => {
     return response.json();
 };
 
+const SORT_NAMES = {
+    DATE: "date",
+    PRICE_ASC: "price-asc",
+    PRICE_DESC: "price-desc"
+}
+
 export const useArchiveData = () => {
     const [state, setState] = useState({
         archiveData: [],
@@ -75,11 +81,11 @@ export const useArchiveData = () => {
         // Сортировка
         if (activeFilter) {
             switch (activeFilter) {
-                case "date":
+                case SORT_NAMES.DATE:
                     return result.sort((a, b) => new Date(a.date) - new Date(b.date));
-                case "price-asc":
+                case SORT_NAMES.PRICE_ASC:
                     return result.sort((a, b) => Number(a.price) - Number(b.price));
-                case "price-desc":
+                case SORT_NAMES.PRICE_DESC:
                     return result.sort((a, b) => Number(b.price) - Number(a.price));
                 default:
                     return result;

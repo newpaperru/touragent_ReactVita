@@ -6,6 +6,13 @@ import { useAuth } from "./useAuth";
 import { useTickets } from "../ProfilePage/Profile/useTickets";
 import styles from "./Admin.module.css";
 
+const STATUS = {
+    NA: "N/A",
+    APPROVED: "Approved",
+    REJECTED: "Rejected",
+    PENDING: "Pending",
+};
+
 export const Admin = () => {
     const [showForm, setShowForm] = useState(false);
     const [users, setUsers] = useState([]);
@@ -72,8 +79,7 @@ export const Admin = () => {
                                         <td className={styles.user_info}>
                                             Full Name:{" "}
                                             <span className={styles.data}>
-                                                {/* TODO: Вынести в константы */}
-                                                {user.fullName || "N/A"}
+                                                {user.fullName || STATUS.NA}
                                             </span>
                                             <br />
                                             ID:{" "}
@@ -84,20 +90,17 @@ export const Admin = () => {
                                         <td className={styles.user_info}>
                                             Email:{" "}
                                             <span className={styles.data}>
-                                                {/* TODO: Вынести в константы */}
-                                                {user.email || "N/A"}
+                                                {user.email || STATUS.NA}
                                             </span>
                                             <br />
                                             Phone:{" "}
                                             <span className={styles.data}>
-                                                {/* TODO: Вынести в константы */}
-                                                {user.phone || "N/A"}
+                                                {user.phone || STATUS.NA}
                                             </span>
                                             <br />
                                             Birth:{" "}
                                             <span className={styles.data}>
-                                                {/* TODO: Вынести в константы */}
-                                                {user.birthDate || "N/A"}
+                                                {user.birthDate || STATUS.NA}
                                             </span>
                                         </td>
                                         <td className={styles.user_info}>
@@ -120,12 +123,10 @@ export const Admin = () => {
                                             <span
                                                 className={
                                                     order.adminStatus ===
-                                                    // TODO: Вынести в константы
-                                                    "Approved"
+                                                    STATUS.APPROVED
                                                         ? styles.status_approved
                                                         : order.adminStatus ===
-                                                        // TODO: Вынести в константы
-                                                          "Rejected"
+                                                          STATUS.REJECTED
                                                         ? styles.status_rejected
                                                         : styles.status_pending
                                                 }
@@ -134,9 +135,7 @@ export const Admin = () => {
                                             </span>
                                         </td>
                                         <td>
-                                            {order.adminStatus ===
-                                            // TODO: Вынести в константы
-                                                "Pending" && (
+                                            {order.adminStatus === STATUS.PENDING && (
                                                 <>
                                                     <button
                                                         className={
@@ -145,8 +144,7 @@ export const Admin = () => {
                                                         onClick={() =>
                                                             updateOrderStatus(
                                                                 order.orderId,
-                                                                // TODO: Вынести в константы
-                                                                "Approved"
+                                                                STATUS.APPROVED
                                                             )
                                                         }
                                                     >
@@ -159,8 +157,7 @@ export const Admin = () => {
                                                         onClick={() =>
                                                             updateOrderStatus(
                                                                 order.orderId,
-                                                                // TODO: Вынести в константы
-                                                                "Rejected"
+                                                                STATUS.REJECTED
                                                             )
                                                         }
                                                     >
@@ -200,10 +197,10 @@ export const Admin = () => {
             <div className={styles.section}>
                 <h2 className={styles.subtitle}>Current Tours</h2>
                 <div className={styles.grid}>
-                {tours.map((tour, index) => (
-                        <PackagesCard 
-                            key={index} 
-                            data={tour} 
+                    {tours.map((tour, index) => (
+                        <PackagesCard
+                            key={index}
+                            data={tour}
                             isAdmin={true}
                             onDelete={removeTour}
                         />
