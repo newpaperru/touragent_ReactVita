@@ -1,6 +1,6 @@
 .title {
     font-family: var(--title-font-family);
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 32px;
     text-align: center;
 
@@ -15,7 +15,7 @@
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
 
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 30px 35px 16px;
 }
 
@@ -45,13 +45,13 @@
 
 .btn {
     border-radius: 6px;
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
 
     padding: 13px 59px;
     width: 100%;
     cursor: pointer;
     
-    color: #fff;
+    color: var(--color-white);
     font-family: var(--text-font-family-semibold);
     font-size: 14px;
 
@@ -59,7 +59,7 @@
 }
 
 .btn:hover {
-    background-color: #e77d68;
+    background-color: var(--color-desert_bloom);
 }
 
 .links_wrap {
@@ -69,10 +69,10 @@
 }
 
 .link {
-    color: #000;
+    color: var(--color-black);
 }
 
 .link:hover {
-    color: #e77d68;
+    color: var(--color-desert_bloom);
     text-decoration: underline;
 }

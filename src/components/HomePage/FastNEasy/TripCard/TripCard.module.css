@@ -15,7 +15,7 @@
 
 .title {
     display: block;
-    color: #080809;
+    color: var(--color-void_black);
     font-family: var(--text-font-family-medium);
     letter-spacing: 0.015em;
     font-size: 18px;
@@ -24,7 +24,7 @@
 
 .info, .count_people {
     letter-spacing: 0.02em;
-    color: #84829A;
+    color: var(--color-dusty_twilight);
     font-family: var(--text-font-family-medium);
 }
 
@@ -44,7 +44,7 @@
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  background-color: #F5F5F5;
+  background-color: var(--color-anti_flash_white);
 
   display: flex;
   align-items: center;

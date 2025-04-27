@@ -10,7 +10,7 @@
 
 .subtitle {
     font-size: 18px;
-    color: var(--btn-color);
+    color: var(--color-burnt_coral);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: var(--text-font-family-bold);
@@ -18,7 +18,7 @@
 }
 
 .title {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 50px;
     text-transform: capitalize;
     font-family: var(--title-font-family);

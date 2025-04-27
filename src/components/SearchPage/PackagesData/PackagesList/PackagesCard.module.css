@@ -58,7 +58,7 @@
 }
 
 .country {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 34px;
     font-family: var(--title-font-family);
     margin-bottom: 5px;
@@ -66,7 +66,7 @@
 }
 
 .description {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 17px;
     font-family: var(--text-font-family-regular);
     margin-bottom: 21px;
@@ -81,7 +81,7 @@
 
 .price,
 .star_wrap {
-    color: #262626;
+    color: var(--color-dark_charcoal);
     font-size: 18px;
     font-family: var(--text-font-family-medium);
 }
@@ -114,7 +114,7 @@
 .explore_button,
 .delete_button {
     padding: 12px 24px;
-    background: var(--btn-color);
+    background: var(--color-burnt_coral);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -128,11 +128,11 @@
 }
 
 .delete_button {
-    background-color: #ff4d4d;
+    background-color: var(--color-red-400);
 }
 
 .delete_button:hover {
-    background-color: #ff1a1a;
+    background-color: var(--color-red-600);
 }
 
 /* Стили для звезд рейтинга */

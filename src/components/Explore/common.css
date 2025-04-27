@@ -3,7 +3,7 @@
 }
 
 .title {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 32px;
     font-family: var(--title-font-family);
     margin-bottom: 26px;
@@ -13,12 +13,12 @@
 
 .btn {
     width: 100%;
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
     border-radius: 10px;
     padding: 15px 0;
 
-    color: #fff;
+    color: var(--color-white);
     font-size: 17px;
     font-family: var(--text-font-family-semibold);
 }

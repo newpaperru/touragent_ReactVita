@@ -15,18 +15,18 @@
 }
 
 .day:not(:last-child) {
-    border-left: 1px dashed var(--btn-color);
+    border-left: 1px dashed var(--color-burnt_coral);
     height: 368px;
 }
 
 .day_number {
     border-radius: 9px;
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
     width: 47px;
     height: 47px;
     display: inline-block;
 
-    color: #fff;
+    color: var(--color-white);
     font-size: 20px;
     font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
@@ -39,7 +39,7 @@
 }
 
 .day_title {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-family: var(--text-font-family-semibold);
     font-size: 20px;
     margin-bottom: 8px;
@@ -48,7 +48,7 @@
 .description,
 .item {
     font-family: var(--text-font-family-regular);
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
 }
 
 .description {

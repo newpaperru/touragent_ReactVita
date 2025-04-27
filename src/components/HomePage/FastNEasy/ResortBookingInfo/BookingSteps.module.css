@@ -22,24 +22,24 @@
 }
 
 .element:first-child .icon {
-    background-color: #F0BB1F;
+    background-color: var(--color-golden_honey);
 }
 
 .element:nth-child(2) .icon {
-    background-color: #F15A2B;
+    background-color: var(--color-vermilion_flame);
 }
 
 .element:last-child .icon {
-    background-color: #006380;
+    background-color: var(--color-deep_teal);
 }
 
 .title {
-    color: #5E6282;
+    color: var(--color-dusk_lavendar);
     font-family: var(--text-font-family-bold);
 }
 
 .text {
-  color: #5E6282;
+  color: var(--color-dusk_lavendar);
   font-family: var(--text-font-family-regular);
 }
 

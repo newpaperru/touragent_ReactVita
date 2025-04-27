@@ -23,7 +23,7 @@
 .description {
   margin-bottom: 15px;
   font-family: var(--text-font-family-bold);
-  color: #fff;
+  color: var(--color-white);
   font-size: 59px;
   font-weight: 700;
 }

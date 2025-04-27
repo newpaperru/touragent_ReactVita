@@ -25,7 +25,7 @@
 .people,
 .name_place {
     font-size: 17px;
-    color: #7D7D7D;
+    color: var(--color-battleship_gray);
 }
 
 .country_name,
@@ -100,11 +100,11 @@
 }
 
 .discount {
-    color: var(--btn-color);
+    color: var(--color-burnt_coral);
 }
 
 .price_line_through {
-    color: #7D7D7D;
+    color: var(--color-battleship_gray);
     text-decoration: line-through;
     font-size: 22px;
 }
@@ -116,7 +116,7 @@
 .btn {
     font-family: var(--text-font-family-semibold);
     box-shadow: 0 15.28px 26.74px 0 rgba(223, 105, 81, 0.15);
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
     border-radius: 8px;
 
     padding: 7px 42px 14px 14px;
@@ -125,5 +125,5 @@
 }
 
 .btn:hover {
-    background-color: #e47e6a;
+    background-color: var(--color-desert_coral);
 }

@@ -23,5 +23,5 @@
 }
 
 .paginationButton.active {
-    border-color: #4a4aff;
+    border-color: var(--color-neon_blue)
 }

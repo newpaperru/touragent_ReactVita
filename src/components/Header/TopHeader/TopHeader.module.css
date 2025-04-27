@@ -23,7 +23,7 @@
 .dark_theme::after {
   width: 0;
   border-radius: 34px;
-  background: var(--btn-color);
+  background: var(--color-burnt_coral);
   height: 3px;
   transition: all .5s ease-in-out;
   content: "";
@@ -46,7 +46,7 @@
 
 .button_login {
   padding: 16px 32px;
-  background-color: var(--btn-color);
+  background-color: var(--color-burnt_coral);
   border-radius: 10px;
   box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
   font-family: "Circular Medium";
@@ -56,5 +56,5 @@
 }
 
 .dark_theme {
-  color: var(--title-color);
+  color: var(--color-midnight_blue);
 }

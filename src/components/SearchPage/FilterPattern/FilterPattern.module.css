@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
-    color: #343434;
+    color: var(--color-onyx_gray);
     font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;
     font-size: 20px;

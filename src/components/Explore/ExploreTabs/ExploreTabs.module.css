@@ -13,7 +13,7 @@
     align-items: center;
     column-gap: 14px;
 
-    background-color: #F8F8F8;
+    background-color: var(--color-ghost_white);
     padding: 25px 89px;
 }
 
@@ -24,10 +24,10 @@
 .text {
     font-family: var(--text-font-family-bold);
     font-size: 20px;
-    color: #343434;
+    color: var(--color-onyx_gray);
     letter-spacing: 0.1em;
 }
 
 .active {
-    background-color: #e0e0e0;
+    background-color: var(--color-platinum_gray);
 }

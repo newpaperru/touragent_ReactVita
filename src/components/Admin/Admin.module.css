@@ -15,7 +15,7 @@
 .subtitle {
     font-family: var(--title-font-family);
     font-size: 32px;
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
 }
 
 .subtitle {
@@ -25,7 +25,7 @@
 .button {
     padding: 8px 16px;
     margin-left: 10px;
-    background-color: #4CAF50;
+    background-color: var(--color-apple_green);
     color: white;
     border: none;
     border-radius: 4px;
@@ -35,11 +35,11 @@
 }
 
 .button:nth-child(2) {
-    background-color: #e9630f;
+    background-color: var(--color-tangerine_orange);
 }
 
 .button.logout {
-    background-color: #f44336;
+    background-color: var(--color-red-500);
 }
 
 .button:hover {
@@ -89,7 +89,7 @@
 
 
 .orders_table th {
-    background-color: #f8f8f8;
+    background-color: var(--color-ghost_white);
     font-family: var(--text-font-family-medium);
 }
 
@@ -101,15 +101,15 @@
 
 
 .status_pending {
-    color: #FFA500;
+    color: var(--color-tangerine);
 }
 
 .status_approved {
-    color: #4CAF50;
+    color: var(--color-apple_green);
 }
 
 .status_rejected {
-    color: #F44336;
+    color: var(--color-red-500);
 }
 
 .approve_btn,
@@ -121,12 +121,12 @@
 }
 
 .approve_btn {
-    background-color: #4CAF50;
+    background-color: var(--color-apple_green);
     margin-right: 8px;
 }
 
 .reject_btn {
-    background-color: #F44336;
+    background-color: var(--color-red-500);
 }
 
 .success_message {
@@ -144,7 +144,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #ff4d4d;
+    background-color: var(--color-red-400);
     color: white;
     border: none;
     padding: 5px 10px;
@@ -154,7 +154,7 @@
 }
 
 .delete_button:hover {
-    background-color: #ff1a1a;
+    background-color: var(--color-red-600);
 }
 
 @keyframes fadeIn {

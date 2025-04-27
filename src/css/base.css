@@ -1,6 +1,53 @@
 :root {
-	--btn-color: #DF6951;
-	--title-color: #181E4B;
+	 /* Зеленые */
+	 --color-apple_green: #4CAF50;
+	 --color-forest_green: #45a049;
+   
+	 /* Красные/Оранжевые */
+	 --color-burnt_coral: #DF6951;
+	 --color-tangerine_orange: #e9630f;
+	 --color-vermilion_flame: #F15A2B;
+	 --color-red-400: #ff4d4d;
+	 --color-red-500: #f44336;
+	 --color-red-600: #ff1a1a;
+   
+	 /* Синие/Фиолетовые */
+	 --color-midnight_blue: #181E4B;
+	 --color-midnight_violet: #181433;
+	 --color-deep_teal: #006380;
+	 --color-dusk_lavender: #5E6282;
+	 --color-misty_violet: #757095;
+	 --color-material_blue: #2196F3;
+	 --color-neon_blue: #4a4aff;
+   
+	 /* Серые/Нейтральные */
+	 --color-void_black: #080809;
+	 --color-dark_charcoal: #262626;
+	 --color-onyx_gray: #343434;
+	 --color-dark_gray: #333;
+	 --color-medium_dark_gray: #666;
+	 --color-medium_gray: #555;
+	 --color-battleship_gray: #7D7D7D;
+	 --color-dusty_twilight: #84829A;
+	 --color-platinum_gray: #e0e0e0;
+	 --color-silver_mist: #F0F0F0;
+	 --color-anti_flash_white: #f5f5f5;
+	 --color-ghost_white: #f8f8f8;
+	 --color-lavender_mist: #EEEEFF;
+	 --color-whisper_pink: #FFEFEC;
+	 --color-white: #fff;
+	 --color-black: #000;
+   
+	 /* Желтые/Золотые */
+	 --color-gold: #FFD700;
+	 --color-golden_poppy: #FFBA0A;
+	 --color-golden_honey: #F0BB1F;
+	 --color-tangerine: #FFA500;
+   
+	 /* Коричневые */
+	 --color-dark_cocoa: #281D1B;
+	 --color-desert_coral: #E47E6A;
+
 
 	--title-font-family: "Volkhov Bold";
 	--text-font-family-regular: "Poppins Regular";

@@ -9,7 +9,7 @@
 .subtitle {
     font-family: var(--text-font-family-bold);
     font-size: 18px;
-    color: var(--btn-color);
+    color: var(--color-burnt_coral);
     margin-bottom: 2px;
     text-transform: uppercase;
     display: block;
@@ -20,7 +20,7 @@
 .title {
     font-family: var(--title-font-family);
     font-size: 50px;
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     text-transform: capitalize;
     margin-bottom: 68px;
     display: block;

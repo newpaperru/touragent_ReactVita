@@ -14,11 +14,11 @@
 }
 
 .filled_star {
-    color: #FFBA0A;
+    color: var(--color-golden_poppy);
 }
 
 .half_star {
-    color: #E0E0E0;
+    color: var(--color-platinum_gray);
 }
 
 .half_star::before {
@@ -27,16 +27,16 @@
     left: 0;
     width: 50%;
     overflow: hidden;
-    color: #FFBA0A;
+    color: var(--color-golden_poppy);
 }
 
 .empty_star {
-    color: #E0E0E0;
+    color: var(--color-platinum_gray);
     font-size: 19px;
 }
 
 .rating_text {
-    color: #5E6282;
+    color: var(--color-dusk_lavendar);
     font-family: var(--text-font-family-medium);
 }
 
@@ -47,7 +47,7 @@
 }
 
 .country {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 32px;
     font-family: var(--title-font-family);
 }
@@ -60,7 +60,7 @@
 
 .price {
     font-family: var(--text-font-family-medium);
-    color: var(--btn-color);
+    color: var(--color-burnt_coral);
     font-size: 30px;
 }
 
@@ -72,7 +72,7 @@
 
 
 .price_text {
-    color: #7D7D7D;
+    color: var(--color-battleship_gray);
 }
 
 .description {
@@ -81,7 +81,7 @@
 }
 
 .title {
-    color: var(--btn-color);
+    color: var(--color-burnt_coral);
     font-size: 20px;
     font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;

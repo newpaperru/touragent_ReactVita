@@ -9,7 +9,7 @@ import Twoo from "../../../assets/Icons/twoo.svg?react"
 export const FooterSocial = () => {
     return (
         <div className={styles.footer_social}>
-            <Logo fill={"var(--title-color)"}/>
+            <Logo fill={"var(--color-midnight_blue)"}/>
             <span className={styles.text}>Travel Helps Companies Manage Payments Easily.</span>
             <div className={styles.icons_wrap}>
                 <Linkedin />

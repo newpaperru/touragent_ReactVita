@@ -13,7 +13,7 @@
 .copyright {
     font-family: "Manrope Medium";
     letter-spacing: -0.02em;
-    color: #181433;
+    color: var(--color-midnight_violet);
     text-align: center;
     display: block;
     margin-bottom: 40px;

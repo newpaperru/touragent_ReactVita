@@ -14,7 +14,7 @@
 
 .title {
     font-family: var(--text-font-family-semibold);
-    color: #1E1D4C;
+    color: var(--color-midnight_navy);
     font-size: 20px;
     margin-bottom: 12px;
     display: inline-block;
@@ -22,7 +22,7 @@
 
 .text {
     font-family: var(--text-font-family-medium);
-    color: #5E6282;
+    color: var(--color-dusk_lavendar);
 }
 
 

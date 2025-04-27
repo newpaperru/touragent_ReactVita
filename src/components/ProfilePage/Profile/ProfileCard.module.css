@@ -8,7 +8,7 @@
 
 .btn {
     padding: 16px 32px;
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
     border-radius: 10px;
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
     font-family: "Circular Medium";
@@ -44,7 +44,7 @@
 .user_fullname {
     font-family: var(--text-font-family-bold);
     font-size: 28px;
-    color: #281D1B;
+    color: var(--color-dark_cocoa);
 }
 
 .user_datas {
@@ -87,7 +87,7 @@
 
 .input_blocked {
     border: 1px gray solid;
-    background-color: #f0f0f0;
+    background-color: var(--color-silver_mist);
     cursor: not-allowed;
 }
 

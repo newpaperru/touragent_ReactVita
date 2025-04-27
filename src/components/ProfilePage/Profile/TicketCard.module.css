@@ -18,7 +18,7 @@
 }
 
 .table th {
-    background-color: #f5f5f5;
+    background-color: var(--color-anti_flash_white);
     font-family: var(--text-font-family-medium);
 }
 
@@ -28,7 +28,7 @@
 
 .pay_btn {
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: var(--color-apple_green);
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,7 +36,7 @@
 }
 
 .pay_btn:hover {
-    background-color: #45a049;
+    background-color: var(--color-forest_green);
 }
 
 .status_ready,
@@ -48,22 +48,22 @@
 }
 
 .status_ready {
-    color: #4CAF50;
+    color: var(--color-apple_green);
 }
 
 .status_rejected {
-    color: #F44336;
+    color: var(--color-red-500);
 }
 
 .status_paid {
-    color: #2196F3;
+    color: var(--color-material_blue);
 }
 
 .status_not_paid {
-    color: #FFA500;
+    color: var(--color-tangerine);
 }
 
 .pending_text {
-    color: #2196F3;
+    color: var(--color-material_blue);
     font-style: italic;
 }

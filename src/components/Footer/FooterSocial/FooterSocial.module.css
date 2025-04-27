@@ -5,7 +5,7 @@
 }
 
 .text {
-    color: #757095;
+    color: var(--color-misty_violet);
     font-family: "Manrope Medium";
     margin-bottom: 10px;
 }

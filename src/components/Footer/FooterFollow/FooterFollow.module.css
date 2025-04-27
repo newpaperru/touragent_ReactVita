@@ -1,13 +1,13 @@
 .title {
     font-size: 21px;
-    color: #181433;
+    color: var(--color-midnight_violet);
     font-family: "Manrope Bold";
     margin-bottom: 24px;
     display: inline-block;
 }
 
 .input {
-    background-color: #EEEEFF;
+    background-color: var(--color-lavender_mist);
     padding: 14px 0 12px 15px;
     max-width: 240px;
     width: 100%;
@@ -15,7 +15,7 @@
 
 .input::placeholder,
 .note {
-    color: #181433;
+    color: var(--color-midnight_violet);
     opacity: 0.2;
     font-family: "Manrope Medium";
     letter-spacing: -0.02em;
@@ -23,7 +23,7 @@
 
 .btn {
     padding: 13px 32px 13px 43px;
-    background-color: var(--btn-color);
+    background-color: var(--color-burnt_coral);
     box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
     border-radius: 10px;
     font-family: "Manrope Medium";

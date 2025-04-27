@@ -3,7 +3,7 @@
 }
 
 .title {
-    color: var(--title-color);
+    color: var(--color-midnight_blue);
     font-size: 50px;
     font-family: var(--title-font-family);
     display: inline-block;

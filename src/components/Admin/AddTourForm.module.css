@@ -28,7 +28,7 @@
 .title {
     font-size: 24px;
     font-family: var(--text-font-family-semibold);
-    color: #333;
+    color: var(--color-dark_gray);
     margin-bottom: 16px;
 }
 
@@ -42,7 +42,7 @@
 
 .group label {
     font-family: var(--text-font-family-medium);
-    color: #555;
+    color: var(--color-medium_gray);
     cursor: default;
 }
 
@@ -72,7 +72,7 @@ button {
     background: none;
     border: none;
     font-size: 24px;
-    color: #666;
+    color: var(--color-medium_dark_gray);
 }
 
 .add_button {

@@ -10,7 +10,7 @@
 }
 
 .text {
-    color: var(--title-color);;
+    color: var(--color-midnight_blue);
     font-size: 18px;
     font-family: var(--text-font-family-bold);
     letter-spacing: 0.1em;

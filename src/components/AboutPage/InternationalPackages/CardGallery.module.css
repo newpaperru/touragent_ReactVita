@@ -36,5 +36,5 @@
 .price {
     font-family: var(--text-font-family-semibold);
     font-size: 22px;
-    color: #fff;
+    color: var(--color-white);
 }

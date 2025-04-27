@@ -8,7 +8,7 @@
     top: 15px;
     border-radius: 46px;
     background: linear-gradient(45deg, #FF7255 0%, #BA4E38 100%);
-    color: #fff;
+    color: var(--color-white);
     font-family: var(--text-font-family-regular);
     padding: 6px 22px;
     
