@@ -28,6 +28,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
         handleAddListItem,
         handleRemoveItem,
         validateForm,
+        fieldMap,
         newDressCodeItem,
         setNewDressCodeItem,
         handleAddDressCodeItem,
@@ -181,7 +182,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                             type="button"
                                             onClick={() =>
                                                 handleRemoveItem(
-                                                    "dressCode",
+                                                    fieldMap.dressCode,
                                                     index
                                                 )
                                             }
@@ -218,7 +219,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                             type="button"
                                             onClick={() =>
                                                 handleRemoveItem(
-                                                    "included",
+                                                    fieldMap.included,
                                                     index
                                                 )
                                             }
@@ -255,7 +256,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                             type="button"
                                             onClick={() =>
                                                 handleRemoveItem(
-                                                    "notIncluded",
+                                                    fieldMap.notIncluded,
                                                     index
                                                 )
                                             }
@@ -333,7 +334,9 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                                 {day.day}
                                             </span>
                                         </div>
-                                        <p className={styles.day_description}>{day.descriptionTour}</p>
+                                        <p className={styles.day_description}>
+                                            {day.descriptionTour}
+                                        </p>
                                         <ul className={styles.list}>
                                             {day.listItems.map((item, i) => (
                                                 <li
@@ -348,7 +351,7 @@ export const AddTourForm = ({ onSubmit, onClose }) => {
                                     <button
                                         type="button"
                                         onClick={() => {
-                                            handleRemoveItem("tourPlan", index);
+                                            handleRemoveItem(fieldMap.tourPlan, index);
                                         }}
                                         className={styles.remove_button}
                                     >

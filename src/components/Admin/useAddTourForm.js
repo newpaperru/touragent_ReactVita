@@ -87,6 +87,13 @@ export const useAddTourForm = (onSubmit) => {
     });
     const [newListItem, setNewListItem] = useState("");
 
+    const fieldMap = {
+        dressCode: 'dressCode',
+        included: 'included',
+        notIncluded: 'notIncluded',
+        tourPlan: 'tourPlan'
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
@@ -103,14 +110,8 @@ export const useAddTourForm = (onSubmit) => {
     };
 
     const handleRemoveItem = (type, index) => {
-        const fieldMap = {
-            dressCode: 'dressCode',
-            included: 'included',
-            notIncluded: 'notIncluded',
-            tourPlan: 'tourPlan'
-        };
 
-        if (type === 'tourPlan') {
+        if (type === fieldMap.tourPlan) {
             setFormData(prev => ({
                 ...prev,
                 tourPlan: prev.tourPlan.filter((_, i) => i !== index)
@@ -245,6 +246,7 @@ export const useAddTourForm = (onSubmit) => {
     return {
         formData,
         currentStep,
+        fieldMap,
         newIncludedItem,
         newNotIncludedItem,
         newLocationDesc,

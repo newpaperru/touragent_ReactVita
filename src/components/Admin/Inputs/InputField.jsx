@@ -6,31 +6,32 @@ export const InputField = ({
     required = true,
     placeholder = "",
     value,
-    onChange
-  }) => {
-    const labelText = name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, " $1");
-    
+    onChange,
+}) => {
+    const labelText =
+        name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, " $1");
+
     return (
-      <div className={styles.group}>
-        <label>{labelText}:</label>
-        {type === "textarea" ? (
-          <textarea
-            name={name}
-            value={value}
-            onChange={onChange}
-            required={required}
-            placeholder={placeholder}
-          />
-        ) : (
-          <input
-            type={type}
-            name={name}
-            value={value}
-            onChange={onChange}
-            required={required}
-            placeholder={placeholder}
-          />
-        )}
-      </div>
+        <div className={styles.group}>
+            <label>{labelText}:</label>
+            {type === "textarea" ? (
+                <textarea
+                    name={name}
+                    value={value}
+                    onChange={onChange}
+                    required={required}
+                    placeholder={placeholder}
+                />
+            ) : (
+                <input
+                    type={type}
+                    name={name}
+                    value={value}
+                    onChange={onChange}
+                    required={required}
+                    placeholder={placeholder}
+                />
+            )}
+        </div>
     );
-  };
+};

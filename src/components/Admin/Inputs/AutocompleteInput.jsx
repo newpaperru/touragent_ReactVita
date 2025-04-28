@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import styles from './AutocompleteInput.module.css';
+import { useState, useRef, useEffect } from "react";
+import styles from "./AutocompleteInput.module.css";
 
 export const AutocompleteInput = ({
     value,
@@ -8,7 +8,7 @@ export const AutocompleteInput = ({
     placeholder,
     options,
     required = true,
-    showAddButton = true
+    showAddButton = true,
 }) => {
     const [filteredOptions, setFilteredOptions] = useState(options);
     const [showOptions, setShowOptions] = useState(false);
@@ -18,14 +18,17 @@ export const AutocompleteInput = ({
     // Обработчик клика вне компонента
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+            if (
+                wrapperRef.current &&
+                !wrapperRef.current.contains(event.target)
+            ) {
                 setShowOptions(false);
             }
         };
 
-        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener("mousedown", handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
 
@@ -40,9 +43,10 @@ export const AutocompleteInput = ({
         const inputValue = e.target.value;
         onChange(e);
         setFilteredOptions(
-            options.filter(option =>
+            options.filter((option) =>
                 option.toLowerCase().includes(inputValue.toLowerCase())
-        ));
+            )
+        );
     };
 
     const handleSelect = (option) => {
@@ -71,8 +75,8 @@ export const AutocompleteInput = ({
                     onBlur={handleBlur}
                 />
                 {showAddButton && onAdd && (
-                    <button 
-                        type="button" 
+                    <button
+                        type="button"
                         onClick={handleAddClick}
                         className={styles.add_button}
                         disabled={!value.trim()}
@@ -81,11 +85,11 @@ export const AutocompleteInput = ({
                     </button>
                 )}
             </div>
-            
+
             {showOptions && filteredOptions.length > 0 && (
                 <ul className={styles.options_list}>
                     {filteredOptions.map((option, index) => (
-                        <li 
+                        <li
                             key={index}
                             onClick={() => handleSelect(option)}
                             className={styles.option_item}

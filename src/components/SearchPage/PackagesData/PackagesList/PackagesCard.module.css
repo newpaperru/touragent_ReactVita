@@ -82,12 +82,7 @@
 .price,
 .star_wrap {
     color: var(--color-dark_charcoal);
-    font-size: 18px;
     font-family: var(--font-family-poppins--medium);
-}
-
-.wrap_img {
-    position: relative;
 }
 
 .packages_card:hover .overlay {
