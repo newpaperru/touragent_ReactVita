@@ -48,7 +48,7 @@
 
 .country {
     color: var(--color-midnight_blue);
-    font-size: 32px;
+    font-size: var(--title-ms);
     font-family: var(--font-family-volkhov--bold);
 }
 

@@ -9,7 +9,7 @@
 
 .text {
     font-family: var(--font-family-volkhov--bold);
-    font-size: 50px;
+    font-size: var(--title-ls);
     color: var(--color-white);
     display: inline-block;
     text-transform: capitalize;

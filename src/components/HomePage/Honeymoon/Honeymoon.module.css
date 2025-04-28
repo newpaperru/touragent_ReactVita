@@ -24,7 +24,7 @@
 
 .title {
     font-family: var(--font-family-volkhov--bold);
-    font-size: 50px;
+    font-size: var(--title-ls);
     color: var(--color-midnight_blue);
     text-transform: capitalize;
     display: block;
@@ -49,7 +49,7 @@
 }
 
 .img_wrap {
-    margin-right: 50px;
+    margin-right: var(--title-ls);
 }
 
 .img {
@@ -78,7 +78,7 @@
     }
 
     .title {
-        font-size: 32px;
+        font-size: var(--title-ms);
     }
 
     .description {

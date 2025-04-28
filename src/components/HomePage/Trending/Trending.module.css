@@ -19,7 +19,7 @@
 
 .title {
     color: var(--color-midnight_blue);
-    font-size: 50px;
+    font-size: var(--title-ls);
     text-transform: capitalize;
     font-family: var(--font-family-volkhov--bold);
 }

@@ -14,7 +14,7 @@
 .title,
 .subtitle {
     font-family: var(--font-family-volkhov--bold);
-    font-size: 32px;
+    font-size: var(--title-ms);
     color: var(--color-midnight_blue);
 }
 

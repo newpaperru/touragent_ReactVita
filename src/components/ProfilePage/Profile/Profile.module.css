@@ -4,7 +4,7 @@
 
 .title {
     color: var(--color-midnight_blue);
-    font-size: 50px;
+    font-size: var(--title-ls);
     font-family: var(--font-family-volkhov--bold);
     display: inline-block;
     margin-bottom: 30px;

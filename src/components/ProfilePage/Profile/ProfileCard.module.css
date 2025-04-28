@@ -101,6 +101,6 @@
 
 .error_message {
     color: red;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+    font-size: 14px;
+    margin-top: 5px;
 }
