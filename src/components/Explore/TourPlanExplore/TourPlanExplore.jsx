@@ -1,5 +1,5 @@
 import styles from "./TourPlanExplore.module.css";
-import { BtnAddToBacket } from "../btnAddToBacket";
+// import { BtnAddToBacket } from "../btnAddToBacket";
 
 export const TourPlanExplore = ({ packageData }) => {
     const tourPlan = packageData.tourPlan || [];
@@ -31,7 +31,7 @@ export const TourPlanExplore = ({ packageData }) => {
                     </div>
                 ))}
             </div>
-            <BtnAddToBacket packageData={packageData} />
+            {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );
 };

@@ -20,7 +20,7 @@ export const PackagesFilter = ({ priceRange, filters, onFilterChange }) => {
                 dolo.
             </p>
             <div className={styles.search_field}>
-                <span className={styles.filter_title}>Country</span>
+                <span className={styles.filter_title}>Country, Town</span>
                 <div className={styles.search_input}>
                     <SearchIcon className={styles.icon} />
                     <input

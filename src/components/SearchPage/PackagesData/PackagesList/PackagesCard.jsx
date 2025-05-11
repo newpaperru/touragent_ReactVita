@@ -65,7 +65,7 @@ export const PackagesCard = ({ data, isAdmin = false, onDelete }) => {
                 <span className={styles.country}>{data.country}</span>
                 <p className={styles.description}>{data.description}</p>
                 <div className={styles.details}>
-                    <span className={styles.price}>$ {data.price}</span>
+                    <span className={styles.price}>from <strong>{data.price}$</strong></span>
                     <div className={styles.star_wrap}>
                         <PackagesStar />
                         <span className={styles.star}>{data.rating}</span>

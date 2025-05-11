@@ -59,7 +59,7 @@
 
 .country {
     color: var(--color-midnight_blue);
-    font-size: 34px;
+    font-size: 30px;
     font-family: var(--font-family-volkhov--bold);
     margin-bottom: 5px;
     display: block;

@@ -1,5 +1,5 @@
 import styles from "./GalleryExplore.module.css";
-import { BtnAddToBacket } from "../btnAddToBacket";
+// import { BtnAddToBacket } from "../btnAddToBacket";
 
 const IMAGES = [
     { src: "/greenField.png", alt: "Green field landscape", className: "" },
@@ -23,7 +23,7 @@ const IMAGES = [
     },
 ];
 
-export const GalleryExplore = ({ packageData }) => {
+export const GalleryExplore = () => {
     return (
         <div className={styles.basic_padding}>
             <h2 className={styles.title}>Gallery</h2>
@@ -38,7 +38,7 @@ export const GalleryExplore = ({ packageData }) => {
                     />
                 ))}
             </div>
-            <BtnAddToBacket packageData={packageData} />
+            {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );
 };

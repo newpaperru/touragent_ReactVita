@@ -3,7 +3,7 @@ import NotIncludedIcon from "../../../assets/Icons/notincluded.svg?react";
 import IncludedIcon from "../../../assets/Icons/included.svg?react";
 import { RatingStars } from "./RatingStars";
 import { ServiceList } from "./ServiceList";
-import { BtnAddToBacket } from "../btnAddToBacket";
+// import { BtnAddToBacket } from "../btnAddToBacket";
 
 export const InformationExplore = ({ packageData }) => {
     const gridItems = [
@@ -56,7 +56,7 @@ export const InformationExplore = ({ packageData }) => {
                 />
             </div>
 
-            <BtnAddToBacket packageData={packageData} />
+            {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import styles from "./LocationExplore.module.css";
-import { BtnAddToBacket } from "../btnAddToBacket";
+// import { BtnAddToBacket } from "../btnAddToBacket";
 
 export const LocationExplore = ({ packageData }) => {    
     return (
@@ -19,7 +19,7 @@ export const LocationExplore = ({ packageData }) => {
                     </p>
                 ))}
             </div>
-            <BtnAddToBacket packageData={packageData} />
+            {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );
 };
