@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./GalleryExplore.module.css";
 // import { BtnAddToBacket } from "../btnAddToBacket";
 
@@ -23,7 +24,7 @@ const IMAGES = [
     },
 ];
 
-export const GalleryExplore = () => {
+export const GalleryExplore = ({ packageData }) => {
     return (
         <div className={styles.basic_padding}>
             <h2 className={styles.title}>Gallery</h2>
@@ -38,6 +39,10 @@ export const GalleryExplore = () => {
                     />
                 ))}
             </div>
+            <Link
+                to={`/explore/${packageData.id}/hostels`}
+                className={`${styles.btn} ${styles.hostels_btn}`}
+            >Go to selection of hotels</Link>
             {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );

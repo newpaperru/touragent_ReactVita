@@ -45,8 +45,12 @@
 	--color-white: #fff;
 	--color-black: #000;
 	--color-black--opacity: #00000057;
+	--color-black--opacity_63: #0000009c;
 	--color-silver: #ddd;
 	--color-system_elevation_base: #E5E5EA;
+	--color-border-recomm: #CFCFCF;
+	--color-bgc-reviews: #E7E7E7;
+	--color-bgc-score_reviews: #49CA2F;
 
 	/* Желтые/Золотые */
 	--color-gold: #FFD700;

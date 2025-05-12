@@ -3,6 +3,7 @@ import NotIncludedIcon from "../../../assets/Icons/notincluded.svg?react";
 import IncludedIcon from "../../../assets/Icons/included.svg?react";
 import { RatingStars } from "./RatingStars";
 import { ServiceList } from "./ServiceList";
+import { Link } from "react-router-dom";
 // import { BtnAddToBacket } from "../btnAddToBacket";
 
 export const InformationExplore = ({ packageData }) => {
@@ -55,7 +56,10 @@ export const InformationExplore = ({ packageData }) => {
                     isIncluded={true}
                 />
             </div>
-
+            <Link
+                to={`/explore/${packageData.id}/hostels`}
+                className={`${styles.btn} ${styles.hostels_btn}`}
+            >Go to selection of hotels</Link>
             {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );

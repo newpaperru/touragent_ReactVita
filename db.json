@@ -102,6 +102,28 @@
         "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
         "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
         "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
+      ],
+      "hostels": [
+        {
+          "id": "hostel_polyana_29b5",
+          "hostelImg": "/hostelPolyana.png",
+          "hostelTitle": "hostel Polyana",
+          "hostelCost": "1500",
+          "recomm": true,
+          "countReviews": 1200,
+          "scoreReviews": 4.7,
+          "hostelAddress": "Bauman Street, 36, Kazan, Republic of Tatarstan (Tatarstan), 420111",
+          "facilities": [
+            {
+              "WifiIcon": "/Wi-Fi_icon.svg",
+              "WifiText": "Free Wi-Fi"
+            },
+            {
+              "lunchIcon": "/icon_lunch.svg",
+              "lunchText": "Nutrition: Swedish table"
+            }
+          ]
+        }
       ]
     },
     {

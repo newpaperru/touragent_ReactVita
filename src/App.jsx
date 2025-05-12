@@ -10,6 +10,8 @@ import { PageLogin } from "./pages/LoginPage";
 import { SearchPage } from "./pages/SearchPage";
 import { ExplorePage } from "./pages/ExplorePage";
 import { AdminPanel } from "./pages/AdmimPanel";
+import { HostelsPage } from "./pages/HostelsPage";
+import { HostelInfo } from "./components/HostelsPage/HostelInfo";
 
 
 function App() {
@@ -65,6 +67,8 @@ function App() {
                     />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/explore/:id" element={<ExplorePage />} />
+                    <Route path="/explore/:id/hostels" element={<HostelsPage />} />
+                    <Route path="/hostels/:hostelId" element={<HostelInfo />} />
                     <Route
                         path="/registration"
                         element={<PageRegistration />}

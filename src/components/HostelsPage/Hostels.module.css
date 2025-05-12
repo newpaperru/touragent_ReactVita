@@ -1,0 +1,10 @@
+.hostels {
+    display: flex;
+    column-gap: 10px;
+}
+
+.container {
+    padding: 0 250px;
+    margin-top: 117px;
+    margin-bottom: 117px;
+}

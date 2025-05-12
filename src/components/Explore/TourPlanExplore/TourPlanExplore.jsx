@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./TourPlanExplore.module.css";
 // import { BtnAddToBacket } from "../btnAddToBacket";
 
@@ -31,6 +32,10 @@ export const TourPlanExplore = ({ packageData }) => {
                     </div>
                 ))}
             </div>
+            <Link
+                to={`/explore/${packageData.id}/hostels`}
+                className={`${styles.btn} ${styles.hostels_btn}`}
+            >Go to selection of hotels</Link>
             {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );

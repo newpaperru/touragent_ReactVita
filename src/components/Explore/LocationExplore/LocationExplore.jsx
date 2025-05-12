@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import styles from "./LocationExplore.module.css";
 // import { BtnAddToBacket } from "../btnAddToBacket";
 
-export const LocationExplore = ({ packageData }) => {    
+export const LocationExplore = ({ packageData }) => {
     return (
         <div className={styles.basic_padding}>
             <span className={styles.title}>Location</span>
@@ -19,6 +20,10 @@ export const LocationExplore = ({ packageData }) => {
                     </p>
                 ))}
             </div>
+            <Link
+                to={`/explore/${packageData.id}/hostels`}
+                className={`${styles.btn} ${styles.hostels_btn}`}
+            >Go to selection of hotels</Link>
             {/* <BtnAddToBacket packageData={packageData} /> */}
         </div>
     );

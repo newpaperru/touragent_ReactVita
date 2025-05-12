@@ -23,6 +23,11 @@
     font-family: var(--font-family-poppins--semibold);
 }
 
+.hostels_btn {
+    display: block;
+    text-align: center;
+}
+
 .btn:disabled {
     cursor: not-allowed;
 }

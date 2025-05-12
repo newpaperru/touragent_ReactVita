@@ -1,6 +1,6 @@
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
-import { Explore } from "../components/Explore/Explore"; // Импортируем компонент Explore
+import { Explore } from "../components/Explore/Explore";
 
 import middleHeaderStyles from "../components/Header/MiddleHeader/MiddleHeader.module.css";
 import headerStyles from "../components/Header/Header.module.css";
