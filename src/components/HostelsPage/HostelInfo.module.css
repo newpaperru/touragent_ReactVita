@@ -121,8 +121,9 @@
 }
 
 .address {
-    max-width: 293px;
+    max-width: 350px;
     font-family: var(--font-family-poppins--regular);
+    font-size: 18px;
 }
 
 /* Удобства и услуги */
@@ -180,12 +181,10 @@
     margin-bottom: 5px;
 }
 
-.progress_title {
-    font-family: var(--font-family-poppins--medium);
-}
-
+.progress_title,
 .progress_percent {
     font-family: var(--font-family-poppins--medium);
+    font-size: 18px;
 }
 
 .progress_bar_bg {
