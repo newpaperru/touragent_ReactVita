@@ -1,17 +1,22 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 import { Footer } from "../Footer/Footer";
 import { TopHeader } from "../Header/TopHeader/TopHeader";
 import stylesHeader from "../../components/Header/TopHeader/TopHeader.module.css";
 import styles from "./HostelInfo.module.css";
 
-import Icon_recomm from "../../assets/Icons/icon_recomm.svg?react";
-import Map_marker from "../../assets/Icons/map-marker.svg?react";
+import { RecommendBadge } from "./HostelInfo_elements/RecommendBadge";
+import { ReviewsSection } from "./HostelInfo_elements/ReviewsSection";
+import { LocationSection } from "./HostelInfo_elements/LocationSection";
+import { FacilitiesSection } from "./HostelInfo_elements/FacilitiesSection";
+import { ProgressBars } from "./HostelInfo_elements/ProgressBars";
+import { ImageModal } from "./HostelInfo_elements/ImageModal";
+import { HostelSlider } from "./HostelInfo_elements/HostelSlider";
 
 export const HostelInfo = () => {
     const { hostelId } = useParams();
     const [hostel, setHostel] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const fetchHostel = async () => {
@@ -41,6 +46,9 @@ export const HostelInfo = () => {
         fetchHostel();
     }, [hostelId]);
 
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     if (!hostel) return <div>Hostel not found</div>;
 
     return (
@@ -48,29 +56,58 @@ export const HostelInfo = () => {
             <TopHeader theme={stylesHeader.dark_theme} handColorSvg="dark" />
             <div className={styles.hostel_info}>
                 <div className={styles.container}>
-                    {hostel.recomm === true ? (
-                        <div className={styles.block_recomm}>
-                            <div className={styles.block_inner}>
-                                <Icon_recomm /> We recommend
+                    <HostelSlider
+                        images={hostel.hostelImages}
+                        onImageClick={openModal}
+                        isModalOpen={isModalOpen}
+                    />
+
+                    <div className={styles.main_info}>
+                        {hostel.recomm && <RecommendBadge />}
+
+                        <span className={styles.title}>
+                            {hostel.hostelTitle}
+                        </span>
+
+                        <ReviewsSection
+                            scoreReviews={hostel.scoreReviews}
+                            countReviews={hostel.countReviews}
+                        />
+
+                        <LocationSection address={hostel.hostelAddress} />
+
+                        {/* TODO: Сделать выборку даты, взрослый/ребенок количество */}
+
+                        <FacilitiesSection facilities={hostel.facilities} />
+
+                        <div className={styles.reviews_details}>
+                            <div className={styles.reviews_wrap}>
+                                <div className={styles.score_reviews}>
+                                    {hostel.scoreReviews}
+                                </div>
+                                <span className={styles.count_rewiews}>
+                                    {hostel.countReviews} reviews
+                                </span>
                             </div>
+
+                            <ProgressBars reviews_bars={hostel.reviews_bars} />
+
+                            {/* TODO: Сделать отзывы */}
                         </div>
-                    ) : (
-                        ""
-                    )}
-                    <span className={styles.title}>{hostel.hostelTitle}</span>
-                    <div className={styles.reviews}>
-                        <div className={styles.score_reviews}>{hostel.scoreReviews}</div>
-                        <span className={styles.count_rewiews}>{hostel.countReviews} reviews</span>
-                    </div>
-                    <div className={styles.place}>
-                        <span className={styles.title}>Where is it?</span>
-                        <div className={styles.place_info}>
-                            <Map_marker />
-                            <p className={styles.address}>{hostel.hostelAddress}</p>
-                        </div>
+
+                        <Link className={styles.hostel_btn} to={"#"}>
+                            Go to choose the hotel room
+                        </Link>
                     </div>
                 </div>
             </div>
+
+            <ImageModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                images={hostel.hostelImages}
+            />
+
             <Footer />
         </>
     );

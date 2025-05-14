@@ -1,202 +1,226 @@
 {
-  "users": [
-    {
-      "id": "93bb",
-      "fullName": "Архангельский Борис Станиславович",
-      "birthDate": "2005-02-01",
-      "email": "boristar010205@icloud.com",
-      "phone": "+79673643999",
-      "password": "qwerty",
-      "repeatPassword": "qwerty",
-      "role": "user"
-    },
-    {
-      "id": "26a7",
-      "fullName": "Admin",
-      "birthDate": "2005-02-12",
-      "email": "boryanski213@gmail.com",
-      "phone": "+79673643997",
-      "password": "qwerty",
-      "repeatPassword": "qwerty",
-      "role": "admin"
-    }
-  ],
-  "archive": [
-    {
-      "id": "82c1",
-      "date": "2025-09-12",
-      "urlImg": "/ZURICH.jpg",
-      "country": "Switzerland, Zurich",
-      "price": "1100",
-      "rating": "5.0",
-      "review": "2300",
-      "countPeople": "120",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
-      "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
-      "destination": "Zurich, Switzerland",
-      "departure": "Main Sqaure, New City",
-      "departureTime": "Approximately 08 : 10 AM",
-      "returnTime": "Approximately 07 : 20 PM",
-      "dressCode": "Casual, comfortable and light",
-      "notIncluded": [
-        "Gallery Ticket",
-        "Lunch"
-      ],
-      "included": [
-        "5 star Accomodations",
-        "Airport Transfer",
-        "Breakfast",
-        "Personal Guide"
-      ],
-      "tourPlan": [
+    "users": [
         {
-          "day": "Day 1: Departure",
-          "dayNumber": "01",
-          "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast",
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
+            "id": "93bb",
+            "fullName": "Архангельский Борис Станиславович",
+            "birthDate": "2005-02-01",
+            "email": "boristar010205@icloud.com",
+            "phone": "+79673643999",
+            "password": "qwerty",
+            "repeatPassword": "qwerty",
+            "role": "user"
         },
         {
-          "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
-          "dayNumber": "02",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast",
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
-        },
-        {
-          "day": "Day 3: Rest",
-          "dayNumber": "03",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
-        },
-        {
-          "day": "Day 4: Historical Tour",
-          "dayNumber": "04",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast",
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
-        },
-        {
-          "day": "Day 5: Return",
-          "dayNumber": "05",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+            "id": "26a7",
+            "fullName": "Admin",
+            "birthDate": "2005-02-12",
+            "email": "boryanski213@gmail.com",
+            "phone": "+79673643997",
+            "password": "qwerty",
+            "repeatPassword": "qwerty",
+            "role": "admin"
         }
-      ],
-      "map": "/map.png",
-      "locationDescription": [
-        "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
-        "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
-        "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
-      ],
-      "hostels": [
+    ],
+    "archive": [
         {
-          "id": "hostel_polyana_29b5",
-          "hostelImg": "/hostelPolyana.png",
-          "hostelTitle": "hostel Polyana",
-          "hostelCost": "1500",
-          "recomm": true,
-          "countReviews": 1200,
-          "scoreReviews": 4.7,
-          "hostelAddress": "Bauman Street, 36, Kazan, Republic of Tatarstan (Tatarstan), 420111",
-          "facilities": [
-            {
-              "WifiIcon": "/Wi-Fi_icon.svg",
-              "WifiText": "Free Wi-Fi"
-            },
-            {
-              "lunchIcon": "/icon_lunch.svg",
-              "lunchText": "Nutrition: Swedish table"
-            }
-          ]
+            "id": "82c1",
+            "date": "2025-09-12",
+            "urlImg": "/ZURICH.jpg",
+            "country": "Switzerland, Zurich",
+            "price": "1100",
+            "rating": "5.0",
+            "review": "2300",
+            "countPeople": "120",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
+            "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
+            "destination": "Zurich, Switzerland",
+            "departure": "Main Sqaure, New City",
+            "departureTime": "Approximately 08 : 10 AM",
+            "returnTime": "Approximately 07 : 20 PM",
+            "dressCode": "Casual, comfortable and light",
+            "notIncluded": ["Gallery Ticket", "Lunch"],
+            "included": [
+                "5 star Accomodations",
+                "Airport Transfer",
+                "Breakfast",
+                "Personal Guide"
+            ],
+            "tourPlan": [
+                {
+                    "day": "Day 1: Departure",
+                    "dayNumber": "01",
+                    "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
+                    "dayNumber": "02",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 3: Rest",
+                    "dayNumber": "03",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": ["5 Star Accommodation", "Breakfast"]
+                },
+                {
+                    "day": "Day 4: Historical Tour",
+                    "dayNumber": "04",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 5: Return",
+                    "dayNumber": "05",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+                }
+            ],
+            "map": "/map.png",
+            "locationDescription": [
+                "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
+                "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
+                "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
+            ],
+            "hostels": [
+                {
+                    "id": "hostel_polyana_29b5",
+                    "hostelImg": "/hostelPolyana.png",
+                    "hostelImages": [
+                        "/polyana_hostel_2x.jpg",
+                        "/hostel_polyana_1.png",
+                        "/hostel_polyana_2.png",
+                        "/hostel_polyana_3.png"
+                    ],
+                    "hostelTitle": "Hostel Polyana",
+                    "hostelCost": "1500",
+                    "recomm": true,
+                    "countReviews": 1200,
+                    "scoreReviews": 4.7,
+                    "hostelAddress": "Bauman Street, 36, Kazan, Republic of Tatarstan (Tatarstan), 420111",
+                    "facilities": [
+                        {
+                            "icon": "/Wi-Fi_icon.svg",
+                            "text": "Free Wi-Fi"
+                        },
+                        {
+                            "icon": "/iconCarrier.svg",
+                            "text": "Air conditioning in room"
+                        },
+                        {
+                            "icon": "/lunch-break.svg",
+                            "text": "Lunch: Swedish table"
+                        },
+                        {
+                            "icon": "/iconBeach.svg",
+                            "text": "Beach line: No"
+                        },
+                        {
+                            "icon": "/icon_checkmarker.svg",
+                            "text": "24-hour reception desk"
+                        }
+                    ],
+                    "reviews_bars": [
+                        {
+                            "title": "Cleanliness of room",
+                            "percent": "100%"
+                        },
+                        {
+                            "title": "Location",
+                            "percent": "70%"
+                        },
+                        {
+                            "title": "Service",
+                            "percent": "48%"
+                        },
+                        {
+                            "title": "Price/Quality",
+                            "percent": "20%"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bb99",
+            "date": "2025-08-26",
+            "urlImg": "/packagesBerlinImg.png",
+            "country": "Berlin",
+            "price": "1500",
+            "rating": "4.7",
+            "countPeople": "100",
+            "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
+            "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
+            "destination": "Zurich, Berlin",
+            "review": "5000",
+            "departure": "Main Sqaure, New City",
+            "departureTime": "Approximately 06 : 10 AM",
+            "returnTime": "Approximately 10 : 20 PM",
+            "dressCode": "Casual, comfortable and light",
+            "notIncluded": ["Gallery Ticket", "Lunch"],
+            "included": [
+                "5 star Accomodations",
+                "Airport Transfer",
+                "Breakfast",
+                "Personal Guide",
+                "Dinner"
+            ],
+            "tourPlan": [
+                {
+                    "day": "Day 1: Departure",
+                    "dayNumber": "01",
+                    "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Dinner"
+                    ]
+                },
+                {
+                    "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
+                    "dayNumber": "02",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": [
+                        "5 Star Accommodation",
+                        "Breakfast",
+                        "5 Star Accommodation",
+                        "Breakfast"
+                    ]
+                },
+                {
+                    "day": "Day 3: Rest",
+                    "dayNumber": "03",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+                    "listItems": ["5 Star Accommodation", "Breakfast"]
+                },
+                {
+                    "day": "Day 4: Return",
+                    "dayNumber": "04",
+                    "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet."
+                }
+            ],
+            "map": "/map.png",
+            "locationDescription": [
+                "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
+                "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
+                "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
+            ]
         }
-      ]
-    },
-    {
-      "id": "bb99",
-      "date": "2025-08-26",
-      "urlImg": "/packagesBerlinImg.png",
-      "country": "Berlin",
-      "price": "1500",
-      "rating": "4.7",
-      "countPeople": "100",
-      "description": "Qui tempore voluptate qui quia commodi rem praesentium alias et.",
-      "fullDescription": "Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.",
-      "destination": "Zurich, Berlin",
-      "review": "5000",
-      "departure": "Main Sqaure, New City",
-      "departureTime": "Approximately 06 : 10 AM",
-      "returnTime": "Approximately 10 : 20 PM",
-      "dressCode": "Casual, comfortable and light",
-      "notIncluded": [
-        "Gallery Ticket",
-        "Lunch"
-      ],
-      "included": [
-        "5 star Accomodations",
-        "Airport Transfer",
-        "Breakfast",
-        "Personal Guide",
-        "Dinner"
-      ],
-      "tourPlan": [
-        {
-          "day": "Day 1: Departure",
-          "dayNumber": "01",
-          "descriptionTour": "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast",
-            "5 Star Accommodation",
-            "Dinner"
-          ]
-        },
-        {
-          "day": "Day 2: Visiting Zurich, Geneva and Zermatt",
-          "dayNumber": "02",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast",
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
-        },
-        {
-          "day": "Day 3: Rest",
-          "dayNumber": "03",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-          "listItems": [
-            "5 Star Accommodation",
-            "Breakfast"
-          ]
-        },
-        {
-          "day": "Day 4: Return",
-          "dayNumber": "04",
-          "descriptionTour": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet."
-        }
-      ],
-      "map": "/map.png",
-      "locationDescription": [
-        "Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium",
-        "Sit quasi soluta non temporibus voluptas non necessitatibus tempore sit deleniti praesentium aut velit nostrum ut itaque atque ad expedita veniam. Hic deleniti officiis est sapiente explicabo non eaque corporis aut voluptatum iusto At facere enim id voluptas reprehenderit. Ut voluptas laudantium et molestias voluptatem ex doloremque omnis est ipsum nihil.",
-        "Quo facere eveniet 33 sint rerum est internos impedit sed dignissimos quia. Et rerum deleniti et voluptates saepe qui labore quisquam non accusantium temporibus. Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos possimus quo quibusdam aliquid est culpa porro sed molestiae libero At blanditiis minima a reiciendis fugiat."
-      ]
-    }
-  ]
+    ]
 }
