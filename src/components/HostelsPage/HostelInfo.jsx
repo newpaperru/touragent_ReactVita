@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Footer } from "../Footer/Footer";
 import { TopHeader } from "../Header/TopHeader/TopHeader";
@@ -12,7 +12,7 @@ import { FacilitiesSection } from "./HostelInfo_elements/FacilitiesSection";
 import { ProgressBars } from "./HostelInfo_elements/ProgressBars";
 import { ImageModal } from "./HostelInfo_elements/ImageModal";
 import { HostelSlider } from "./HostelInfo_elements/HostelSlider";
-// import { FormSection } from "./HostelInfo_elements/FormSection";
+import { FormSection } from "./HostelInfo_elements/FormSection";
 
 export const HostelInfo = () => {
     const { hostelId } = useParams();
@@ -78,7 +78,6 @@ export const HostelInfo = () => {
                         <LocationSection address={hostel.hostelAddress} />
 
                         {/* TODO: Сделать выборку даты, взрослый/ребенок количество */}
-                        {/* <FormSection /> */}
 
                         <FacilitiesSection facilities={hostel.facilities} />
 
@@ -96,13 +95,7 @@ export const HostelInfo = () => {
 
                             {/* TODO: Сделать отзывы */}
                         </div>
-
-                        <Link
-                            className={styles.hostel_btn}
-                            to={`/hostels/${hostelId}/${hostel.id}_rooms`}
-                        >
-                            Go to choose the hotel room
-                        </Link>
+                        <FormSection />
                     </div>
                 </div>
             </div>

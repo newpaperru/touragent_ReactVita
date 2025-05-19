@@ -12,7 +12,7 @@
 
     margin-top: 117px;
     margin-bottom: 177px;
-    height: 1212px;
+    height: 1430px;
 }
 
 .container {
@@ -230,6 +230,60 @@
     font-family: var(--font-family-poppins--semibold);
     text-align: center;
 }
+
+
+/* FormSection */
+.form_section {
+    
+}
+
+.form_section > .title {
+    font-size: 24px;
+}
+
+.form_section > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputs {
+    padding: 20px 10px;
+    background-color: var(--color-inputs-bgc);
+    border-radius: 10px;
+}
+
+.uni {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.date_selection {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.guests_selection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.guests_selection > label {
+    display: block;
+    font-family: var(--font-family-poppins--medium);
+}
+
+.guests_selection > label > .inputs {
+    width: 40px;
+    padding: 0;
+    padding-left: 15px;
+    margin-left: 7px;
+}
+
 
 
 /* модальное окно при клике */
