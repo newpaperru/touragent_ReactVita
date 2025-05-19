@@ -2,7 +2,7 @@ import styles from "../HosteRoom.module.css";
 import { useBookingData } from "../customHooks/useBookingData";
 
 export const HeaderHostelRoom = ({ header_data }) => {
-    const { dateRange, totalGuests } = useBookingData();
+    const { dateRange, totalGuests} = useBookingData();
 
     return (
         <div className={styles.header}>

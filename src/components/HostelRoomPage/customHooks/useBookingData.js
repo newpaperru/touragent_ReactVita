@@ -49,7 +49,6 @@ export const useBookingData = () => {
             endDate,
             adults,
             children
-        },
-        hasBookingParams: Boolean(startDate && endDate)
+        }
     };
 };
