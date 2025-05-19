@@ -9,7 +9,7 @@ export const HeaderHostelRoom = ({ header_data }) => {
             <span className={styles.name_hostel}>{header_data}</span>
             <div className={styles.info_user_chose}>
                 <span className={styles.user_date}>{dateRange}</span>
-                <span className={styles.user_count}>Гостей: {totalGuests}</span>
+                <span className={styles.user_count}>Guests: {totalGuests}</span>
             </div>
         </div>
     );

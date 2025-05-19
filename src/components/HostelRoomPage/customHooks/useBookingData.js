@@ -4,7 +4,10 @@ import { useSearchParams } from "react-router-dom";
 const DEFAULT_ADULTS = 1;
 const DEFAULT_CHILDREN = 0;
 const DEFAULT_DATE_TEXT = "Select dates";
-const MONTH_FORMAT_OPTIONS = { month: "short" };
+const MONTH_FORMAT_OPTIONS = {
+    month: "short",
+    locale: "en-US"
+};
 
 export const useBookingData = () => {
     const [searchParams] = useSearchParams();
@@ -31,8 +34,8 @@ export const useBookingData = () => {
 
         const startDay = startDate.getDate();
         const endDay = endDate.getDate();
-        const startMonth = startDate.toLocaleString("default", MONTH_FORMAT_OPTIONS);
-        const endMonth = endDate.toLocaleString("default", MONTH_FORMAT_OPTIONS);
+        const startMonth = startDate.toLocaleString("en-US", MONTH_FORMAT_OPTIONS);
+        const endMonth = endDate.toLocaleString("en-US", MONTH_FORMAT_OPTIONS);
 
         return startDate.getMonth() === endDate.getMonth()
             ? `${startDay}-${endDay} ${startMonth}`

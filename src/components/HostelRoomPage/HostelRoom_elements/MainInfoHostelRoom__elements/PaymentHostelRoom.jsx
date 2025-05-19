@@ -8,7 +8,7 @@ export const PaymentHostelRoom = ({ cost, breakfast, payment }) => {
     return (
         <div className={styles.payment_hostel_room}>
             <span className={styles.cost}>
-                {totalCost}$
+                {totalGuests > 1 ? `${cost}$ * ${totalGuests} Guests = ${totalCost}$` : `${totalCost}$`}
             </span>
             {breakfast === true ? (
                 <span className={`${styles.breakfast} ${styles.active}`}>
