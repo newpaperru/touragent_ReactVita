@@ -108,7 +108,7 @@
                         "/hostel_polyana_3.png"
                     ],
                     "hostelTitle": "Hostel Polyana",
-                    "hostelCost": "1500",
+                    "hostelCost": "60",
                     "recomm": true,
                     "countReviews": 1200,
                     "scoreReviews": 4.7,
@@ -151,6 +151,44 @@
                         {
                             "title": "Price/Quality",
                             "percent": "20%"
+                        }
+                    ],
+                    "hostelRooms": [
+                        {
+                            "roomId": "standart_2_seperate_beds",
+                            "roomImg": "/roomTwoSeperateStandart.jpg",
+                            "roomTitle": "Standard double room with 2 separate beds",
+                            "square": "17",
+                            "beds": "2 single beds",
+                            "facilities": [
+                                {
+                                    "icon": "/Wi-Fi_icon.svg",
+                                    "text": "Free Wi-Fi"
+                                },
+                                {
+                                    "icon": "/iconCarrier.svg",
+                                    "text": "Air conditioning in room"
+                                }
+                            ],
+                            "roomCost": "60",
+                            "breakfast": true,
+                            "returnPrepayment": false
+                        },
+                        {
+                            "roomId": "standart_2_seperate_beds_2",
+                            "roomImg": "/roomTwoSeperateStandart_2.jpg",
+                            "roomTitle": "Standard double room with 2 separate beds",
+                            "square": "15",
+                            "beds": "2 single beds",
+                            "facilities": [
+                                {
+                                    "icon": "/Wi-Fi_icon.svg",
+                                    "text": "Free Wi-Fi"
+                                }
+                            ],
+                            "roomCost": "49",
+                            "breakfast": true,
+                            "returnPrepayment": true
                         }
                     ]
                 }

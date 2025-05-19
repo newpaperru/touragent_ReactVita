@@ -15,7 +15,7 @@ export const Hostel = ({ hostelData }) => {
                         {hostelData.hostelTitle}
                     </span>
                     <span className={styles.cost}>
-                        {hostelData.hostelCost}$ / per 1 night
+                        from {hostelData.hostelCost}$ / per 1 night
                     </span>
                 </div>
             </div>

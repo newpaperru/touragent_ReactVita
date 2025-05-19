@@ -1,0 +1,148 @@
+.main_info_hostel_room {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+.hostel_room {
+    margin-bottom: 117px;
+}
+
+.info {
+    padding: 0 15px 20px;
+}
+
+.hostel_room,
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 30px 0;
+    background-color: var(--color-white);
+    transition: all 0.3s ease;
+    margin-bottom: 60px;
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    transform: translateY(-100%);
+}
+
+.header.fixed.visible {
+    transform: translateY(0);
+}
+
+.name_hostel {
+    font-size: 24px;
+    font-family: var(--font-family-volkhov--bold);
+}
+
+.info_user_chose {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.user_date,
+.user_count {
+    font-size: 18px;
+    font-family: var(--font-family-poppins--regular);
+}
+
+/* MainInfoHostelRoom */
+.img {
+    max-width: 800px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* InfoHostelRoom */
+.info_hostel_room {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.info_hostel_room>span {
+    display: block;
+    font-size: 18px;
+}
+
+.info_hostel_room>span:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.title {
+    font-family: var(--font-family-poppins--semibold);
+}
+
+.square,
+.beds {
+    font-family: var(--font-family-poppins--regular);
+}
+
+/* PaymentHostelRoom */
+.payment_hostel_room {
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 15px;
+    max-width: 263px;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.breakfast,
+.payment,
+.cost {
+    font-size: 18px;
+    font-family: var(--font-family-poppins--regular);
+}
+
+.cost {
+    font-family: var(--font-family-poppins--semibold);
+    font-size: 20px;
+}
+
+.breakfast.active {
+    color: var(--color-bgc-score_reviews);
+}
+
+/* btn */
+.room_btn {
+    width: 100%;
+    display: block;
+    background-color: var(--color-burnt_coral);
+    box-shadow: 0 20px 35px 0 rgba(223, 105, 81, 0.15);
+    border-radius: 10px;
+    padding: 15px 0;
+
+    color: var(--color-white);
+    font-size: 17px;
+    font-family: var(--font-family-poppins--semibold);
+    text-align: center;
+}
+
+/* анимации Keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

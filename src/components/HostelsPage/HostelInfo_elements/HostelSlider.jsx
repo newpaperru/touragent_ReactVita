@@ -12,7 +12,7 @@ export const HostelSlider = ({ images, onImageClick, isModalOpen }) => {
         if (images.length <= 1 || isPaused || isModalOpen) {
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
-                intervalRef.current = null;
+                intervalRef.current = null; 
             }
             return;
         }

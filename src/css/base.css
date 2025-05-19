@@ -3,6 +3,7 @@
 	/* Зеленые */
 	--color-apple_green: #4CAF50;
 	--color-forest_green: #45a049;
+	--color-bgc-score_reviews: #49CA2F;
 
 	/* Красные/Оранжевые */
 	--color-burnt_coral: #DF6951;
@@ -49,7 +50,6 @@
 	--color-silver: #ddd;
 	--color-system_elevation_base: #E5E5EA;
 	--color-border-recomm: #CFCFCF;
-	--color-bgc-score_reviews: #49CA2F;
 
 	/* Желтые/Золотые */
 	--color-gold: #FFD700;
