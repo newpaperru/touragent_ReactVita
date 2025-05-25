@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 
-export const useHostelData = (hostelId) => {
-    const [hostel, setHostel] = useState(null);
+export const useHostelRoomData = (hostelId, roomId = null) => {
+    const [data, setData] = useState(null);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchHostel = async () => {
+        const fetchData = async () => {
             try {
+                setLoading(true);
                 const response = await fetch(`http://localhost:3000/archive`);
                 const tours = await response.json();
 
@@ -15,14 +17,41 @@ export const useHostelData = (hostelId) => {
                 ).find(Boolean);
 
                 if (!foundHostel) throw new Error("Hostel not found");
-                setHostel(foundHostel);
+
+                if (roomId) {
+                    const foundRoom = foundHostel.hostelRooms.find(r => r.roomId === roomId);
+                    if (!foundRoom) throw new Error("Room not found");
+
+                    setData({
+                        type: 'room',
+                        hostel: {
+                            title: foundHostel.hostelTitle,
+                            scoreInText: foundHostel.scoreInText,
+                            scoreReviews: foundHostel.scoreReviews,
+                            address: foundHostel.hostelAddress
+                        },
+                        room: {
+                            title: foundRoom.roomTitle,
+                            breakfast: foundRoom.breakfast,
+                            returnPrepayment: foundRoom.returnPrepayment,
+                            cost: foundRoom.roomCost
+                        }
+                    });
+                } else {
+                    setData({
+                        type: 'hostel',
+                        data: foundHostel
+                    });
+                }
             } catch (err) {
                 setError(err.message);
+            } finally {
+                setLoading(false);
             }
         };
 
-        fetchHostel();
-    }, [hostelId]);
+        fetchData();
+    }, [hostelId, roomId]);
 
-    return { hostel, error };
+    return { data, error, loading };
 };

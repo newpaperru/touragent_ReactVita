@@ -111,6 +111,7 @@
                     "hostelCost": "49",
                     "recomm": true,
                     "countReviews": 1200,
+                    "scoreInText": "Nice",
                     "scoreReviews": 4.7,
                     "hostelAddress": "Bauman Street, 36, Kazan, Republic of Tatarstan (Tatarstan), 420111",
                     "facilities": [

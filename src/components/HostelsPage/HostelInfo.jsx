@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Footer } from "../Footer/Footer";
 import { TopHeader } from "../Header/TopHeader/TopHeader";
 import stylesHeader from "../../components/Header/TopHeader/TopHeader.module.css";
@@ -13,44 +13,20 @@ import { ProgressBars } from "./HostelInfo_elements/ProgressBars";
 import { ImageModal } from "./HostelInfo_elements/ImageModal";
 import { HostelSlider } from "./HostelInfo_elements/HostelSlider";
 import { FormSection } from "./HostelInfo_elements/FormSection";
+import { useHostelRoomData } from "../HostelRoomPage/customHooks/useHostelData";
 
 export const HostelInfo = () => {
     const { hostelId } = useParams();
-    const [hostel, setHostel] = useState(null);
+    const { data, error } = useHostelRoomData(hostelId);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    useEffect(() => {
-        const fetchHostel = async () => {
-            try {
-                const response = await fetch(`http://localhost:3000/archive`);
-                const tours = await response.json();
-
-                let foundHostel = null;
-                for (const tour of tours) {
-                    if (tour.hostels && Array.isArray(tour.hostels)) {
-                        const matchingHostel = tour.hostels.find(
-                            (h) => h.id === hostelId
-                        );
-                        if (matchingHostel) {
-                            foundHostel = matchingHostel;
-                            break;
-                        }
-                    }
-                }
-
-                setHostel(foundHostel);
-            } catch (error) {
-                console.error("Error fetching hostel:", error);
-            }
-        };
-
-        fetchHostel();
-    }, [hostelId]);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
-    if (!hostel) return <div>Hostel not found</div>;
+    if (error) return <div>Error: {error}</div>;
+    if (!data || data.type !== "hostel") return <div>Hostel not found</div>;
+
+    const hostel = data.data;
 
     return (
         <>
@@ -77,8 +53,6 @@ export const HostelInfo = () => {
 
                         <LocationSection address={hostel.hostelAddress} />
 
-                        {/* TODO: Сделать выборку даты, взрослый/ребенок количество */}
-
                         <FacilitiesSection facilities={hostel.facilities} />
 
                         <div className={styles.reviews_details}>
@@ -92,8 +66,6 @@ export const HostelInfo = () => {
                             </div>
 
                             <ProgressBars reviews_bars={hostel.reviews_bars} />
-
-                            {/* TODO: Сделать отзывы */}
                         </div>
                         <FormSection />
                     </div>

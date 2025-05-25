@@ -8,6 +8,7 @@ import { Hostels } from "../components/HostelsPage/Hostels";
 export const HostelsPage = () => {
     const { id } = useParams();
     const [hostels, setHostels] = useState([]);
+    
 
     useEffect(() => {
         const fetchHostels = async () => {

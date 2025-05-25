@@ -2,7 +2,7 @@ import styles from "../HostelInfo.module.css";
 import { Link, useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useBookingParams } from "../useBookingParams";
+import { useBookingParams } from "../useBookingParams.js";
 
 export const FormSection = () => {
     const { hostelId } = useParams();

@@ -13,6 +13,7 @@ import { AdminPanel } from "./pages/AdmimPanel";
 import { HostelsPage } from "./pages/HostelsPage";
 import { HostelInfo } from "./components/HostelsPage/HostelInfo";
 import { HostelRoomPage } from "./pages/HostelRoomPage";
+import { PaymentPage } from "./pages/PaymentPage";
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
                     <Route path="/explore/:id/hostels" element={<HostelsPage />} />
                     <Route path="/hostels/:hostelId" element={<HostelInfo />} />
                     <Route path="/hostels/:hostelId/:hostelRoom_rooms" element={<HostelRoomPage />} />
+                    <Route path="/hostels/:hostelId/payment/:roomId" element={<PaymentPage />} />
                     <Route
                         path="/registration"
                         element={<PageRegistration />}
