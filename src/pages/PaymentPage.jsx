@@ -31,7 +31,6 @@ export const PaymentPage = () => {
             {isFixed && (
                 <PaymentHeader
                     header_data={data.data.hostelTitle}
-                    isFixed
                     searchParams={searchParams}
                 />
             )}

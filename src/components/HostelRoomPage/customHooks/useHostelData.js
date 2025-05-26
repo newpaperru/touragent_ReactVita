@@ -12,10 +12,14 @@ export const useHostelRoomData = (hostelId, roomId = null) => {
                 const response = await fetch(`http://localhost:3000/archive`);
                 const tours = await response.json();
 
-                const foundHostel = tours.flatMap(tour =>
-                    tour.hostels?.filter(h => h.id === hostelId) || []
-                ).find(Boolean);
+                // Находим тур, содержащий нужный хостел
+                const foundTour = tours.find(tour => 
+                    tour.hostels?.some(h => h.id === hostelId)
+                );
 
+                if (!foundTour) throw new Error("Tour not found");
+
+                const foundHostel = foundTour.hostels.find(h => h.id === hostelId);
                 if (!foundHostel) throw new Error("Hostel not found");
 
                 if (roomId) {
@@ -24,6 +28,9 @@ export const useHostelRoomData = (hostelId, roomId = null) => {
 
                     setData({
                         type: 'room',
+                        tour: {
+                            price: foundTour.price
+                        },
                         hostel: {
                             title: foundHostel.hostelTitle,
                             scoreInText: foundHostel.scoreInText,
@@ -40,7 +47,10 @@ export const useHostelRoomData = (hostelId, roomId = null) => {
                 } else {
                     setData({
                         type: 'hostel',
-                        data: foundHostel
+                        data: foundHostel,
+                        tour: {
+                            price: foundTour.price
+                        }
                     });
                 }
             } catch (err) {
