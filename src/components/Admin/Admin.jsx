@@ -1,25 +1,19 @@
 import { useState, useEffect } from "react";
 import { AddTourForm } from "./AddTourForm";
-import { PackagesCard } from "../SearchPage/PackagesData/PackagesList/PackagesCard";
 import { useTours } from "./useTours";
 import { useAuth } from "./useAuth";
 import { useTickets } from "../ProfilePage/Profile/useTickets";
 import styles from "./Admin.module.css";
-
-const STATUS = {
-    NA: "N/A",
-    APPROVED: "Approved",
-    REJECTED: "Rejected",
-    PENDING: "Pending",
-};
+import { OrdersTable } from "./Admin__elements/OrdersTable";
+import { CurrentTours } from "./Admin__elements/CurrentTours";
 
 export const Admin = () => {
     const [showForm, setShowForm] = useState(false);
     const [users, setUsers] = useState([]);
+    const [successMessage, setSuccessMessage] = useState(false);
     const { tours, addTour, removeTour } = useTours();
     const { logout } = useAuth();
     const { orders = [], updateOrderStatus } = useTickets();
-    const [successMessage, setSuccessMessage] = useState(false);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -34,8 +28,13 @@ export const Admin = () => {
         fetchUsers();
     }, []);
 
-    const getUserInfo = (userId) => {
-        return users.find((user) => user.id === userId) || {};
+    const handleAddTour = async (newTour) => {
+        await addTour(newTour);
+        setSuccessMessage(true);
+        setTimeout(() => {
+            setSuccessMessage(false);
+            setShowForm(false);
+        }, 3000);
     };
 
     return (
@@ -58,159 +57,21 @@ export const Admin = () => {
                 </div>
             </header>
 
-            <div className={styles.section}>
-                <h2 className={styles.subtitle}>Orders Management</h2>
-                <div className={styles.table_container}>
-                    <table className={styles.orders_table}>
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Contact Info</th>
-                                <th>Order Details</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {orders.map((order) => {
-                                const user = getUserInfo(order.userId);
-                                return (
-                                    <tr key={order.orderId}>
-                                        <td className={styles.user_info}>
-                                            Full Name:{" "}
-                                            <span className={styles.data}>
-                                                {user.fullName || STATUS.NA}
-                                            </span>
-                                            <br />
-                                            ID:{" "}
-                                            <span className={styles.data}>
-                                                {order.userId}
-                                            </span>
-                                        </td>
-                                        <td className={styles.user_info}>
-                                            Email:{" "}
-                                            <span className={styles.data}>
-                                                {user.email || STATUS.NA}
-                                            </span>
-                                            <br />
-                                            Phone:{" "}
-                                            <span className={styles.data}>
-                                                {user.phone || STATUS.NA}
-                                            </span>
-                                            <br />
-                                            Birth:{" "}
-                                            <span className={styles.data}>
-                                                {user.birthDate || STATUS.NA}
-                                            </span>
-                                        </td>
-                                        <td className={styles.user_info}>
-                                            Country:{" "}
-                                            <span className={styles.data}>
-                                                {order.country}
-                                            </span>
-                                            <br />
-                                            Total price:{" "}
-                                            <span className={styles.data}>
-                                                ${order.price}
-                                            </span>
-                                            <br />
-                                            Booking date:{" "}
-                                            <span className={styles.data}>
-                                                {order.date}
-                                            </span>
-                                            Booking period:{" "}
-                                            <span className={styles.data}>
-                                                {order.dateRange || "N/A"}
-                                            </span>
-                                            Total guest:{" "}
-                                            <span className={styles.data}>
-                                                {order.totalGuests || "N/A"}
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span
-                                                className={
-                                                    order.adminStatus ===
-                                                    STATUS.APPROVED
-                                                        ? styles.status_approved
-                                                        : order.adminStatus ===
-                                                          STATUS.REJECTED
-                                                        ? styles.status_rejected
-                                                        : styles.status_pending
-                                                }
-                                            >
-                                                {order.adminStatus}
-                                            </span>
-                                        </td>
-                                        <td>
-                                            {order.adminStatus ===
-                                                STATUS.PENDING && (
-                                                <>
-                                                    <button
-                                                        className={
-                                                            styles.approve_btn
-                                                        }
-                                                        onClick={() =>
-                                                            updateOrderStatus(
-                                                                order.orderId,
-                                                                STATUS.APPROVED
-                                                            )
-                                                        }
-                                                    >
-                                                        Approve
-                                                    </button>
-                                                    <button
-                                                        className={
-                                                            styles.reject_btn
-                                                        }
-                                                        onClick={() =>
-                                                            updateOrderStatus(
-                                                                order.orderId,
-                                                                STATUS.REJECTED
-                                                            )
-                                                        }
-                                                    >
-                                                        Reject
-                                                    </button>
-                                                </>
-                                            )}
-                                        </td>
-                                    </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <OrdersTable
+                orders={orders}
+                users={users}
+                updateOrderStatus={updateOrderStatus}
+            />
 
             {showForm && (
                 <AddTourForm
-                    onSubmit={async (newTour) => {
-                        await addTour(newTour);
-                        setSuccessMessage(true);
-                        setTimeout(() => {
-                            setSuccessMessage(false);
-                            setShowForm(false);
-                        }, 3000);
-                    }}
+                    onSubmit={handleAddTour}
                     onClose={() => setShowForm(false)}
                     showSuccess={successMessage}
                 />
             )}
 
-            <div className={styles.section}>
-                <h2 className={styles.subtitle}>Current Tours</h2>
-                <div className={styles.grid}>
-                    {tours.map((tour, index) => (
-                        <PackagesCard
-                            key={index}
-                            data={tour}
-                            isAdmin={true}
-                            onDelete={removeTour}
-                        />
-                    ))}
-                </div>
-            </div>
+            <CurrentTours tours={tours} removeTour={removeTour} />
         </div>
     );
 };
