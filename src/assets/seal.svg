@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Внешний круг печати -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#0066cc" stroke-width="3"/>
+  
+  <!-- Внутренний круг -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#0066cc" stroke-width="2"/>
+  
+  <!-- Текст по кругу -->
+  <path id="textPath" d="M 50,100 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" fill="none"/>
+  <text font-size="12" fill="#0066cc" font-weight="bold" font-family="Arial">
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle">
+      OOO "Travel" Production by Boris, Anna, Alexey
+    </textPath>
+  </text>
+  
+  <!-- Иконка самолета в центре -->
+  <path d="M80 110 L120 110 L130 100 L120 90 L80 90 L70 100 Z" fill="#0066cc"/>
+  <path d="M60 100 L140 100" stroke="#0066cc" stroke-width="3"/>
+  <path d="M100 70 L100 90" stroke="#0066cc" stroke-width="3"/>
+  <path d="M100 110 L100 130" stroke="#0066cc" stroke-width="3"/>
+  
+  <!-- Звездочки для украшения -->
+  <path d="M100 30 L103 40 L113 40 L106 46 L109 56 L100 50 L91 56 L94 46 L87 40 L97 40 Z" fill="#0066cc"/>
+  <path d="M30 100 L40 103 L40 113 L46 106 L56 109 L50 100 L56 91 L46 94 L40 87 L40 97 Z" fill="#0066cc"/>
+  <path d="M170 100 L160 103 L160 113 L166 106 L176 109 L170 100 L176 91 L166 94 L160 87 L160 97 Z" fill="#0066cc"/>
+  <path d="M100 170 L103 160 L113 160 L106 166 L109 176 L100 170 L91 176 L94 166 L87 160 L97 160 Z" fill="#0066cc"/>
+</svg>

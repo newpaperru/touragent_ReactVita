@@ -1,38 +1,97 @@
+/* TicketCard.module.css */
+.tickets_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
 .ticket_card {
-    padding: 50px;
+    padding: 30px;
     border-radius: 26px;
     border: 2px solid rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 130px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 30px;
+    background-color: var(--color-white);
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    padding: 12px;
-    text-align: left;
+.ticket_header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
     border-bottom: 1px solid var(--color-silver);
+    padding-bottom: 10px;
 }
 
-.table th {
-    background-color: var(--color-anti_flash_var(--color-white));
+.user_booking_info {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.user_booking_info > .detail_row {
+    column-gap: 5px;
+}
+
+.ticket_header h3 {
+    margin: 0;
     font-family: var(--font-family-poppins--medium);
+    font-size: 20px;
+    color: var(--color-dark);
 }
 
-.table td {
-    font-family: var(--font-family-poppins--regular);
+.status {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ticket_details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.detail_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail_row > span {
+    font-size: 18px;
+    font-family: var(--font-family-poppins--regular)
+}
+
+.detail_row > span:first-of-type {
+    font-family: var(--font-family-poppins--semibold);
+}
+
+.detail_label {
+    font-family: var(--font-family-poppins--medium);
+    color: var(--color-dark);
+}
+
+.ticket_actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.paid_actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
 }
 
 .pay_btn {
-    padding: 8px 16px;
+    padding: 10px 20px;
     background-color: var(--color-apple_green);
     color: var(--color-white);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-family: var(--font-family-poppins--medium);
+    transition: background-color 0.2s;
 }
 
 .pay_btn:hover {
@@ -45,25 +104,40 @@
 .status_not_paid,
 .pending_text {
     font-family: var(--font-family-poppins--medium);
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .status_ready {
     color: var(--color-apple_green);
+    background-color: rgba(52, 168, 83, 0.1);
 }
 
 .status_rejected {
     color: var(--color-red-500);
+    background-color: rgba(234, 67, 53, 0.1);
 }
 
 .status_paid {
     color: var(--color-material_blue);
+    background-color: rgba(66, 133, 244, 0.1);
 }
 
 .status_not_paid {
     color: var(--color-tangerine);
+    background-color: rgba(255, 171, 64, 0.1);
 }
 
 .pending_text {
     color: var(--color-material_blue);
     font-style: italic;
+    font-size: 16px;
+}
+
+.no_tickets {
+    text-align: center;
+    padding: 40px;
+    font-family: var(--font-family-poppins--medium);
+    color: var(--color-dark);
+    font-size: 18px;
 }

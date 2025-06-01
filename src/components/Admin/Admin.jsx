@@ -18,7 +18,7 @@ export const Admin = () => {
     const [users, setUsers] = useState([]);
     const { tours, addTour, removeTour } = useTours();
     const { logout } = useAuth();
-    const { orders, updateOrderStatus } = useTickets();
+    const { orders = [], updateOrderStatus } = useTickets();
     const [successMessage, setSuccessMessage] = useState(false);
 
     useEffect(() => {
@@ -109,14 +109,22 @@ export const Admin = () => {
                                                 {order.country}
                                             </span>
                                             <br />
-                                            Price:{" "}
+                                            Total price:{" "}
                                             <span className={styles.data}>
                                                 ${order.price}
                                             </span>
                                             <br />
-                                            Date:{" "}
+                                            Booking date:{" "}
                                             <span className={styles.data}>
                                                 {order.date}
+                                            </span>
+                                            Booking period:{" "}
+                                            <span className={styles.data}>
+                                                {order.dateRange || "N/A"}
+                                            </span>
+                                            Total guest:{" "}
+                                            <span className={styles.data}>
+                                                {order.totalGuests || "N/A"}
                                             </span>
                                         </td>
                                         <td>

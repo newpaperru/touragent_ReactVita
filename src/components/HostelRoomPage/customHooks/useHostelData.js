@@ -27,6 +27,7 @@ export const useHostelRoomData = (hostelId, roomId = null) => {
                     if (!foundRoom) throw new Error("Room not found");
 
                     setData({
+                        country: foundTour.country,
                         type: 'room',
                         tour: {
                             price: foundTour.price
@@ -49,7 +50,8 @@ export const useHostelRoomData = (hostelId, roomId = null) => {
                         type: 'hostel',
                         data: foundHostel,
                         tour: {
-                            price: foundTour.price
+                            price: foundTour.price,
+                            country: foundTour.country
                         }
                     });
                 }

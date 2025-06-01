@@ -1,11 +1,6 @@
 import styles from "../Payment.module.css";
 
-export const PaymentSection = ({ 
-    isValid, 
-    totalCost, 
-    isRefundable, 
-    handleSubmit 
-}) => {
+export const PaymentSection = ({ isValid, totalCost, isRefundable }) => {
     return (
         <div className={styles.pay_block}>
             <h2 className={styles.title}>Payment</h2>
@@ -20,11 +15,11 @@ export const PaymentSection = ({
                 ) : (
                     <span>Payment is not refundable</span>
                 )}
+
                 <button
                     type="submit"
                     className={styles.payment_button}
                     disabled={!isValid}
-                    onClick={handleSubmit}
                 >
                     To payment {totalCost}$
                 </button>
